@@ -8,16 +8,12 @@
 
 ---------------------------------------------*/
 $(document).ready(function(e) {
-	var tit = $('input[name=subject]').val();
+	var tit = 'Tema beta';//$('input[name=subject]').val();
 	if (tit.indexOf('Tema beta')==0) {
 		// EL TEMA ES BETA
 		//
 		// Escribir el newStyle
-		$("<link/>", {
-			rel: "stylesheet",
-			type: "text/css",
-			href: "https://raw.github.com/otiasc/Seijyuji-Rest/master/newStyle.css"
-		}).appendTo("head");
+		$("link[rel=stylesheet]").attr('href', "https://raw.github.com/otiasc/Seijyuji-Rest/master/newStyle.css");
 		
 		// Cambiar la helpbox de sitio
 		$('#message-box .left-box #helpbox').appendTo('#text_editor_controls');
