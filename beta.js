@@ -13,7 +13,11 @@ $(document).ready(function(e) {
 		// EL TEMA ES BETA
 		//
 		// Escribir el newStyle
-		$('<style></style>')
+		$("<link/>", {
+			rel: "stylesheet",
+			type: "text/css",
+			href: "https://raw.github.com/otiasc/Seijyuji-Rest/master/newStyle.css"
+		}).appendTo("head");
 		
 		// Cambiar la helpbox de sitio
 		$('#message-box .left-box #helpbox').appendTo('#text_editor_controls');
