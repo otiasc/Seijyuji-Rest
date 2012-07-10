@@ -2,9 +2,7 @@
 	SEIJYUJI GAKUEN JAVA-SCRIPT
 	
 	>	RELOJ DEL FORO
-	Sistema del tiempo
 	
-	Creado el día 09/06/2012
 
 ---------------------------------------------*/
 var nextEvents = new Array();
