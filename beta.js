@@ -1,39 +1,26 @@
-/*
-	SEIJYUJI GAKUEN JAVA-SCRIPT
-	
-	>	BETA
-	Pone en beta el tema BETA
-	
-	Creado el día 07/07/2012
-
----------------------------------------------*/
+/*--------------------------------------------------------------------
+|                                                                     |
+|   SEIJYUJI GAKUEN PRESENTS                                          |
+|   BETA                                                              |
+|                                                                     |
+|   Configura las páginas para que sean BETA                          |
+|                                                                     |
+ --------------------------------------------------------------------*/
 $(document).ready(function(e) {
-	var tit = 'Tema beta';//$('input[name=subject]').val();
-	if (tit.indexOf('Tema beta')==0) {
-		// EL TEMA ES BETA
-		//
-		// Escribir el newStyle
-		$("link[rel=stylesheet]").attr('href', "https://raw.github.com/otiasc/Seijyuji-Rest/master/newStyle.css");
+	// Comprobar que el Usuario está en modo Beta
+	var user = $('img#i_icon_mini_logout').attr('title');
+	if (user=='Desconectarse [ Admin ]' || user=='Desconectarse [ Ryûji Suguro ]' || user=='Desconectarse [ Okumura Rin ]') {
+		// Lo está
 		
-		// Cambiar la helpbox de sitio
-		$('#message-box .left-box #helpbox').appendTo('#text_editor_controls');
-		$('#helpbox').css('display', 'block');
-		$('#textarea_content').attr('style', '');
-		$('#showBattleSystem').fadeOut(0);
-		//
-		// Ocultar sistema de Batalla
-		$('#text_editor_textarea').focusin(function(e) {
-			$('#smiley-box').fadeOut('fast');
-			$('#showBattleSystem').fadeIn('fast');
-		});
-		//
-		// Mostrar sistema de batalla
-		$('#showBattleSystem').click(function(e) {
-			$('#smiley-box').fadeIn('fast');
-			$('#showBattleSystem').fadeOut('fast');
-		});
-		//
-		// Situar botones de "Vengo de", "voy a"
-		$('#text_editor_controls #text_edit').append('<button class="button2" onclick="comefrom(); return false;" type="button" title="Viene de"><img src="http://illiweb.com/fa/wysiwyg/help.png" /><span>Viene de</span></button>');
+		// Beta 1                                     
+		// Situar botones de "Vengo de" y "voy a"     
+		var mode = $('.submit-buttons input[name=mode]').val();
+		if (mode) {
+			// Situar botones de "Vengo de", "voy a"
+			$('#text_editor_controls #text_edit').append('<button class="button2" id="comefrom" onclick="getLink(\'comefrom\'); return false;" type="button" title="Viene de"><img src="http://i48.servimg.com/u/f48/17/38/25/48/minibu10.png" /><span>Vengo de</span></button>');
+			if (mode=='editpost') {
+				$('#text_editor_controls #text_edit').append('<button class="button2" id="followin" onclick="getLink(\'followin\'); return false;" type="button" title="Sigue en"><img src="http://i48.servimg.com/u/f48/17/38/25/48/minibu11.png" /><span>Sigo en</span></button>');
+			}
+		}
 	}
 });
