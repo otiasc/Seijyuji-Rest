@@ -1,15 +1,23 @@
-/*
-	SEIJYUJI GAKUEN JAVA-SCRIPT
-	
-	>	RELOJ DEL FORO
-	
-
----------------------------------------------*/
+/*-------------------------------------------------------------------*\
+|                                                                     |
+|   SEIJYUJI GAKUEN PRESENTS                                          |
+|                                                                     |
+|   Maneja los datos de reloj. Interacciones entre hora real y hora   |
+|	del foro                                                          |
+|                                                                     |
+|   Aplicable a TODAS LAS PÁGINAS                                     |
+|                                                                     |
+\*-------------------------------------------------------------------*/
 var nextEvents = new Array();
 
-//
-//
-// constante WEATHER_IMAGES
+
+/*	CONSTANTE WEATHER_IMAGES                            
+	Matriz con las variables atmosféricas del foro.     
+		str id		id meteorológica de 3 letras        
+		int xd		número con la posición X de día     
+		int xn		número con la posición X de noche   
+		str alt		texto de la imagen                  
+                                                      */
 var WEATHER_IMAGES = new Array();
 WEATHER_IMAGES.push({id:'DES', xd:1, xn: 14, alt:'Despejado'});
 WEATHER_IMAGES.push({id:'NU1', xd:2, xn: 14, alt:'Nubosidad leve'});
@@ -25,27 +33,122 @@ WEATHER_IMAGES.push({id:'NV1', xd:11, xn: 14, alt:'Nieve leve'});
 WEATHER_IMAGES.push({id:'NV2', xd:12, xn: 14, alt:'Nieve moderada'});
 WEATHER_IMAGES.push({id:'NV3', xd:13, xn: 13, alt:'Nieve fuerte'});
 
-//
-// constante WEEKDAYS_REDUCED
+
+/*	CONSTANTE WEEKDAYS_REDUCED                          
+	Matriz con los días de la semana                    
+                                                      */
 var WEEKDAYS_REDUCED= new Array('DOMINGO', 'LUN', 'MARTES', 'MIÉRCOLES', 'JUEVES', 'VIERNES', 'SÁBADO');
 
-//
-//
-// constante MONTHS
+/*	CONSTANTE WEEKDAYS_REDUCED                          
+	Matriz con los meses del año                        
+                                                      */
 var MONTHS = new Array('ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE');
 
-//
-//
-//
+
 var HELP_BUBBLES = new Array('Usada para rolear, solo válida dentro el foro', 'Usada en el mundo real');
 
-//
-//
-//
-// FUNCIÓN clock_start(). Inicia el reloj
+/*------------------------------------------------------------------
+                                                                    
+                                                                    
+	FUNCIONES clock______To________                                 
+		Convierte las horas de real a foro y viceversa              
+																	
+																	
+------------------------------------------------------------------*/
+
+/*	FUNCIÓN clock_realtimeToForumtime(_when)            
+	Convierte la hora real en hora del foro             
+	  date _realNow		Hora real                       
+	                                                    
+	devuelve                                            
+	  date: hora del foro                               
+                                                      */
+function clock_realtimeToForumtime(_realNow) {
+	var forumNow = new Date();
+	for (var i=1; i<clocks.length; i++) {
+		// Comprobar a qué intervalo pertenece              
+		var realMax = new Date(clocks[i].real);
+		var realMin = new Date(clocks[i-1].real);
+		
+		var forumMax = new Date(clocks[i].forum);
+		var forumMin = new Date(clocks[i-1].forum);
+		if (_realNow<=realMax && _realNow>realMin) {
+			// Pertenece al intervalo entre «i-1» e «i»         
+			// Calcular la hora del foro.                       
+			
+			// Para ello, se hace una regla de tres entre la    
+			// diferencia de horas del foro y la diferencia de  
+			// horas en la realidad                             
+			var percent = (_realNow - realMin)/(realMax - realMin);
+			var forumNow = new Date(forumMin.getTime() + (forumMax - forumMin) * percent);
+			
+			var multiplier = (realMax - realMin)/(forumMax - forumMin);
+		}
+	}
+	// Si el intervalo al que pertenece no existe       
+	var i = clocks.length-1;
+	if (realNow > new Date(clocks[i].real)) {
+		var realMax = new Date(clocks[i].real);
+		var realMin = new Date(clocks[i-1].real);
+		
+		var forumMax = new Date(clocks[i].forum);
+		var forumMin = new Date(clocks[i-1].forum);
+		
+		var percent = (forumNow - forumMin)/(forumMax - forumMin);
+		var forumNow = new Date(forumMin.getTime() + (forumMax - forumMin) * percent);
+	}
+	return forumNow;
+}
+
+/*	FUNCIÓN clock_realtimeToForumtime(_when)            
+	Convierte la hora foro en hora real                 
+	  date _when	hora del foro                       
+	                                                    
+	devuelve                                            
+	  date: hora real                                   
+                                                      */
+function clock_forumtimeToRealtime(forumNow) {
+	for (var i=1; i<clocks.length; i++) {
+		// Comprobar a qué intervalo pertenece           
+		var realMax = new Date(clocks[i].real);
+		var realMin = new Date(clocks[i-1].real);
+		
+		var forumMax = new Date(clocks[i].forum);
+		var forumMin = new Date(clocks[i-1].forum);
+		if (forumNow<=forumMax && forumNow>forumMin) {
+			// Pertenece al intervalo entre «i-1» e «i»                   
+			// Calcular la hora del foro.                                 
+			
+			// Para ello, se hace una regla de tres entre la diferencia   
+			// de horas del foro y la diferencia de horas en la realidad  
+			var percent = (forumNow - forumMin)/(forumMax - forumMin);
+			var realNow = new Date(realMin.getTime() + (realMax - realMin) * percent);
+			
+			var multiplier = (realMax - realMin)/(forumMax - forumMin);
+		}
+	}
+	var i = clocks.length-1;
+	if (forumNow > new Date(clocks[i].forum)) {
+		var realMax = new Date(clocks[i].real);
+		var realMin = new Date(clocks[i-1].real);
+		
+		var forumMax = new Date(clocks[i].forum);
+		var forumMin = new Date(clocks[i-1].forum);
+		
+		var percent = (forumNow - forumMin)/(forumMax - forumMin);
+		var realNow = new Date(realMin.getTime() + (realMax - realMin) * percent);
+	}
+	return realNow;
+}
+
+
+/*	FUNCIÓN clock_getForumTime ()                       
+	                                                    
+	devuelve                                            
+	  date: hora del foro                               
+                                                      */
 function clock_getForumTime() {
-	//
-	// Hora actual REAL
+	// Hora actual REAL              
 	var realNow = new Date();
 	var forumNow = clock_realtimeToForumtime(realNow);
 	
@@ -53,16 +156,15 @@ function clock_getForumTime() {
 }
 /*
 
-	FUNCIÓN clock_getWeather(when)
-	Devuelve el tiempo que hace en la fecha especificada en date
-		date when	Objeto fecha
-	
-	Devuelve
-		str weather	cadena que toma valores DES NU1 NU2 NU3 DLL NIB LL1 LL2 LL3 NV1 NV2 NV3
-
-*/
+/*	FUNCIÓN clock_getWeather(_when)                     
+	Obtiene el tiempo atmosférico a determinada hora    
+	del foro                                            
+	  date _when	hora del foro                       
+	                                                    
+	devuelve                                            
+	  str: ID con el tiempo atmosférico                 
+                                                      */
 function clock_getWeather(when) {
-	//
 	// Obtener día, mes y año
 	var y = when.getUTCFullYear();
 	var m = when.getUTCMonth()+1;
@@ -71,8 +173,8 @@ function clock_getWeather(when) {
 	if (m<10) {m = '0' + m}
 	if (d<10) {d = '0' + d}
 	var compose = y + '-' + m + '-' + d;
-	//
-	//
+	
+	
 	// Recorrer todos los sky hasta descubrir el día del que hablamos hoy
 	var weatherToday = '';
 	var weatherNow = '';
@@ -81,21 +183,30 @@ function clock_getWeather(when) {
 			weatherToday = sky[i].weather;
 		}
 	}
-	//
+	
 	// Si no hay tiempo, obtener el último
 	if (weatherToday=='') {
 		weatherToday == sky[sky.length-1].weather;
 	}
-	//
-	// Obtener el tiempo del día de hoy
+	
+	// Obtener el tiempo del día de hoy en la hora de hoy
 	var j = Math.floor(when.getHours() / 6);
 	weatherNow = weatherToday.split('-')[j];
 	
+	// Responder   
 	return weatherNow;
 }
+
+/*	FUNCIÓN clock_getTemperature(_when)                 
+	Obtiene el tiempo atmosférico a determinada hora    
+	del foro                                            
+	  date _when	hora del foro                       
+	                                                    
+	devuelve                                            
+	  map: temperaturas actual, mínima y máxima         
+                                                      */
 function clock_getTemperature(when) {
-	//
-	// Obtener día, mes y año
+	// Obtener día, mes y año    
 	var y = when.getUTCFullYear();
 	var m = when.getUTCMonth()+1;
 	var d = when.getUTCDate();
@@ -104,13 +215,11 @@ function clock_getTemperature(when) {
 	if (d<10) {d = '0' + d}
 	var compose = y + '-' + m + '-' + d;
 	
-	//
-	// Obtener las horas y minutos
+	// Obtener las horas y minutos     
 	var mm = when.getUTCMinutes();
 	var hh = when.getUTCHours();
-	//
-	//
-	// Recorrer todos los sky hasta descubrir el día del que hablamos hoy
+	
+	// Recorrer todos los sky hasta descubrir el día del que hablamos hoy     
 	var maxYesterday = 0;
 	var maxToday = 0;
 	var minToday = 0;
@@ -125,16 +234,17 @@ function clock_getTemperature(when) {
 			}
 		}
 	}
-	//
-	// Si no hay tiempo, obtener el último
+	
+	// Si no hay tiempo, obtener el último    
 	if (maxToday==minToday) {
 		maxYesterday = parseInt(sky[sky.length-1].temps.split(',')[2]);
 		minToday = parseInt(sky[sky.length-1].temps.split(',')[0]);
 		maxToday = parseInt(sky[sky.length-1].temps.split(',')[1]);
 		minTomorroy = parseInt(sky[sky.length-1].temps.split(',')[0]);
 	}
-	//
-	// Comprobar en qué franja se encuentra
+	
+	// Comprobar en qué franja se encuentra          
+	// (antes de las 2, antes de las 15, después)    
 	var temperature = 0;
 	if (hh<2) {
 		var p = (hh+9)/11;
@@ -146,52 +256,20 @@ function clock_getTemperature(when) {
 		var p = (hh-15)/11;
 		temperature = maxToday + (minTomorrow - maxToday)*p
 	}
-	return Math.round(temperature);
+	return {min:minToday, max:maxToday, now:Math.round(temperature)};
 }
-/*
 
 
-*/
-function clock_getTemperatureMaxMin(when) {
-	var y = when.getUTCFullYear();
-	var m = when.getUTCMonth()+1;
-	var d = when.getUTCDate();
-	
-	if (m<10) {m = '0' + m}
-	if (d<10) {d = '0' + d}
-	var compose = y + '-' + m + '-' + d;
-	
-	//
-	// Obtener las horas y minutos
-	var mm = when.getUTCMinutes();
-	var hh = when.getUTCHours();
-	//
-	//
-	// Recorrer todos los sky hasta descubrir el día del que hablamos hoy
-	var maxYesterday = 0;
-	var maxToday = 0;
-	var minToday = 0;
-	var minTomorrow = 0;
-	for (var i=1; i<sky.length; i++) {
-		if (sky[i].date==compose) {
-			minToday = parseInt(sky[i].temps.split(',')[0]);
-			maxToday = parseInt(sky[i].temps.split(',')[1]);
-		}
-	}
-	return 'Mín ' + minToday + 'º' + ' | Máx ' + maxToday + 'º';
-}
-/*
-
-	FUNCIÓN clock_isDay(when)
-	¿Es de día o es de noche?
-		date when	Objeto fecha
-	
-	Devuelve
-		true	si es de día (when está entre amanecer y anochecer)
-		false	si es de noche
-*/
+/*	FUNCIÓN clock_isDay(_when)                          
+	Obtiene si la hora _when es de día o de noche       
+	del foro                                            
+	  date _when	hora del foro                       
+	                                                    
+	devuelve                                            
+	  boolean: true si es de día. false si es de noche  
+                                                      */
 function clock_isDay(when) {
-	//
+	
 	// Obtener día, mes y año
 	var y = when.getUTCFullYear();
 	var m = when.getUTCMonth()+1;
@@ -200,8 +278,7 @@ function clock_isDay(when) {
 	if (m<10) {m = '0' + m}
 	if (d<10) {d = '0' + d}
 	var compose = y + '-' + m + '-' + d;
-	//
-	//
+	
 	// Recorrer todos los sky hasta descubrir el día del que hablamos hoy
 	var dawnToday = new Date();
 	var fallToday = new Date();
@@ -273,82 +350,7 @@ function clock_getNextSkyEvent(when) {
 	return (nextSkyEvent + ' EN ' + h + ':' + m + ':' + s);
 	
 }
-/*
 
-	FUNCIÓN clock_realtimeToForumtime(realNow)
-	Convierte realNow (hora real) en hora del foro
-*/
-function clock_realtimeToForumtime(realNow) {
-	var forumNow = new Date();
-	for (var i=1; i<clocks.length; i++) {
-		// Comprobar a qué intervalo pertenece
-		var realMax = new Date(clocks[i].real);
-		var realMin = new Date(clocks[i-1].real);
-		
-		var forumMax = new Date(clocks[i].forum);
-		var forumMin = new Date(clocks[i-1].forum);
-		if (realNow<=realMax && realNow>realMin) {
-			// Pertenece al intervalo entre «i-1» e «i»
-			// Calcular la hora del foro.
-			// Para ello, se hace una regla de tres entre la diferencia de horas del foro y la diferencia de horas en la realidad
-			var percent = (realNow - realMin)/(realMax - realMin);
-			var forumNow = new Date(forumMin.getTime() + (forumMax - forumMin) * percent);
-			
-			var multiplier = (realMax - realMin)/(forumMax - forumMin);
-		}
-	}
-	//
-	// Si el intervalo al que pertenece no existe
-	var i = clocks.length-1;
-	if (realNow > new Date(clocks[i].real)) {
-		var realMax = new Date(clocks[i].real);
-		var realMin = new Date(clocks[i-1].real);
-		
-		var forumMax = new Date(clocks[i].forum);
-		var forumMin = new Date(clocks[i-1].forum);
-		
-		var percent = (forumNow - forumMin)/(forumMax - forumMin);
-		var forumNow = new Date(forumMin.getTime() + (forumMax - forumMin) * percent);
-	}
-	return forumNow;
-}
-/*
-
-	FUNCIÓN clock_forumtimeToRealtime(when)
-	Convierte when (hora del foro) en hora real
-
-*/
-function clock_forumtimeToRealtime(forumNow) {
-	for (var i=1; i<clocks.length; i++) {
-		// Comprobar a qué intervalo pertenece
-		var realMax = new Date(clocks[i].real);
-		var realMin = new Date(clocks[i-1].real);
-		
-		var forumMax = new Date(clocks[i].forum);
-		var forumMin = new Date(clocks[i-1].forum);
-		if (forumNow<=forumMax && forumNow>forumMin) {
-			// Pertenece al intervalo entre «i-1» e «i»
-			// Calcular la hora del foro.
-			// Para ello, se hace una regla de tres entre la diferencia de horas del foro y la diferencia de horas en la realidad
-			var percent = (forumNow - forumMin)/(forumMax - forumMin);
-			var realNow = new Date(realMin.getTime() + (realMax - realMin) * percent);
-			
-			var multiplier = (realMax - realMin)/(forumMax - forumMin);
-		}
-	}
-	var i = clocks.length-1;
-	if (forumNow > new Date(clocks[i].forum)) {
-		var realMax = new Date(clocks[i].real);
-		var realMin = new Date(clocks[i-1].real);
-		
-		var forumMax = new Date(clocks[i].forum);
-		var forumMin = new Date(clocks[i-1].forum);
-		
-		var percent = (forumNow - forumMin)/(forumMax - forumMin);
-		var realNow = new Date(realMin.getTime() + (realMax - realMin) * percent);
-	}
-	return realNow;
-}
 
 /*
 

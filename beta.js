@@ -1,4 +1,4 @@
-/*--------------------------------------------------------------------
+/*--------------------------------------------------------------------\
 |                                                                     |
 |   SEIJYUJI GAKUEN PRESENTS                                          |
 |   BETA                                                              |
@@ -9,7 +9,7 @@
 $(document).ready(function(e) {
 	// Comprobar que el Usuario está en modo Beta
 	var user = $('img#i_icon_mini_logout').attr('title');
-	if (user=='Desconectarse [ Admin ]' || user=='Desconectarse [ Ryûji Suguro ]' || user=='Desconectarse [ Okumura Rin ]') {
+	if (user=='Desconectarse [ Admin ]' || user=='Desconectarse [ Ryûji Suguro ]' || user=='Desconectarse [ Okumura Rin ]' || user=='Desconectarse [ Okumura Yukio ]' ) {
 		// Lo está
 		
 		// Beta 1                                     

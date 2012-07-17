@@ -1,18 +1,18 @@
-/*
-	SEIJYUJI GAKUEN JAVA-SCRIPT
-	
-	>	FONDO SEIJYUJI
-	Establece el nuevo fondo. Después configura el movimiento para el ratón
-	
-	Creado el día 07/07/2012
-
----------------------------------------------*/
+/*-------------------------------------------------------------------*\
+|                                                                     |
+|   SEIJYUJI GAKUEN PRESENTS                                          |
+|                                                                     |
+|   Sitúa el fondo #flameBG. Crea el script para que aparezca y       |
+|	desaparezca                                                       |
+|   Aplicable a TODAS LAS PÁGINAS                                     |
+|                                                                     |
+\*-------------------------------------------------------------------*/
 $(document).ready(function(e) {
 	$('<div id="flameBG1">-</div>').appendTo('body');
 	var centerX = $(window).width()/2 - 350;
-	var centerY = 320;
+	var centerY = 400;
 	
-	var rX = 300;
+	var rX = 200;
 	var rY = 40;
 	
 	$(document).mousemove(function(e) {

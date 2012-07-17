@@ -1,10 +1,9 @@
 /*-------------------------------------------------------------------*\
 |                                                                     |
 |   SEIJYUJI GAKUEN PRESENTS                                          |
-|   NEW BATTLE SYSTEM.                                                |
 |                                                                     |
-|	Conversor de dados a resultado                                    |
-|	Aplicable a POSTS                                                 |
+|   Conversor de dados a resultado                                    |
+|   Aplicable a POSTS                                                 |
 |                                                                     |
 \*-------------------------------------------------------------------*/
 $(document).ready(function(e) {
