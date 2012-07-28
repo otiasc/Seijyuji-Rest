@@ -6,8 +6,9 @@
 
 /* End CSS for print media */
 body {
-  background:#000000 url(/imgs/heading_back.png) no-repeat center top;
   padding:0;
+  background-repeat:no-repeat;
+  background-position:center top;
 }
 #flameBG1,
 #flameBG2 {
@@ -18,7 +19,7 @@ body {
   width:100%;
 }
 #flameBG1 {
-  background:url(/imgs/heading_seijyuji.png) no-repeat center top;
+  background:url("https://github.com/otiasc/Seijyuji-Rest/raw/master/heading_seijyuji.png") no-repeat center top;
 }
 #flameBG2 {
   background:none;
@@ -35,6 +36,7 @@ body {
   padding:0;
 }
 div#container {
+  -webkit-box-shadow:#666 0 6px 30px -3px;
   box-shadow:#666 0 6px 30px -3px;
   width:920px !important;
   padding:20px;
@@ -43,6 +45,9 @@ div#container {
   padding: 0;
 }
 #logo-desc p {
+  display:none;
+}
+#left {
   display:none;
 }
 /* Tags------------------------------------*/
@@ -79,6 +84,7 @@ p.path {
   margin: 10px 0;
 }
 /* Links------------------------------------*/
+
 a:hover{
   color: #06C;
   text-decoration: none;
@@ -98,6 +104,7 @@ select:focus {
   background:#000000;
   box-shadow:#333 0 -7px 20px -3px inset;
   box-sizing:content-box;
+  -moz-box-sizing:content-box;
 }
 .inputbox:hover {
   border-color:#666;
@@ -116,7 +123,9 @@ button.button1 {
   font-size:13px;
   padding:5px 10px;
   border-radius:4px;
+  -moz-border-radius:4px;
   box-shadow:#222 0 -6px 10px -3px inset;
+  -webkit-box-shadow:#222 0 -6px 10px -3px inset;
   border:none;
   background:#444;
   color:#FFFFFF;
@@ -135,10 +144,12 @@ button.button2,
 select,
 input[type=submit].mainoption {
   box-sizing:border-box;
+  -moz-box-sizing:border-box;
   font-size:10px;
   padding:3px 5px;
   border-radius:4px;
   box-shadow:#222 0 -6px 10px -3px inset;
+  -webkit-box-shadow:#222 0 -6px 10px -3px inset;
   color:#CCCCCC;
   background:#333;
   border:none;
@@ -254,6 +265,7 @@ ul.topiclist li.header {
 }
 ul.topiclist li.header dd,
 ul.topiclist li.header dt {
+  margin:-1px;
   color:#FFF;
 }
 li.header dl.icon dt {
@@ -275,13 +287,22 @@ ul.topiclist dd {
   border: none;
 }
 ul.forums li.row {
-  height:65px;
 }
 ul.forums dd.dterm .hierarchy {
-  font-size:14px !important;
+  color:#999;
+  font-size:13px !important;
   padding:3px 0;
   display:inline-block;
   margin:0;
+}
+ul.forums dd.dterm a.forumtitle,
+ul.forums dd.dterm a.gensmall {
+  color:#999;
+}
+
+ul.forums dd.dterm a.forumtitle:hover,
+ul.forums dd.dterm a.gensmall:hover {
+  color:#06C;
 }
 ul.forums dd.dterm div {
   white-space:nowrap;
@@ -289,11 +310,6 @@ ul.forums dd.dterm div {
 }
 ul.topiclist li.row {
   background:none;
-  opacity:0.7;
-  transition:0.2s;
-  -moz-transition:0.2s;
-  -webkit-transition:0.2s;
-  -o-transition:0.2s;
 }
 ul.topiclist li.row:hover {
   opacity:1;
@@ -497,6 +513,74 @@ blockquote.bad {
   width:30px;
   height:70px;
 }
+/* Textarea------------------------------------*/
+#page-footer, div.navbar, div.navbar ul.linklist {
+	display: block !important;
+}
+ul.linklist li.rightside, ul.linklist li.rightside a.copyright {
+	display: inline !important;
+}
+
+#text_editor_controls {
+	font-size:0px;
+	padding:7px 7px 0 7px;
+	margin:0;
+	height:40px;
+	background:#333333;
+	border-radius:6px 6px 0 0;
+}
+fieldset.fields1 div.clear {
+	margin:0;
+}
+#smiley-box {
+	background:#000;
+	position:absolute;
+	margin: 0 0 0 710px;
+	width:190px;
+	height:298px;
+	border:#333 1px solid;
+	border-left:#333 9px solid;
+}
+#smiley-box iframe {
+	width:100%;
+	height:100%;
+}
+#message-box {
+	height:300px;
+}
+#message-box br {
+	display:none;
+}
+#textarea_content {
+	margin:0;
+	width:910px;
+	height:300px;
+}
+#textarea_content textarea#text_editor_textarea {
+	width:100%;
+	height:100%;
+	padding:10px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+#textarea_content textarea#text_editor_textarea:focus {
+	outline:none;
+	border:#06C 1px solid;
+	box-shadow:#06C 0 6px 20px -5px inset;
+}
+#showBattleSystem {
+	display:block;
+	float:right;
+	font-size:11px;
+}
+
+fieldset.submit-buttons {
+	font-size:0;
+}
+fieldset.submit-buttons input {
+	padding:4px 7px;
+}
 /* Clock------------------------------------*/
 #clock {
   border:none;
@@ -662,4 +746,13 @@ ul.news .newstitle h3 {
 }
 #news-2 span {
   background:url(/imgs/back_002.jpg) no-repeat top right;
+}
+
+/* Afiliados ------------*/
+#afilitylist {
+  height:40px;
+}
+#afilitylist li {
+  float:left;
+  margin:0 1px 0 0;
 }

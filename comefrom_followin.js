@@ -50,16 +50,28 @@ function getLink(_direction) {
 					
 					if (_direction=="comefrom" && currentPost==0) {
 						// "Vengo de" + post nuevo => Obtener el último post realizado, es decir, primer hijo
-						returnLink = $(data).contents().find('#main-content .search.post.row1:first .postbody h2.h3 a').attr('href');
+						var found=false;
+						$(data).contents().find('#main-content .search.post.row1').each(function(index, element) {
+							
+							var valid = isValid( $(this).find('.postprofile dd:eq(2) .postdetails').attr('href') );
+							var fullLink = $(this).find('.postbody h2.h3 a').attr('href');
+							var linkId = parseInt(fullLink.slice(fullLink.indexOf('#')+1), 10);
+							
+							if (!found && valid) {
+								returnLink = fullLink;
+								found = true;
+							}
+						});
 					} else if (_direction=='comefrom' && currentPost!=0) {
 						// "Vengo de" + post que no es nuevo => Obtener el inmediato anterior a él
 						var found=false;
 						$(data).contents().find('#main-content .search.post.row1').each(function(index, element) {
 							// Buscar en cada post
+							var valid = isValid( $(this).find('.postprofile dd:eq(2) .postdetails').attr('href') );
 							var fullLink = $(this).find('.postbody h2.h3 a').attr('href');
 							var linkId = parseInt(fullLink.slice(fullLink.indexOf('#')+1), 10);
 							
-							if (linkId<currentPost && !found) {
+							if (linkId<currentPost && !found && valid) {
 								found = true;
 								returnLink = fullLink;
 							}
@@ -68,10 +80,11 @@ function getLink(_direction) {
 						// "Sigo en" + post que no es nuevo => Obtener el siguiente a él
 						$(data).contents().find('#main-content .search.post.row1').each(function(index, element) {
 							// Buscar en cada post
+							var valid = isValid( $(this).find('.postprofile dd:eq(2) .postdetails').attr('href') );
 							var fullLink = $(this).find('.postbody h2.h3 a').attr('href');
 							var linkId = parseInt(fullLink.slice(fullLink.indexOf('#')+1), 10);
 							
-							if (linkId>currentPost) {
+							if (linkId>currentPost && valid) {
 								returnLink = fullLink;
 							}
                         });
@@ -105,4 +118,14 @@ function getLink(_direction) {
 		}
 	});
 
+}
+
+
+function isValid(_link) {
+	var forumId = parseInt(_link.slice(2, _link.indexOf('-')), 10);
+	if (forumId==74 || forumId==3 || forumId==22 || forumId==21 || forumId==75) {
+		return false;
+	} else {
+		return true;
+	}
 }

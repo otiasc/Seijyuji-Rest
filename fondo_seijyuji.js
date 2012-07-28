@@ -28,5 +28,7 @@ $(document).ready(function(e) {
 		var alpha = 1 - p;
 		
 		$('#flameBG1').css('opacity', alpha);
+		$('#flameBG1').css('-moz-opacity', alpha);
+		$('#flameBG1').css('-webkit-opacity', alpha);
 	});
 });

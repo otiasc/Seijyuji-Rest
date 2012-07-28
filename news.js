@@ -36,16 +36,18 @@ $(document).ready(function(e) {
 		var li = $('<li id="' + news[i].id + '"></li>').addClass('row').html(news[i].content);
 		li.appendTo($newsContents);
 		
-		$newsTitles.append('<a href="javascript:void(0)" id="'+ news[i].id +'-btn" class="newstitle" onclick="activate(\'' + news[i].id + '\')">' + news[i].title + '</a>');
+		$newsTitles.append(
+			$('<a href="javascript:void(0)" id="'+ news[i].id +'-btn" class="newstitle">' + news[i].title + '</a>').attr('onclick', 'news_activate("' + news[i].id + '")')
+		);
 	}
 	
 	$newsTitles.appendTo($('ul.topiclist.news li.header .table-title'));
 	$newsContents.insertAfter($('.forabg:first ul.topiclist.news'));
 	
-	activate(news[0].id);
+	news_activate(news[0].id);
 });
 
-function activate(_id) {
+function news_activate(_id) {
 	for (var i=0; i<news.length; i++) {
 		$('li#' + news[i].id).hide();
 		$('a#' + news[i].id + '-btn').removeClass('selected');
