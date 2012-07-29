@@ -9,6 +9,11 @@
 \*-------------------------------------------------------------------*/
 var news = new Array();
 news.push({
+	title:'Información',
+	id:'news-0',
+	content:'<a href="#" class="newstitle" href="#"><h3>Sí. Hemos cambiado algunas cosas</h3><p>Y muchas otras que no se ven</p></a>'
+});
+news.push({
 	title:'Evento',
 	id:'news-1',
 	content:'<span class="newstitle" href="#"><h3>Clase especial</h3><p>Reunión ahora en <a href="http://seijyujigakuen.foroactivo.com/t137-segunda-clase-de-exorcismo-farmacologia-demoniaca-charla">Aula 1106</a></p></span>'
@@ -18,11 +23,11 @@ news.push({
 	id:'news-2',
 	content:'<span class="newstitle" href="#"><h3>El día 17 de julio de 2012, el reloj ha muerto</h3><p>Puedes dejar tu mensaje de despedida <a href="http://seijyujigakuen.foroactivo.com/t137-segunda-clase-de-exorcismo-farmacologia-demoniaca-charla">aquí</a></p></span>'
 });
-news.push({
+/*news.push({
 	title:'Nuevo diseño',
 	id:'news-3',
 	content:'<a href="#" class="newstitle" href="#"><h3>Sí. Hemos cambiado algunas cosas</h3><p>Y muchas otras que no se ven</p></a>'
-});
+});*/
 $(document).ready(function(e) {
 	var $forabg = $('<div class="forabg"><div class="inner"><ul class="topiclist news"><li class="header"><dl class="icon"><dd class="dterm"><div class="table-title"><h2>Tablón de anuncios</h2></div></dd></dl></li></ul></div></div>');
 	
