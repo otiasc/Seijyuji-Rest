@@ -27,3 +27,25 @@ $(document).ready(function(e) {
 		post_check(obj);
     });
 });
+function post_check(me) {
+	for (var i=0; i<statistics.length; i++) {
+		var cs = new Object({
+			F:statistics[i].F.charAt(0),
+			V:statistics[i].F.charAt(1),
+			I:statistics[i].F.charAt(2),
+			D:statistics[i].F.charAt(3),
+			PUN:statistics[i].F.charAt(4),
+			ESG:statistics[i].F.charAt(5),
+			FAM:statistics[i].F.charAt(6),
+			MEM:statistics[i].F.charAt(7),
+			MED:statistics[i].F.charAt(8)
+		});
+		if (cs.id==id) {
+			// check
+			if (cs.F<me.F || cs.V<me.V || cs.I<me.I || cs.D<me.D || cs.PUN<me.PUN || cs.ESG<me.ESG || cs.FAM<me.FAM || cs.MEM<me.MEM || cs.MED<me.MED) {
+				// not valid
+				$(this).css('border-right-color', '#F00');
+			}
+		}
+	}
+}
