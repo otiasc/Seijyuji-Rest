@@ -13,7 +13,7 @@ $(document).ready(function(e) {
 		
 		var s2 = stats2.split(',');
 		s2.shift();
-		var obj = new Object({
+		var me = new Object({
 			F:s1[0],
 			V:s1[1],
 			I:s1[2],
@@ -24,28 +24,27 @@ $(document).ready(function(e) {
 			MEM:s2[3],
 			MED:s2[4]
 		});
-		post_check(obj);
-    });
-});
-function post_check(me) {
-	for (var i=0; i<statistics.length; i++) {
-		var cs = new Object({
-			F:statistics[i].F.charAt(0),
-			V:statistics[i].F.charAt(1),
-			I:statistics[i].F.charAt(2),
-			D:statistics[i].F.charAt(3),
-			PUN:statistics[i].F.charAt(4),
-			ESG:statistics[i].F.charAt(5),
-			FAM:statistics[i].F.charAt(6),
-			MEM:statistics[i].F.charAt(7),
-			MED:statistics[i].F.charAt(8)
-		});
-		if (cs.id==id) {
-			// check
-			if (cs.F<me.F || cs.V<me.V || cs.I<me.I || cs.D<me.D || cs.PUN<me.PUN || cs.ESG<me.ESG || cs.FAM<me.FAM || cs.MEM<me.MEM || cs.MED<me.MED) {
-				// not valid
-				$(this).css('border-right-color', '#F00');
+		for (var i=0; i<statistics.length; i++) {
+			var cs = new Object({
+				id:statistics[i].id,
+				F:statistics[i].F.charAt(0),
+				V:statistics[i].F.charAt(1),
+				I:statistics[i].F.charAt(2),
+				D:statistics[i].F.charAt(3),
+				PUN:statistics[i].F.charAt(4),
+				ESG:statistics[i].F.charAt(5),
+				FAM:statistics[i].F.charAt(6),
+				MEM:statistics[i].F.charAt(7),
+				MED:statistics[i].F.charAt(8)
+			});
+			if (cs.id==id) {
+				alert('here i am');
+				// check
+				if (cs.F<me.F || cs.V<me.V || cs.I<me.I || cs.D<me.D || cs.PUN<me.PUN || cs.ESG<me.ESG || cs.FAM<me.FAM || cs.MEM<me.MEM || cs.MED<me.MED) {
+					// not valid
+					$(this).css('border-right-color', '#F00');
+				}
 			}
 		}
-	}
-}
+    });
+});

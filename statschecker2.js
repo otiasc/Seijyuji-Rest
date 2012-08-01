@@ -11,4 +11,5 @@
  
  
 var statistics = new Array();
-statistics.push({id:1,  F:'999997999'}); // Admin
+statistics.push({id:1,  F:'999999999'}); // Admin
+statistics.push({id:4,  F:'111111111'}); // Ryûji Suguro
