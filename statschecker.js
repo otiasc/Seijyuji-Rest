@@ -18,6 +18,7 @@ $(document).ready(function(e) {
 			MEM:t.charAt(7),
 			MED:t.charAt(8)
 		});
+		$(this).css('border-right-color', '#000');
 		for (var i=0; i<statistics.length; i++) {
 			var cs = new Object({
 				id:statistics[i].id,
@@ -31,7 +32,7 @@ $(document).ready(function(e) {
 				MEM:statistics[i].F.charAt(7),
 				MED:statistics[i].F.charAt(8)
 			});
-			$(this).css('border-right-color', '#000');
+			
 			if (cs.id==id) {
 				// check
 				if (cs.F<me.F || cs.V<me.V || cs.I<me.I || cs.D<me.D || cs.PUN<me.PUN || cs.ESG<me.ESG || cs.FAM<me.FAM || cs.MEM<me.MEM || cs.MED<me.MED) {
