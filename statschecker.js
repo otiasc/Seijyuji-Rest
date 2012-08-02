@@ -18,7 +18,7 @@ $(document).ready(function(e) {
 			MEM:t.charAt(7),
 			MED:t.charAt(8)
 		});
-		$(this).css('border-right-color', '#000');
+		$(this).css('border-right-color', '#1A1B20');
 		for (var i=0; i<statistics.length; i++) {
 			var cs = new Object({
 				id:statistics[i].id,
