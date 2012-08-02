@@ -31,11 +31,14 @@ $(document).ready(function(e) {
 				MEM:statistics[i].F.charAt(7),
 				MED:statistics[i].F.charAt(8)
 			});
+			$(this).css('border-right-color', '#000');
 			if (cs.id==id) {
 				// check
 				if (cs.F<me.F || cs.V<me.V || cs.I<me.I || cs.D<me.D || cs.PUN<me.PUN || cs.ESG<me.ESG || cs.FAM<me.FAM || cs.MEM<me.MEM || cs.MED<me.MED) {
 					// not valid
 					$(this).css('border-right-color', '#F00');
+				} else {
+					$(this).css('border-right-color', '#393E55');
 				}
 			}
 		}
