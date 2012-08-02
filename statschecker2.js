@@ -36,4 +36,4 @@ statistics.push({id:26, F:'434224411'}); // kida kuran
 statistics.push({id:27, F:'244495000'}); // Mr. Fox
 //statistics.push({id:28, F:'-------'}); // Limonxic
 //statistics.push({id:29, F:'-------'}); // Dragon Ball…
-statistics.push({id:30, F:'244101000'}); // Mia Asakura
+statistics.push({id:30, F:'244100100'}); // Mia Asakura
