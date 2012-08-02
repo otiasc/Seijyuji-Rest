@@ -21,7 +21,7 @@ statistics.push({id:9,  F:'114500100'}); // Izumo
 statistics.push({id:10, F:'113600001'}); // Shiemi Moriyama
 //statistics.push({id:--, F:'-------'}); // Shima Kinzou
 //statistics.push({id:--, F:'-------'}); // Shiemi Moriyama
-//statistics.push({id:--, F:'-------'}); // Kira Okami
+statistics.push({id:15, F:'442336223'}); // Kira Okami
 statistics.push({id:16, F:'533436444'}); // Shura Kirigakure
 statistics.push({id:17, F:'243201000'}); // Natsuky Hikary
 //statistics.push({id:18, F:'-------'}); // Kuroyuki Hiramatsu
