@@ -1,0 +1,364 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+body {
+  font-family:'Open Sans', Arial, Helvetica, sans-serif;
+  font-weight:400;
+  font-size:14px;
+  
+  background:#000000;
+  color:#666666;
+  padding:0;
+  margin:0;
+  text-align:center;
+}
+/* GENERAL - STRUCTURE (container...) */
+#wrap {
+  width:960px;
+  text-align:left;
+  margin:0 auto;
+  padding:0 10px;
+  box-shadow:0 0px 9px 1px rgba(255, 255, 255, 0.2);
+}
+#page-header {
+  height:320px;
+}
+/* GENERAL - TAGS (h1...h6, a, ul, li...) */
+a {
+  color:#999999;
+  text-decoration:none;
+}
+h2 {
+  font-size:16px;
+  padding:0;
+  margin:0;
+}
+a:hover {
+  color:#DDD;
+}
+/* GENERAL - UI (button, text...) */
+.button-ui {
+  width:16px;
+  height:16px;
+  display:inline-block;
+}
+.button-ui-circle {
+  background:url(../imgs/icons_disabled.png) no-repeat -80px -144px;
+}
+.button-ui-disk {
+  background:url(../imgs/icons_disabled.png) no-repeat -96px -144px;
+}
+/* GENERAL - CLASSES */
+.linklist {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.linklist li {
+  float:left;
+}
+
+.rightside {
+  float:right !important;
+}
+.clear {
+}
+.nomargin {
+  margin:0;
+}
+.righttext {
+  text-align:right;
+}
+.highlight {
+  color:#0066CC;
+}
+/* SPECIFIC - STRUCTURE - */
+/* SPECIFIC - LOGO */
+#logo {
+  float:right;
+}
+#logo img {
+}
+#logo-desc {
+  height:300px;
+  padding:0;
+  margin:0;
+}
+#logo-desc2 {
+  display:inline-block;
+  margin:200px 0 0 30px;
+  padding:0;
+  list-style:none;
+  background:#000000;
+}
+#logo-desc2 h1 {
+  font-size:36px;
+  font-weight:300;
+}
+#logo-desc2 h1, #logo-desc2 p {
+  padding:0;
+  margin:0;
+}
+/* SPECIFIC - NAVBAR & SEARCH-BOX */
+.navbar {
+  padding:0;
+  margin:0;
+  font-size:13px;
+}
+.navlinks {
+  float:left;
+}
+.navlinks li {
+  margin:0 3px 0 0;
+  padding:0;
+}
+.navbar li img {
+  display:none;
+}
+#search-box {
+  padding:0;
+  margin:0;
+  float:right;
+}
+/* SPECIFIC - FIRST LINKS */
+#main-content {
+  padding:0 0 0 0;
+}
+#main-content p:nth-child(1),
+#main-content p:nth-child(2) {
+  display:none;
+}
+.forabg {
+  clear:both;
+}
+/* SPECIFIC - NEWBAR */
+#newbar {
+  margin:20px -10px 15px -10px;
+  height:260px;
+  background:#222;
+  padding:10px;
+}
+#newbar-menu {
+  float:left;
+  width:220px;
+  height:220px;
+  border-right:#333 1px solid;
+}
+#newbar-menu ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+#newbar-menu li {
+  margin:-2px 0 2px 0;  
+}
+#newbar-menu li.selected {
+  background:#333;
+  margin-right:-10px;
+}
+#newbar-menu li.selected a {
+  color:#0066CC;
+}
+#newbar-menu a {
+  display:block;
+  padding:3px;
+}
+#newbar-content {
+  margin:0 0 0 220px;
+  padding:0 20px;
+  height:230px;
+}
+.newbar-content-history,
+.newbar-content-staff {
+  display:none;
+}
+#newbar-content.history .newbar-content-history,
+#newbar-content.staff .newbar-content-staff {
+  display:block;
+}
+.newbar-content-history h2 {
+  color:#999;
+  font-size:13px;
+  font-weight:700;
+}
+.newbar-content-history h2:first-line {
+  font-size:17px;
+}
+
+.newbar-content-staff h2 {
+  color:#999;
+  font-size:17px;
+  font-weight:700;
+}
+.newbar-content-staff ul#staff {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.newbar-content-staff ul#staff li {
+  float:left;
+  width:120px;
+  margin:0 5px 0 0;
+  font-size:12px;
+}
+.newbar-content-staff ul#staff li h3 {
+  margin:0;
+  padding:0;
+  font-size:14px;
+}
+
+#newbar-links li {
+  margin:0 10px 0 0;
+}
+/* SPECIFIC - LINKLIST */
+#main-content ul.linklist:nth-child(4) {
+  font-size:12px;
+}
+
+/* SPECIFIC - INDEX */
+/*
+	.forabg
+	    ul.topiclist 			titulos
+        li.header				cada titulo
+        	dl.icon
+            	dd.dterm
+                	div.table-title
+                    	h2
+                dd.topics
+                dd.posts
+                dd.lastpost
+        ul.topiclist.forums		lista de foros
+        li.row					cada foro
+        	dl.icon				icono del foro		
+	        	dd.dterm		titulo y descripcion
+                	h3			titulo
+                    resto: 		descripcion
+    	        dd.topics
+                	dfn					"Temas"
+        	    dd.posts
+                	dfn					"Mensajes"
+            	dd.lastpost
+                	"Jue 2 Ago 2012 - 11:02" <br>
+                    strong				Usuario
+                    a.last-post-icon	link al último post
+*/
+.forabg ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.forabg h2 {
+  font-weight:400;
+  font-size:19px;
+  padding:12px 0 0 0;
+}
+.forabg h3 {
+  font-weight:300;
+  font-size:14px;
+  margin:0;
+  padding:0;
+}
+/* Off-rol */
+#main-content .forabg {
+}
+#main-content .forabg li.header {
+  padding:0;
+  margin:0;
+}
+#main-content .forabg li.header dl.icon {
+  padding:0;
+  margin:0;
+}
+#main-content .forabg li.header .dterm {
+  padding:0;
+  margin:0;
+}
+#main-content .forabg li.header .topics,
+#main-content .forabg li.header .posts,
+#main-content .forabg li.header .lastpost {
+  display:none;
+}
+#main-content .forabg:nth-child(5) li.row {
+  float:left;
+  width:315px;
+  padding:0 7px 0 0;
+}
+#main-content .forabg:nth-child(5) li.row:last-child {
+  padding:0;
+}
+#main-content .forabg:nth-child(6) li.row {
+  float:left;
+  width:235px;
+  padding:0 6px 0 0;
+}
+#main-content .forabg:nth-child(6) li.row:last-child {
+  padding:0;
+}
+
+#main-content .forabg:nth-child(7) li.row {
+  float:left;
+  width:235px;
+  height:300px;
+  padding:0 6px 0 0;
+}
+#main-content .forabg:nth-child(7) li.row .newStyleDesc img {
+  width:240px;
+  height:203px;
+}
+#main-content .forabg:nth-child(7) li.row:nth-child(4n) {
+  padding:0;
+}
+
+#main-content .forabg:nth-child(8) li.row {
+  float:left;
+  width:235px;
+  height:300px;
+  padding:0 6px 0 0;
+}
+#main-content .forabg:nth-child(8) li.row .newStyleDesc img {
+  width:235px;
+  height:134px;
+}
+#main-content .forabg:nth-child(8) li.row:nth-child(4n) {
+  padding:0;
+}
+
+
+#main-content .forabg li.row dl.icon {
+  padding:0;
+  margin:0;
+}
+#main-content .forabg li.row .dterm {
+  padding:0;
+  margin:0;
+}
+#main-content .forabg li.row .dterm br {
+  display:none;
+}
+#main-content .forabg:nth-child(5) li.row .dterm .newStyleDesc {
+  height:100px;
+}
+#main-content .forabg:nth-child(6) li.row .dterm .newStyleDesc {
+  height:370px;
+}
+#main-content .forabg li.row .topics {
+  display:inline-block;
+  font-size:12px;
+  margin:0;
+}
+#main-content .forabg li.row .posts {
+  display:inline-block;
+  font-size:12px;
+  margin:0;
+  padding:0 0 0 10px;
+}
+#main-content .forabg li.row .lastpost {
+  text-align:right;
+  font-size:12px;
+  margin:0;
+}
+#main-content .forabg li.row .lastpost:before {
+  content:'Último post: ';
+}
+
+/* SPECIFIC - FORUMS */
+
+/* SPECIFIC - THREADS */
