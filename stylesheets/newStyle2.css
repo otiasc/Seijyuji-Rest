@@ -21,6 +21,17 @@ body {
 #page-header {
   height:320px;
 }
+#page-header .headerbar {
+  height:300px;
+}
+#background2 {
+  position:absolute;
+  top:0;
+  width:100%;
+  height:1200px;
+  z-index:-3;
+  background:url("http://i38.servimg.com/u/f38/17/38/25/48/00seij10.jpg") no-repeat center top;
+}
 /* GENERAL - TAGS (h1...h6, a, ul, li...) */
 a {
   color:#999999;
