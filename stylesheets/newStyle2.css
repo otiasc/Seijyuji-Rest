@@ -108,6 +108,12 @@ a:hover {
   padding:0;
   margin:0;
 }
+#logo-desc-navi {
+  height:16px;
+}
+#logo-desc-navi.loading {
+  background:url(../../imgs/loader_h.gif) no-repeat 5px 0;
+}
 /* SPECIFIC - NAVBAR & SEARCH-BOX */
 .navbar {
   padding:0;

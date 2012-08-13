@@ -74,6 +74,7 @@ function preload(arrayOfImages) {
 		$('<img/>').attr('src', arrayOfImages[i]).load(function() {
 			charge++;
 			if (charge==arrayOfImages.length) {
+				$('#logo-desc-navi').removeClass('loading');
 				for (var i=0; i<arrayOfImages.length; i++) {
 					$('#logo-desc-navi').append('<a href="javascript:;" onclick="nextCode(' + i + ')" class="button-ui button-ui-circle"></a>');
 				}
@@ -84,7 +85,7 @@ function preload(arrayOfImages) {
 }
 $(document).ready(function(e) {
 	$('<div></div>').attr('id', 'background2').appendTo(document.body);
-	$('<div id="logo-desc-navi"></div>').appendTo('#logo-desc');
+	$('<div id="logo-desc-navi" class="loading"></div>').appendTo('#logo-desc');
 	$('<ul id="logo-desc2"><li><h1>Seijyuji Gakuen</h1><div>Foro de Rol de Ao no Exorcist</div></li></ul>').appendTo('#logo-desc');
 	$('.forabg .dterm div').css('margin-left', 0);
 	$('.forabg li.row .newStyleDesc').each(function() {
