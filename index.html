@@ -100,6 +100,12 @@ $(document).ready(function(e) {
 		'http://i38.servimg.com/u/f38/17/38/25/48/03rins10.jpg',
 		'http://i38.servimg.com/u/f38/17/38/25/48/00seij10.jpg'
 	]);
+	
+	$('.icon').each(function(index, element) {
+		if ($(this).css('background-image')=='url(http://i48.servimg.com/u/f48/17/38/25/48/icons_11.png)') {
+			$(this).addClass('forum-newmessages');
+		}
+    });
 });
 function activatePage(id) {
 	$('#newbar-menu .history').removeClass('selected');
@@ -261,7 +267,7 @@ insert_search_menu_new();//]]>
                             <li class="activetopics"><a href="javascript:;" onclick="activatePage('activetopics')">Tramas activas</a></li>
                           </ul>
                         </div>
-                        <div id="newbar-content" class="history">
+                        <div id="newbar-content" class="activetopics">
                           <div class="newbar-content-history">
                             <h2 class="">Los demonios existen...<br>
                               <span class="highlight">...en nuestros corazones</span></h2>
@@ -294,6 +300,52 @@ insert_search_menu_new();//]]>
                                 <h3>O clic aquí para saber más de ellos</h3>
                                 </a></li>
                             </ul>
+                          </div>
+                          <div class="newbar-content-miniguide">
+                            <ul id="miniguide">
+                              <li style="background:url(images/guide01.jpg) no-repeat left top">
+                                <a href="/t172-">
+                                <img src="http://illiweb.com/fa/empty.gif" class="empty" />
+                                <h3>Las normas</h3>
+                                </a>
+                                <p></p>
+                              </li>
+                              <li style="background:url(images/guide02.jpg) no-repeat left top">
+                                <a href="/register">
+                                <img src="http://illiweb.com/fa/empty.gif" class="empty" />
+                                <h3>Regístrate</h3></a>
+                                <p>Nombre de usuario</p>
+                                <p>=</p>
+                                <p>Nombre de personaje</p>
+                              </li>
+                              <li style="background:url(images/guide03.jpg) no-repeat left top">
+                                <img src="http://illiweb.com/fa/empty.gif" class="empty" />
+                                <h3>La ficha</h3>
+                                <p><a href="http://seijyujigakuen.foroactivo.com/profile?mode=editprofile">Entra en tu perfil</a></p>
+                                <p>Luego en Ficha de personaje y Generar.</p>
+                                <p>¡Y rellénala!</p>
+                              </li>
+                              <li style="background:url(images/guide04.jpg) no-repeat left top">
+                                <img src="http://illiweb.com/fa/empty.gif" class="empty" />
+                                <h3>Avatar</h3>
+                                <p>Ancho: 100-150px</p>
+                                <p>Alto: 100-400px</p>
+                              </li>
+                              <li style="background:url(images/guide05.jpg) no-repeat left top">
+                                <a href="/f21-">
+                                <img src="http://illiweb.com/fa/empty.gif" class="empty" />
+                                <h3>Prueba de rol</h3>
+                                <p>¡Demuestra lo que vales!</p></a>
+                              </li>
+                              <li style="background:url(images/guide06.jpg) no-repeat left top">
+                                <img src="http://illiweb.com/fa/empty.gif" class="empty" />
+                                <h3>Celébralo</h3>
+                                <p>¡Y a rolear!</p>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="newbar-content-activetopics">
+                            
                           </div>
                         </div>
                         <div id="newbar-links">
