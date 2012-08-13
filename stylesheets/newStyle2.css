@@ -112,7 +112,7 @@ a:hover {
   height:16px;
 }
 #logo-desc-navi.loading {
-  background:url(../../imgs/loader_h.gif) no-repeat 5px 0;
+  background:url('http://i38.servimg.com/u/f38/17/38/25/48/loader11.gif') no-repeat 5px 0;
 }
 /* SPECIFIC - NAVBAR & SEARCH-BOX */
 .navbar {
