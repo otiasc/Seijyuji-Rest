@@ -37,3 +37,11 @@ statistics.push({id:27, F:'244495000'}); // Mr. Fox
 //statistics.push({id:28, F:'-------'}); // Limonxic
 //statistics.push({id:29, F:'-------'}); // Dragon Ball…
 statistics.push({id:30, F:'244100100'}); // Mia Asakura
+//statistics.push({id:31, F:'-------'}); // Sayo
+//statistics.push({id:32, F:'-------'}); // Hikary Ryo
+//statistics.push({id:33, F:'-------'}); // Sayo
+//statistics.push({id:33, F:'-------'}); // Yami D. Noctis
+//statistics.push({id:34, F:'-------'}); // Gosuto Kage
+statistics.push({id:35, F:'223400100'}); // Meredith Ariant
+//statistics.push({id:36, F:'-------'}); // Vandrake
+statistics.push({id:37, F:'442244000'}); // Charlotte Blue
