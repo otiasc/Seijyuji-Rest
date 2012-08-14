@@ -88,8 +88,21 @@ $(document).ready(function(e) {
 	$('<div id="logo-desc-navi" class="loading"></div>').appendTo('#logo-desc');
 	$('<ul id="logo-desc2"><li><h1>Seijyuji Gakuen</h1><div>Foro de Rol de Ao no Exorcist</div></li></ul>').appendTo('#logo-desc');
 	$('.forabg .dterm div').css('margin-left', 0);
+	$('.forabg li.row a.forumtitle').each(function(index, element) {
+		$(this).html($('<div></div>').text($(this).text()));
+    });
 	$('.forabg li.row .newStyleDesc').each(function() {
-		$(this).appendTo($(this).parents('.dterm').find('a.forumtitle'));
+		var img = $(this).find('img');
+		var url = img.attr('src');
+		
+		$(this).css('background-image', 'url(' + url + ')');
+		$(this).css('background-position', 'left top');
+		$(this).css('background-repeat', 'no-repeat');
+		$(this).appendTo($(this).parents('.dterm').find('a.forumtitle').attr('title', img.attr('title')));
+		img.remove();
+	});
+	$('.forabg li.row .newStyleSubforums').each(function() {
+		$(this).parents('li.row').addClass('specialRow');
 	});
 	//changeHeaderPage(0);
 	
@@ -191,7 +204,7 @@ function stepThree(h) {
           <div class="headerbar">
             <div class="inner"><span class="corners-top"><span></span></span>
               <div id="logo-desc"><a href="/" id="logo"><img src="http://i38.servimg.com/u/f38/17/38/25/48/logo10.png" /></a> 
-                <!--                <p>Foro de rol de Ao no Exorcist</p>-->
+                <!--                <p>Foro de rol de Ao no Exorcist</p>--> 
                 
               </div>
               <span class="corners-bottom"><span></span></span></div>
@@ -303,50 +316,40 @@ insert_search_menu_new();//]]>
                           </div>
                           <div class="newbar-content-miniguide">
                             <ul id="miniguide">
-                              <li style="background:url(images/guide01.jpg) no-repeat left top">
-                                <a href="/t172-">
-                                <img src="http://illiweb.com/fa/empty.gif" class="empty" />
+                              <li style="background:url(images/guide01.jpg) no-repeat left top"> <a href="/t172-"> <img src="http://illiweb.com/fa/empty.gif" class="empty" />
                                 <h3>Las normas</h3>
                                 </a>
                                 <p></p>
                               </li>
-                              <li style="background:url(images/guide02.jpg) no-repeat left top">
-                                <a href="/register">
-                                <img src="http://illiweb.com/fa/empty.gif" class="empty" />
-                                <h3>Regístrate</h3></a>
+                              <li style="background:url(images/guide02.jpg) no-repeat left top"> <a href="/register"> <img src="http://illiweb.com/fa/empty.gif" class="empty" />
+                                <h3>Regístrate</h3>
+                                </a>
                                 <p>Nombre de usuario</p>
                                 <p>=</p>
                                 <p>Nombre de personaje</p>
                               </li>
-                              <li style="background:url(images/guide03.jpg) no-repeat left top">
-                                <img src="http://illiweb.com/fa/empty.gif" class="empty" />
+                              <li style="background:url(images/guide03.jpg) no-repeat left top"> <img src="http://illiweb.com/fa/empty.gif" class="empty" />
                                 <h3>La ficha</h3>
                                 <p><a href="http://seijyujigakuen.foroactivo.com/profile?mode=editprofile">Entra en tu perfil</a></p>
                                 <p>Luego en Ficha de personaje y Generar.</p>
                                 <p>¡Y rellénala!</p>
                               </li>
-                              <li style="background:url(images/guide04.jpg) no-repeat left top">
-                                <img src="http://illiweb.com/fa/empty.gif" class="empty" />
+                              <li style="background:url(images/guide04.jpg) no-repeat left top"> <img src="http://illiweb.com/fa/empty.gif" class="empty" />
                                 <h3>Avatar</h3>
                                 <p>Ancho: 100-150px</p>
                                 <p>Alto: 100-400px</p>
                               </li>
-                              <li style="background:url(images/guide05.jpg) no-repeat left top">
-                                <a href="/f21-">
-                                <img src="http://illiweb.com/fa/empty.gif" class="empty" />
+                              <li style="background:url(images/guide05.jpg) no-repeat left top"> <a href="/f21-"> <img src="http://illiweb.com/fa/empty.gif" class="empty" />
                                 <h3>Prueba de rol</h3>
-                                <p>¡Demuestra lo que vales!</p></a>
-                              </li>
-                              <li style="background:url(images/guide06.jpg) no-repeat left top">
-                                <img src="http://illiweb.com/fa/empty.gif" class="empty" />
+                                <p>¡Demuestra lo que vales!</p>
+                                </a> </li>
+                              <li style="background:url(images/guide06.jpg) no-repeat left top"> <img src="http://illiweb.com/fa/empty.gif" class="empty" />
                                 <h3>Celébralo</h3>
                                 <p>¡Y a rolear!</p>
                               </li>
                             </ul>
                           </div>
-                          <div class="newbar-content-activetopics">
-                            
-                          </div>
+                          <div class="newbar-content-activetopics"> </div>
                         </div>
                         <div id="newbar-links">
                           <ul class="linklist">
@@ -465,8 +468,17 @@ insert_search_menu_new();//]]>
                                       <h3 class="hierarchy"><a href="/f1-monasterio" class="forumtitle">Monasterio</a></h3>
                                       <br>
                                       <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/monast10.jpg" title="Este es el pequeño monasterio masculino que lleva el padre Fujimoto, el cual se encuentra al sur, en el pueblo de Seijyuji Gakuen" /> </div>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f30-entrada" title="La entrada al monasterio se encuentra en medio de una calle transitada por bastantes coches. Está decorada por un pequeño jardín adornado en su mayor parte por cerezos." class="gensmall">Entrada</a></li>
+                                          <li><a href="/f23-capilla" title="Pequeña capilla del monasterio, donde se celebra la misa y los fieles vienen a confesarse. Si se utiliza la llave adecuada, bajo el altar se encuentra una sala con un armario donde Fujimoto escondía la Koumaken Kurikara." class="gensmall">Capilla</a></li>
+                                          <li><a href="/f28-cocina" title="La cocina del monasterio es pequeña y cuenta con una mesa de madera donde comen todos aquellos que viven en el." class="gensmall">Cocina</a></li>
+                                          <li><a href="/f29-habitaciones" title="Las habitaciones de los habitantes del monasterio. Entre ellas se encuentran las de los hermanos, una pequeña habitación con una litera y un escritorio." class="gensmall">Habitaciones</a></li>
+                                          <li><a href="/f31-cementerio" title="En a parte trasera del monasterio se encuentra un pequeño cementerio." class="gensmall">Cementerio</a></li>
+                                        </ul>
+                                      </div>
                                       <!-- Se le conoce por sus trabajos de exorcismo. Tiene un pequeño cementerio particular en el exterior del edificio.--><br>
-                                      <!--<a href="/f30-entrada" title="La entrada al monasterio se encuentra en medio de una calle transitada por bastantes coches. Está decorada por un pequeño jardín adornado en su mayor parte por cerezos." class="gensmall">Entrada</a>, <a href="/f23-capilla" title="Pequeña capilla del monasterio, donde se celebra la misa y los fieles vienen a confesarse. Si se utiliza la llave adecuada, bajo el altar se encuentra una sala con un armario donde Fujimoto escondía la Koumaken Kurikara." class="gensmall">Capilla</a>, <a href="/f28-cocina" title="La cocina del monasterio es pequeña y cuenta con una mesa de madera donde comen todos aquellos que viven en el." class="gensmall">Cocina</a>, <a href="/f29-habitaciones" title="Las habitaciones de los habitantes del monasterio. Entre ellas se encuentran las de los hermanos, una pequeña habitación con una litera y un escritorio." class="gensmall">Habitaciones</a>, <a href="/f31-cementerio" title="En a parte trasera del monasterio se encuentra un pequeño cementerio." class="gensmall">Cementerio</a><strong></strong>--> </div>
+                                      <!--<, , , , <strong></strong>--> </div>
                                   </dd>
                                   <dd class="topics">1 <dfn>Temas</dfn></dd>
                                   <dd class="posts">5 <dfn>Mensajes</dfn></dd>
@@ -496,8 +508,15 @@ insert_search_menu_new();//]]>
                                       <h3 class="hierarchy"><a href="/f4-calle-de-la-cruz-sur" class="forumtitle">Calle de la Cruz Sur</a></h3>
                                       <br>
                                       <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/callec10.jpg" title="La calle principal del pueblo, donde pasea mucha gente, comprando o hablando. Está llena de tiendas de todo tipo." /> </div>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f25-supermercado-nico-nico" title="Uno de los supermercados más importantes, el cual se encuentra abierto las 24 horas del día." class="gensmall">Supermercado Nico Nico</a></li>
+                                          <li><a href="/f26-pabellon-cruz-del-sur" title="Su lema es &quot;Un lugar para la amistad&quot;. Es el centro comercial más grande de la ciudad, repleto de tiendas, cafeterías, restaurantes y sitios para divertirse." class="gensmall">Pabellón Cruz del Sur</a></li>
+                                          <li><a href="/f27-callejones" title="Los callejones más estrechos de la ciudad, en ellos suelen haber edificios en construcción o descampados. Muchos matones se suelen reunir por estas zonas, por lo que no es aconsejable entrar, y menos de noche." class="gensmall">Callejones</a></li>
+                                        </ul>
+                                      </div>
                                       <br>
-                                      <!--<a href="/f25-supermercado-nico-nico" title="Uno de los supermercados más importantes, el cual se encuentra abierto las 24 horas del día." class="gensmall">Supermercado Nico Nico</a>, <a href="/f26-pabellon-cruz-del-sur" title="Su lema es &quot;Un lugar para la amistad&quot;. Es el centro comercial más grande de la ciudad, repleto de tiendas, cafeterías, restaurantes y sitios para divertirse." class="gensmall">Pabellón Cruz del Sur</a>, <a href="/f27-callejones" title="Los callejones más estrechos de la ciudad, en ellos suelen haber edificios en construcción o descampados. Muchos matones se suelen reunir por estas zonas, por lo que no es aconsejable entrar, y menos de noche." class="gensmall">Callejones</a><strong></strong>--> </div>
+                                      <!--, , <strong></strong>--> </div>
                                   </dd>
                                   <dd class="topics">5 <dfn>Temas</dfn></dd>
                                   <dd class="posts">17 <dfn>Mensajes</dfn></dd>
@@ -659,8 +678,18 @@ insert_search_menu_new();//]]>
                                       <h3 class="hierarchy"><a href="/f11-escuela-de-exorcistas" class="forumtitle">Escuela de Exorcistas</a></h3>
                                       <br>
                                       <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/40410.jpg" title="Oculta para la gran parte de los alumnos, salvo aquellos que tienen la llave para acceder a ella. Es un largo pasillo lleno de aulas." /> </div>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f20-aula-1106" title="" class="gensmall">Aula 1106</a></li>
+                                          <li><a href="/f33-pasillo" title="Un largo pasillo lleno de puertas que dan a diversas aulas de la escuela de exorcistas." class="gensmall">Pasillo</a></li>
+                                          <li><a href="/f19-gimnasio" title="" class="gensmall">Gimnasio</a></li>
+                                          <li><a href="/f18-campo-de-practicas" title="Una aula que consta con una instalación de entrenamiento para exorcistas." class="gensmall">Campo de prácticas</a></li>
+                                          <li><a href="/f34-jardin" title="Un pequeño jardín en forma redondeada en cuyo centro se encuentra una fuente donde los exorcistas suelen tomarse un descanso y pasar el rato libre." class="gensmall">Jardín</a></li>
+                                          <li><a href="/f35-laboratorio" title="El laboratorio es una zona a la que solo pueden entrar los exorcistas de alto nivel, en el hay materiales altamente peligrosos, así como diversas sustancias de investigación y herramientas para llevar a cabo análisis y experimentos." class="gensmall">Laboratorio</a></li>
+                                        </ul>
+                                      </div>
                                       <br>
-                                      <!--<a href="/f20-aula-1106" title="" class="gensmall">Aula 1106</a>, <a href="/f33-pasillo" title="Un largo pasillo lleno de puertas que dan a diversas aulas de la escuela de exorcistas." class="gensmall">Pasillo</a>, <a href="/f19-gimnasio" title="" class="gensmall">Gimnasio</a>, <a href="/f18-campo-de-practicas" title="Una aula que consta con una instalación de entrenamiento para exorcistas." class="gensmall">Campo de prácticas</a>, <a href="/f34-jardin" title="Un pequeño jardín en forma redondeada en cuyo centro se encuentra una fuente donde los exorcistas suelen tomarse un descanso y pasar el rato libre." class="gensmall">Jardín</a>, <a href="/f35-laboratorio" title="El laboratorio es una zona a la que solo pueden entrar los exorcistas de alto nivel, en el hay materiales altamente peligrosos, así como diversas sustancias de investigación y herramientas para llevar a cabo análisis y experimentos." class="gensmall">Laboratorio</a><strong></strong>--> </div>
+                                      <!--, , , , <strong></strong>--> </div>
                                   </dd>
                                   <dd class="topics">9 <dfn>Temas</dfn></dd>
                                   <dd class="posts">192 <dfn>Mensajes</dfn></dd>
@@ -675,8 +704,17 @@ insert_search_menu_new();//]]>
                                       <h3 class="hierarchy"><a href="/f10-residencia-de-estudiantes-y-profesores" class="forumtitle">Residencia</a></h3>
                                       <br>
                                       <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/40410.jpg" title="Las habitaciones de estudiantes son dobles y las de profesores son más majestuosas e individuales" /> </div>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f36-habitaciones" title="Las habitaciones de los diversos estudiantes de la Seijyuji Gakuen. Las habitaciones son compartidas entre dos personas." class="gensmall">Habitaciones</a></li>
+                                          <li><a href="/f76-habitaciones-de-profesores" title="" class="gensmall">Habitaciones de profesores</a></li>
+                                          <li><a href="/f37-comedor" title="El comer sirve tanto el desayuno como la comida y la cena a los estudiantes que se encuentran hospedados en la residencia." class="gensmall">Comedor</a></li>
+                                          <li><a href="/f38-banos" title="Los baños y lavabos de la residencia, separados por sexos." class="gensmall">Baños</a></li>
+                                          <li><a href="/f39-terraza" title="La terraza de la residencia se encuentra abierta para cualquiera que quiera ir, además es donde se tiende la ropa." class="gensmall">Terraza</a></li>
+                                        </ul>
+                                      </div>
                                       <br>
-                                      <!--<a href="/f36-habitaciones" title="Las habitaciones de los diversos estudiantes de la Seijyuji Gakuen. Las habitaciones son compartidas entre dos personas." class="gensmall">Habitaciones</a>, <a href="/f76-habitaciones-de-profesores" title="" class="gensmall">Habitaciones de profesores</a>, <a href="/f37-comedor" title="El comer sirve tanto el desayuno como la comida y la cena a los estudiantes que se encuentran hospedados en la residencia." class="gensmall">Comedor</a>, <a href="/f38-banos" title="Los baños y lavabos de la residencia, separados por sexos." class="gensmall">Baños</a>, <a href="/f39-terraza" title="La terraza de la residencia se encuentra abierta para cualquiera que quiera ir, además es donde se tiende la ropa." class="gensmall">Terraza</a><strong></strong>--> 
+                                      <!--, , , , <strong></strong>--> 
                                     </div>
                                   </dd>
                                   <dd class="topics">32 <dfn>Temas</dfn></dd>
@@ -692,8 +730,16 @@ insert_search_menu_new();//]]>
                                       <h3 class="hierarchy"><a href="/f9-antigua-residencia" class="forumtitle">Antigua residencia</a></h3>
                                       <br>
                                       <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/40410.jpg" title="La antigua residencia de la Seijyuji Gakuen es un viejo edificio el cual se encuentra aparentemente desocupado." /> </div>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f40-habitacion-602" title="La habitación de Yukio y Rin Okumura" class="gensmall">Habitación 602</a></li>
+                                          <li><a href="/f41-comedor-y-cocina" title="El comedor de la antigua residencia, la cocina se encuentra en desuso, aparentemente." class="gensmall">Comedor y Cocina</a></li>
+                                          <li><a href="/f42-banos" title="Los baños y los lavabos de la antigua residencia masculina." class="gensmall">Baños</a></li>
+                                          <li><a href="/f43-terraza" title="La terraza de la residencia se encuentra abierta para cualquiera que quiera ir, además es donde se tiende la ropa." class="gensmall">Terraza</a></li>
+                                        </ul>
+                                      </div>
                                       <br>
-                                      <!--<a href="/f40-habitacion-602" title="La habitación de Yukio y Rin Okumura" class="gensmall">Habitación 602</a>, <a href="/f41-comedor-y-cocina" title="El comedor de la antigua residencia, la cocina se encuentra en desuso, aparentemente." class="gensmall">Comedor y Cocina</a>, <a href="/f42-banos" title="Los baños y los lavabos de la antigua residencia masculina." class="gensmall">Baños</a>, <a href="/f43-terraza" title="La terraza de la residencia se encuentra abierta para cualquiera que quiera ir, además es donde se tiende la ropa." class="gensmall">Terraza</a><strong></strong>--></div>
+                                      <!--, , , <strong></strong>--></div>
                                   </dd>
                                   <dd class="topics">6 <dfn>Temas</dfn></dd>
                                   <dd class="posts">91 <dfn>Mensajes</dfn></dd>
@@ -708,8 +754,15 @@ insert_search_menu_new();//]]>
                                       <h3 class="hierarchy"><a href="/f8-tienda-de-suministros-para-exorcistas-futsumaya" class="forumtitle">Tienda de Suministros</a></h3>
                                       <br>
                                       <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/tienda10.jpg" title="La tienda solo para exorcistas de la cual está a cargo la señora Moriyama." /> </div>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f45-tiendo-de-exorcistas" title="En esta tienda solo pueden entrar aquellos que tengan el rango de exorcista. En ella venden todo tipo de suministros, desde balas, hasta plantas o diversas sustancias." class="gensmall">Tiendo de exorcistas</a></li>
+                                          <li><a href="/f46-jardin" title="Un precioso jardín de encuentra a la entrada de la tienda de exorcistas, se dice que era de la madre de la tendera, aunque ahora se puede ver como su hija se dedica enteramente al cuidado de este. Se encuentra cercado por unas vallas y una puerta negras, las cuales funcionan de escudo contra los demonios." class="gensmall">Jardín</a></li>
+                                          <li><a href="/f47-habitacion-de-shiemi" title="Un pequeño cuarto al un lateral de la tienda, el cual da al jardín es la habitación de Shiemi. Antiguamente pertenecía a su abuela, pero desde su muerte ella a ocupado esta habitación que tiene una pequeña cama, para así poder estar más atenta al jardín." class="gensmall">Habitación de Shiemi</a></li>
+                                        </ul>
+                                      </div>
                                       <br>
-                                      <!--<a href="/f45-tiendo-de-exorcistas" title="En esta tienda solo pueden entrar aquellos que tengan el rango de exorcista. En ella venden todo tipo de suministros, desde balas, hasta plantas o diversas sustancias." class="gensmall">Tiendo de exorcistas</a>, <a href="/f46-jardin" title="Un precioso jardín de encuentra a la entrada de la tienda de exorcistas, se dice que era de la madre de la tendera, aunque ahora se puede ver como su hija se dedica enteramente al cuidado de este. Se encuentra cercado por unas vallas y una puerta negras, las cuales funcionan de escudo contra los demonios." class="gensmall">Jardín</a>, <a href="/f47-habitacion-de-shiemi" title="Un pequeño cuarto al un lateral de la tienda, el cual da al jardín es la habitación de Shiemi. Antiguamente pertenecía a su abuela, pero desde su muerte ella a ocupado esta habitación que tiene una pequeña cama, para así poder estar más atenta al jardín." class="gensmall">Habitación de Shiemi</a><strong></strong> --></div>
+                                      <!--, , <strong></strong> --></div>
                                   </dd>
                                   <dd class="topics">4 <dfn>Temas</dfn></dd>
                                   <dd class="posts">4 <dfn>Mensajes</dfn></dd>

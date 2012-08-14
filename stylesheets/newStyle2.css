@@ -12,13 +12,14 @@ body {
 }
 /* GENERAL - STRUCTURE (container...) */
 #wrap {
-  width:960px;
+  width:980px;
   text-align:left;
   margin:0 auto;
-  padding:0 10px;
+  padding:0 0px;
   box-shadow:0 0px 9px 1px rgba(255, 255, 255, 0.2);
 }
 #page-header {
+  padding:0 10px;
   height:320px;
 }
 #page-header .headerbar {
@@ -148,7 +149,7 @@ a:hover {
 }
 /* SPECIFIC - NEWBAR */
 #newbar {
-  margin:20px -10px 15px -10px;
+  margin:20px 0 15px 0;
   height:260px;
   background:#222;
   padding:10px;
@@ -261,6 +262,7 @@ a:hover {
 /* SPECIFIC - LINKLIST */
 #main-content ul.linklist:nth-child(4) {
   font-size:12px;
+  padding:10px;
 }
 
 /* SPECIFIC - INDEX */
@@ -306,11 +308,17 @@ a:hover {
   margin:0;
   padding:0;
 }
+.forabg li.row.specialRow .dterm .newStyleSubforums {
+  font-size:12px;
+}
+.forabg li.row.specialRow .dterm .newStyleSubforums li {
+  padding:1px 0;
+}
 /* Off-rol */
 #main-content .forabg {
 }
 #main-content .forabg li.header {
-  padding:0;
+  padding:0 10px;
   margin:0;
 }
 #main-content .forabg li.header dl.icon {
@@ -321,47 +329,75 @@ a:hover {
   padding:0;
   margin:0;
 }
+#main-content .forabg li.row {
+  padding:10px 10px;
+  margin:0px 0px;
+}
+
+#main-content .forabg:nth-child(6) li.row.specialRow .dterm .newStyleSubforums {
+  text-align:right;
+}
 #main-content .forabg li.header .topics,
 #main-content .forabg li.header .posts,
 #main-content .forabg li.header .lastpost {
   display:none;
 }
+
+
+/* ESPECÍFICO - SUBFORO Off-Rol*/
 #main-content .forabg:nth-child(5) li.row {
   float:left;
-  width:315px;
-  padding:0 7px 0 0;
+  width:305px;
 }
-#main-content .forabg:nth-child(5) li.row:last-child {
-  padding:0;
+#main-content .forabg:nth-child(5) li.row .dterm .newStyleDesc {
+  height:100px;
 }
+
+/* ESPECÍFICO - SUBFORO Ciudad de Seijyuji */
 #main-content .forabg:nth-child(6) li.row {
   float:left;
-  width:235px;
-  padding:0 6px 0 0;
+  width:224px;
 }
-#main-content .forabg:nth-child(6) li.row:last-child {
-  padding:0;
+#main-content .forabg:nth-child(6) li.row .dterm .newStyleDesc {
+  height:370px;
 }
 
+#main-content .forabg:nth-child(6) li.row.specialRow .dterm .newStyleDesc {
+  height:270px;
+}
+#main-content .forabg:nth-child(6) li.row.specialRow .dterm .newStyleSubforums {
+  height:100px;
+}
+
+/* ESPECÍFICO - SUBFORO Seijyuji Gakuen */
 #main-content .forabg:nth-child(7) li.row {
   float:left;
+  width:224px;
+  height:320px;
+}
+#main-content .forabg:nth-child(7) li.row .dterm .newStyleDesc {
+  height:214px;
+}
+#main-content .forabg:nth-child(7) li.row.specialRow {
+  width:470px;
+}
+#main-content .forabg:nth-child(7) li.row.specialRow:hover {
+  background:#191919;
+}
+#main-content .forabg:nth-child(7) li.row.specialRow .dterm .newStyleDesc {
+  float:left;
   width:235px;
-  height:300px;
-  padding:0 6px 0 0;
 }
-#main-content .forabg:nth-child(7) li.row .newStyleDesc img {
-  width:240px;
-  height:203px;
-}
-#main-content .forabg:nth-child(7) li.row:nth-child(4n) {
-  padding:0;
+#main-content .forabg:nth-child(7) li.row.specialRow .dterm .newStyleSubforums {
+  padding-left:245px;
+  height:214px;
 }
 
+/* ESPECÍFICO - SUBFORO La Orden */
 #main-content .forabg:nth-child(8) li.row {
   float:left;
   width:235px;
   height:300px;
-  padding:0 6px 0 0;
 }
 #main-content .forabg:nth-child(8) li.row .newStyleDesc img {
   width:235px;
@@ -369,6 +405,9 @@ a:hover {
 }
 #main-content .forabg:nth-child(8) li.row:nth-child(4n) {
   padding:0;
+}
+#main-content .forabg:nth-child(8) li.row .dterm .newStyleDesc {
+  height:144px;
 }
 
 
@@ -382,12 +421,6 @@ a:hover {
 }
 #main-content .forabg li.row .dterm br {
   display:none;
-}
-#main-content .forabg:nth-child(5) li.row .dterm .newStyleDesc {
-  height:100px;
-}
-#main-content .forabg:nth-child(6) li.row .dterm .newStyleDesc {
-  height:370px;
 }
 #main-content .forabg li.row .topics {
   display:inline-block;
