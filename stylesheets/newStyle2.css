@@ -404,9 +404,6 @@ a:hover {
   width:235px;
   height:134px;
 }
-#main-content .forabg:nth-child(8) li.row:nth-child(4n) {
-  padding:0;
-}
 #main-content .forabg:nth-child(8) li.row .dterm .newStyleDesc {
   height:144px;
 }
