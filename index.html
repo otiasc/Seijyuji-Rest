@@ -51,8 +51,10 @@
 <link rel="stylesheet" href="/Seijyuji-Rest/stylesheets/newStyle2.css" type="text/css" />
 <link rel="search" type="application/opensearchdescription+xml" href="/improvedsearch.xml" title="Seijyuji Gakuen">
 <link rel="search" type="application/opensearchdescription+xml" href="http://www.directorio-foros.com/es/search/improvedsearch.xml" title="Buscar foros">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script><script src="http://illiweb.com/rsc/34/frm/lang/es.js" type="text/javascript"></script><script type="text/javascript">//<![CDATA[
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+<script src="http://illiweb.com/rsc/34/frm/lang/es.js" type="text/javascript"></script><script type="text/javascript">//<![CDATA[
 $(document).ready(function(){});//]]></script>
+<script type="text/javascript" src="javascripts/identifyIndex.js"></script>
 <style type="text/css">
 #page-footer,
 div.navbar,
@@ -90,23 +92,12 @@ function loop(p, t) {
 }
 
 $(document).ready(function(e) {
+	
 	$('<div></div>').attr('id', 'background2').appendTo(document.body);
 	$('<div id="logo-desc-navi" class="loading"></div>').appendTo('#logo-desc');
 	$('<ul id="logo-desc2"><li><h1>Seijyuji Gakuen</h1><div>Foro de Rol de Ao no Exorcist</div></li></ul>').appendTo('#logo-desc');
-	$('.forabg .dterm div').css('margin-left', 0);
-	$('.forabg li.row a.forumtitle').each(function(index, element) {
-		$(this).html($('<div></div>').text($(this).text()));
-    });
-	$('.forabg li.row .newStyleDesc').each(function() {
-		var img = $(this).find('img');
-		var url = img.attr('src');
-		
-		$(this).css('background-image', 'url(' + url + ')');
-		$(this).css('background-position', 'left top');
-		$(this).css('background-repeat', 'no-repeat');
-		$(this).appendTo($(this).parents('.dterm').find('a.forumtitle').attr('title', img.attr('title')));
-		img.remove();
-	});
+	
+	
 	$('.forabg li.row .newStyleSubforums').each(function() {
 		$(this).parents('li.row').addClass('specialRow');
 	});
@@ -125,8 +116,8 @@ $(document).ready(function(e) {
 	$('.icon').each(function(index, element) {
 		if ($(this).css('background-image')=='url(http://i48.servimg.com/u/f48/17/38/25/48/icons_11.png)') {
 			$(this).parents('li.row').addClass('forum-newmessages');
-			$('.forum-newmessages').find('dl.icon').css('background-image','none');
 		}
+		$(this).css('background-image','none');
     });
 	if (location.search) {
 		var s = location.search.slice(1);
@@ -909,8 +900,14 @@ insert_search_menu_new();//]]>
                                       <h3 class="hierarchy"><a href="/f50-rama-japonesa-de-la-seijyuji" class="forumtitle">Rama Japonesa de la Seijyuji</a></h3>
                                       <br>
                                       <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/japan10.jpg" title="Se encuentra en un subterráneo bajo la Seijyuji Gakuen, Tokyo. Se encuentra bajo el liderazgo de Mephisto Pheles." /> </div>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f51-central-de-exorcistas" title="Aquí es donde se reúnen todos los exorcistas de la rama para acordar decisiones o reunirse con el jefe de la misma." class="gensmall">Central de exorcistas</a></li>
+                                          <li><a href="/f52-celdas" title="Las celdas sirven para encerrar a aquellos que hallan cometido delitos o interrogar." class="gensmall">Celdas</a></li>
+                                        </ul>
+                                      </div>
                                       <br>
-                                      <!--<a href="/f51-central-de-exorcistas" title="Aquí es donde se reúnen todos los exorcistas de la rama para acordar decisiones o reunirse con el jefe de la misma." class="gensmall">Central de exorcistas</a>, <a href="/f52-celdas" title="Las celdas sirven para encerrar a aquellos que hallan cometido delitos o interrogar." class="gensmall">Celdas</a><strong></strong>--> </div>
+                                      <!--, <strong></strong>--> </div>
                                   </dd>
                                   <dd class="topics">1 <dfn>Temas</dfn></dd>
                                   <dd class="posts">1 <dfn>Mensajes</dfn></dd>
@@ -925,8 +922,14 @@ insert_search_menu_new();//]]>
                                       <h3 class="hierarchy"><a href="/f53-rama-inglesa-de-la-seijyuji" class="forumtitle">Rama Inglesa de la Seijyuji</a></h3>
                                       <br>
                                       <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/englan10.jpg" title="La rama inglesa de la orden se encuentra oculta en algún lugar de Londres, Inglaterra." /> </div>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f55-central-de-exorcistas" title="Aquí es donde se reúnen todos los exorcistas de la rama para acordar decisiones o reunirse con el jefe de la misma." class="gensmall">Central de exorcistas</a></li>
+                                          <li><a href="/f56-celdas" title="Las celdas sirven para encerrar a aquellos que hallan cometido delitos o interrogar." class="gensmall">Celdas</a></li>
+                                        </ul>
+                                      </div>
                                       <br>
-                                      <a href="/f55-central-de-exorcistas" title="Aquí es donde se reúnen todos los exorcistas de la rama para acordar decisiones o reunirse con el jefe de la misma." class="gensmall">Central de exorcistas</a>, <a href="/f56-celdas" title="Las celdas sirven para encerrar a aquellos que hallan cometido delitos o interrogar." class="gensmall">Celdas</a><strong></strong> </div>
+                                      <strong></strong> </div>
                                   </dd>
                                   <dd class="topics">1 <dfn>Temas</dfn></dd>
                                   <dd class="posts">3 <dfn>Mensajes</dfn></dd>
@@ -942,7 +945,13 @@ insert_search_menu_new();//]]>
                                       <br>
                                       <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/kyoto10.jpg" title="La rama de Kyoto de la orden se encuentra en la misma capital. Su líderazgo es compartido entre Yaozo Shima y Uwabami Hojo" /> </div>
                                       <br>
-                                      <!-- <a href="/f67-sala-del-interior" title="Sala principal del interior de la rama de Kyoto, en ella hay una pequeña hoguera con una pequeña estatua de Buda. En lo alto de un altar se encuentra el ojo derecho del Rey Impuro, sellado en una urna. Es por esto que esta sala está sellada con barreras mágicas, para evitar que sea robado." class="gensmall">Sala del interior</a>, <a href="/f69-celdas" title="Las celdas sirven para encerrar a aquellos que hallan cometido delitos o interrogar." class="gensmall">Celdas</a><strong></strong>--> </div>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f67-sala-del-interior" title="Sala principal del interior de la rama de Kyoto, en ella hay una pequeña hoguera con una pequeña estatua de Buda. En lo alto de un altar se encuentra el ojo derecho del Rey Impuro, sellado en una urna. Es por esto que esta sala está sellada con barreras mágicas, para evitar que sea robado." class="gensmall">Sala del interior</a></li>
+                                          <li><a href="/f69-celdas" title="Las celdas sirven para encerrar a aquellos que hallan cometido delitos o interrogar." class="gensmall">Celdas</a></li>
+                                        </ul>
+                                      </div>
+                                      <!-- , <strong></strong>--> </div>
                                   </dd>
                                   <dd class="topics">0 <dfn>Temas</dfn></dd>
                                   <dd class="posts">0 <dfn>Mensajes</dfn></dd>
@@ -957,7 +966,14 @@ insert_search_menu_new();//]]>
                                       <br>
                                       <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/vatica11.jpg" title="En Roma, concretamente en el Vaticano, se encuentra la sede principal de la Seijyuji. Se encuentra dirigida por el actual Paladín, así como por el consejo de los Gregori. Ellos son quienes dictan lo que se ha de hacer y son la autoridad máxima en la orden." /> </div>
                                       <br>
-                                      <!-- <a href="/f57-oficinas-principales-de-la-orden" title="Aquí es donde se reúnen todos los exorcistas de todas las ramas para acordar decisiones que afectan a todas las ramas y a la orden en general." class="gensmall">Oficinas principales de la orden</a>, <a href="/f58-celdas" title="En estas celdas se encierra a aquellos que hayan cometido delitos graves a visión del Vaticano, así como aquellos condenados a muerte." class="gensmall">Celdas</a>, <a href="/f59-sala-de-juicios" title="La sala de juicios es aquella donde se juzga a los que hayan cometido un delito a visión de la orden. En los jucios siempre están presente tanto los Gregori como el paladín actual, además de una serie de exorcistas de alto rango cualificados." class="gensmall">Sala de juicios</a><strong></strong>--> </div>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f57-oficinas-principales-de-la-orden" title="Aquí es donde se reúnen todos los exorcistas de todas las ramas para acordar decisiones que afectan a todas las ramas y a la orden en general." class="gensmall">Oficinas principales de la orden</a></li>
+                                          <li><a href="/f58-celdas" title="En estas celdas se encierra a aquellos que hayan cometido delitos graves a visión del Vaticano, así como aquellos condenados a muerte." class="gensmall">Celdas</a></li>
+                                          <li><a href="/f59-sala-de-juicios" title="La sala de juicios es aquella donde se juzga a los que hayan cometido un delito a visión de la orden. En los jucios siempre están presente tanto los Gregori como el paladín actual, además de una serie de exorcistas de alto rango cualificados." class="gensmall">Sala de juicios</a></li>
+                                        </ul>
+                                      </div>
+                                      <!-- , , <strong></strong>--> </div>
                                   </dd>
                                   <dd class="topics">3 <dfn>Temas</dfn></dd>
                                   <dd class="posts">3 <dfn>Mensajes</dfn></dd>
@@ -968,8 +984,6 @@ insert_search_menu_new();//]]>
                             </ul>
                             <span class="corners-bottom"><span></span></span></div>
                         </div>
-                        <br class="clear" />
-                        <h1>A partir de aquí no hay nada creado</h1>
                         <div class="forabg">
                           <div class="inner"><span class="corners-top"><span></span></span>
                             <ul class="topiclist">
@@ -993,8 +1007,17 @@ insert_search_menu_new();//]]>
                                     <div style="display: block; margin : 0 0px 0 42px;">
                                       <h3 class="hierarchy"><a href="/f62-posada" class="forumtitle">Posada</a></h3>
                                       <br>
-                                      Una humilde posada de Kyoto destinada a hospedar a gente. Tiene un estilo típico de las casas japonesas y los templos. La dueña es la madre de  Suguro Ryuuji, por lo que a su vez está es la casa de toda la familia Suguro. También vive aquí el Monje Tatsuma Suguro, cabecilla de la secta budista Myoda. Corren rumores de que se trata de un sacerdote corrupto.<br>
-                                      <a href="/f63-habitaciones" title="Habitaciones de estilo japonés destinadas a los huéspedes del hostal." class="gensmall">Habitaciones</a>, <a href="/f65-comedor" title="Un gran comedor con grandes mesas tradicionales" class="gensmall">Comedor</a>, <a href="/f66-sala-principal-espacio-del-ruisenor" title="La sala principal de la posada, normalmente se reserva para eventos importantes, como las reuniones del Myoda." class="gensmall">Sala principal: Espacio del ruiseñor.</a>, <a href="/f68-cementerio" title="Pequeño cementerio particular donde se encuentran enterrados los familiares fallecidos tanto de la familia Suguro, como de la familia Miwa, principalmente durante la noche azul." class="gensmall">Cementerio</a><strong></strong> </div>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/vatica11.jpg" title="Una humilde posada de Kyoto destinada a hospedar a gente. Tiene un estilo típico de las casas japonesas y los templos. La dueña es la madre de  Suguro Ryuuji, por lo que a su vez está es la casa de toda la familia Suguro. También vive aquí el Monje Tatsuma Suguro, cabecilla de la secta budista Myoda. Corren rumores de que se trata de un sacerdote corrupto." /> </div>
+                                      <br>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f63-habitaciones" title="Habitaciones de estilo japonés destinadas a los huéspedes del hostal." class="gensmall">Habitaciones</a></li>
+                                          <li><a href="/f65-comedor" title="Un gran comedor con grandes mesas tradicionales" class="gensmall">Comedor</a></li>
+                                          <li><a href="/f66-sala-principal-espacio-del-ruisenor" title="La sala principal de la posada, normalmente se reserva para eventos importantes, como las reuniones del Myoda." class="gensmall">Sala principal: Espacio del ruiseñor.</a></li>
+                                          <li><a href="/f68-cementerio" title="Pequeño cementerio particular donde se encuentran enterrados los familiares fallecidos tanto de la familia Suguro, como de la familia Miwa, principalmente durante la noche azul." class="gensmall">Cementerio</a></li>
+                                        </ul>
+                                      </div>
+                                     <strong></strong> </div>
                                   </dd>
                                   <dd class="topics">0 <dfn>Temas</dfn></dd>
                                   <dd class="posts">0 <dfn>Mensajes</dfn></dd>
@@ -1007,7 +1030,8 @@ insert_search_menu_new();//]]>
                                     <div style="display: block; margin : 0 0px 0 42px;">
                                       <h3 class="hierarchy"><a href="/f73-calles" class="forumtitle">Calles</a></h3>
                                       <br>
-                                      Las calles de Kyoto, tanto las de la ciudad más moderna de altos edificios como las más antiguas, rodeadas de un paisaje más tradicional.<br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/vatica11.jpg" title="Las calles de Kyoto, tanto las de la ciudad más moderna de altos edificios como las más antiguas, rodeadas de un paisaje más tradicional.." /> </div>
+                                      <br>
                                       <strong></strong> </div>
                                   </dd>
                                   <dd class="topics">1 <dfn>Temas</dfn></dd>
@@ -1022,7 +1046,8 @@ insert_search_menu_new();//]]>
                                     <div style="display: block; margin : 0 0px 0 42px;">
                                       <h3 class="hierarchy"><a href="/f64-la-torre-de-kyoto" class="forumtitle">La torre de Kyoto</a></h3>
                                       <br>
-                                      La torre de Kyoto es una torre de observación de 131 metros de altura que se encuentra en el barrio de Shimogyō-ku.<br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/vatica11.jpg" title="La torre de Kyoto es una torre de observación de 131 metros de altura que se encuentra en el barrio de Shimogyō-ku." /> </div>
+                                      <br>
                                       <strong></strong> </div>
                                   </dd>
                                   <dd class="topics">1 <dfn>Temas</dfn></dd>
@@ -1037,8 +1062,15 @@ insert_search_menu_new();//]]>
                                     <div style="display: block; margin : 0 0px 0 42px;">
                                       <h3 class="hierarchy"><a href="/f70-montanas-kongo" class="forumtitle">Montañas Kongo</a></h3>
                                       <br>
-                                      Las montañas más lejanas, rodeadas por un espeso bosque<br>
-                                      <a href="/f72-bosque" title="Un profundo bosque en el cual es bastante fácil perderse si no se conoce el camino a seguir." class="gensmall">Bosque</a>, <a href="/f71-gomado" title="El gomado es la antigua base central de la secta Budista Myoda. A parte del monje principal, es un sitio en el cual técnicamente no podía entrar nadie más. En su interior hay una pequeña plataforma con fuego aun encendido. Bajo una trampilla, y tras pasar un a puerta, se encuentra un gran secreto sellado...El rey impuro." class="gensmall">Gomado</a><strong></strong> </div>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/vatica11.jpg" title="Las montañas más lejanas, rodeadas por un espeso bosque" /> </div>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f72-bosque" title="Un profundo bosque en el cual es bastante fácil perderse si no se conoce el camino a seguir." class="gensmall">Bosque</a></li>
+                                          <li><a href="/f71-gomado" title="El gomado es la antigua base central de la secta Budista Myoda. A parte del monje principal, es un sitio en el cual técnicamente no podía entrar nadie más. En su interior hay una pequeña plataforma con fuego aun encendido. Bajo una trampilla, y tras pasar un a puerta, se encuentra un gran secreto sellado...El rey impuro." class="gensmall">Gomado</a></li>
+                                        </ul>
+                                      </div>
+                                      <br>
+                                      <strong></strong> </div>
                                   </dd>
                                   <dd class="topics">0 <dfn>Temas</dfn></dd>
                                   <dd class="posts">0 <dfn>Mensajes</dfn></dd>

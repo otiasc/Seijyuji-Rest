@@ -18,13 +18,8 @@ body {
   padding:0 0px;
   box-shadow:0 0px 9px 1px rgba(255, 255, 255, 0.2);
 }
-#page-header {
-  padding:0 10px;
-  height:320px;
-}
-#page-header .headerbar {
-  height:300px;
-}
+
+
 #background2 {
   position:absolute;
   top:0;
@@ -38,13 +33,29 @@ a {
   color:#999999;
   text-decoration:none;
 }
+h1 {
+  font-size:36px;
+  font-weight:300;
+  margin:30px 10px 0 10px;
+  padding:0;
+}
 h2 {
   font-size:16px;
   padding:0;
   margin:0;
 }
+h3, .h3 {
+  font-size:14px;
+  padding:10px 0 0 0;
+  margin:0;
+}
 a:hover {
   color:#DDD;
+}
+fieldset {
+  border:none;
+  margin:0;
+  padding:0;
 }
 /* GENERAL - UI (button, text...) */
 .button-ui {
@@ -82,40 +93,69 @@ a:hover {
 .highlight {
   color:#0066CC;
 }
-/* SPECIFIC - STRUCTURE - */
-/* SPECIFIC - LOGO */
-#logo {
+/* BODY - SPECIFIC - NO-INDEX */
+body.notIndexPage {
+  background:#000 url('http://i38.servimg.com/u/f38/17/38/25/48/02fore10.jpg') no-repeat center -90px;
+}
+/* LOGO - SPECIFIC - ON INDEX */
+.indexPage #logo {
   float:right;
 }
-#logo img {
+.indexPage #page-header {
+  padding:0 10px;
+  height:320px;
 }
-#logo-desc {
+.indexPage #page-header .headerbar {
+  height:300px;
+}
+.indexPage #logo-desc {
   height:300px;
   padding:0;
   margin:0;
 }
-#logo-desc2 {
+.indexPage #logo-desc2 {
   display:inline-block;
   margin:200px 0 0 30px;
   padding:0;
   list-style:none;
   background:#000000;
 }
-#logo-desc2 h1 {
+.indexPage #logo-desc2 h1 {
   font-size:36px;
   font-weight:300;
 }
-#logo-desc2 h1, #logo-desc2 p {
+.indexPage #logo-desc2 h1,
+.indexPage #logo-desc2 p {
   padding:0;
   margin:0;
 }
-#logo-desc-navi {
+.indexPage #logo-desc-navi {
   height:16px;
 }
-#logo-desc-navi.loading {
+.indexPage #logo-desc-navi.loading {
   background:url('http://i38.servimg.com/u/f38/17/38/25/48/loader11.gif') no-repeat 5px 0;
 }
-/* SPECIFIC - NAVBAR & SEARCH-BOX */
+/* LOGO - SPECIFIC - ON NOT-INDEX */
+.notIndexPage #page-header {
+  padding:0 10px;
+  height:180px;
+}
+.notIndexPage #page-header .headerbar {
+  height:150px;
+}
+.notIndexPage #logo {
+  position:absolute;
+  margin:110px 0 0 -72px;
+}
+.notIndexPage #logo img {
+  width:72px;
+  height:92px;
+}
+.notIndexPage #page-body {
+  background:#000000;
+/*  margin:100px 0 0 0;*/
+}
+/* NAVBAR & SEARCH-BOX - GENERAL */
 .navbar {
   padding:0;
   margin:0;
@@ -136,7 +176,8 @@ a:hover {
   margin:0;
   float:right;
 }
-/* SPECIFIC - FIRST LINKS */
+
+/* HORA DEL FORO - GENERAL */
 #main-content {
   padding:0 0 0 0;
 }
@@ -147,39 +188,40 @@ a:hover {
 .forabg {
   clear:both;
 }
-/* SPECIFIC - NEWBAR */
-#newbar {
+
+/* NEWBAR - SPECIFIC - INDEX*/
+.indexPage #newbar {
   margin:20px 0 15px 0;
   height:260px;
   background:#222;
   padding:10px;
 }
-#newbar-menu {
+.indexPage #newbar-menu {
   float:left;
   width:220px;
   height:220px;
   border-right:#333 1px solid;
 }
-#newbar-menu ul {
+.indexPage #newbar-menu ul {
   list-style:none;
   padding:0;
   margin:0;
 }
-#newbar-menu li {
+.indexPage #newbar-menu li {
   margin:-2px 0 2px 0;  
 }
-#newbar-menu li.selected {
+.indexPage #newbar-menu li.selected {
   background:#333;
   margin-right:-10px;
 }
-#newbar-menu li.selected a {
+.indexPage #newbar-menu li.selected a {
   color:#0066CC;
 }
-#newbar-menu a {
+.indexPage #newbar-menu a {
   display:block;
   padding:3px;
 }
-#newbar-content {
+.indexPage #newbar-content {
   margin:0 0 0 220px;
   padding:0 20px;
   height:230px;
@@ -255,14 +297,19 @@ a:hover {
   font-size:10px;
   text-align:center;
 }
-
 #newbar-links li {
   margin:0 10px 0 0;
 }
+/* NEWBAR - SPECIFIC - NO-INDEX */
+.notIndexPage #newbar {
+  display:none;
+}
+
 /* SPECIFIC - LINKLIST */
-#main-content ul.linklist:nth-child(4) {
+#main-content ul.linklist {
   font-size:12px;
   padding:10px;
+  height:13px;
 }
 
 /* SPECIFIC - INDEX */
@@ -292,6 +339,8 @@ a:hover {
                     strong				Usuario
                     a.last-post-icon	link al último post
 */
+
+/* FORABG - GENERAL */
 .forabg ul {
   list-style:none;
   margin:0;
@@ -308,69 +357,113 @@ a:hover {
   margin:0;
   padding:0;
 }
+
+.forabg li.header .topics,
+.forabg li.header .posts,
+.forabg li.header .lastpost {
+  display:none;
+}
+
 .forabg li.row.specialRow .dterm .newStyleSubforums {
   font-size:12px;
 }
 .forabg li.row.specialRow .dterm .newStyleSubforums li {
   padding:1px 0;
 }
-/* Off-rol */
-#main-content .forabg {
+.forabg li.row dl.icon {
+  padding:0;
+  margin:0;
 }
-#main-content .forabg li.header {
+.forabg li.row .dterm {
+  padding:0;
+  margin:0;
+}
+.forabg li.row .dterm br {
+  display:none;
+}
+.forabg li.row .topics {
+  display:inline-block;
+  font-size:12px;
+  margin:0;
+}
+.forabg li.row .posts {
+  display:inline-block;
+  font-size:12px;
+  margin:0;
+  padding:0 0 0 10px;
+}
+.corners-bottom {
+  display:block;
+  float:none;
+  clear:both;
+}
+
+/* FORABG - SPECIFIC - INDEX */
+.indexPage .forabg li.header {
   padding:0 10px;
   margin:0;
 }
-#main-content .forabg li.header dl.icon {
+.indexPage .forabg li.header dl.icon {
   padding:0;
   margin:0;
 }
-#main-content .forabg li.header .dterm {
+.indexPage .forabg li.header .dterm {
   padding:0;
   margin:0;
 }
-#main-content .forabg li.row {
+.indexPage .forabg li.row {
   padding:0 10px 10px 10px;
   margin:0px 0px;
 }
-
-#main-content .forabg:nth-child(6) li.row.specialRow .dterm .newStyleSubforums {
+.indexPage .forabg li.row .lastpost {
   text-align:right;
+  font-size:12px;
+  margin:0;
 }
-#main-content .forabg li.header .topics,
-#main-content .forabg li.header .posts,
-#main-content .forabg li.header .lastpost {
+.indexPage .forabg li.row .lastpost:before {
+  content:'Último post: ';
+}
+/* FORABG - SPECIFIC - NO-INDEX */
+.notIndexPage .forabg li.header {
   display:none;
 }
+.notIndexPage .forabg li.row .lastpost {
+  text-align:right;
+  font-size:10px;
+  margin:0;
+}
+.notIndexPage .forabg li.row .lastpost:before {
+  content:'Último: ';
+}
 
-
-/* ESPECÍFICO - SUBFORO Off-Rol*/
-#main-content .forabg:nth-child(5) li.row {
+/* FORABG - SPECIFIC - INDEX - Off-rol */
+.indexPage .forabg:nth-child(5) li.row {
   float:left;
   width:305px;
   margin:0 0 20px 0;
 }
-#main-content .forabg:nth-child(5) li.row .dterm .newStyleDesc {
+.indexPage .forabg:nth-child(5) li.row .dterm .newStyleDesc {
   height:100px;
 }
 
-/* ESPECÍFICO - SUBFORO Ciudad de Seijyuji */
-#main-content .forabg:nth-child(6) li.row {
+/* FORABG - SPECIFIC - INDEX - Ciudad Seijyuji */
+.indexPage .forabg:nth-child(6) li.row {
   float:left;
   width:224px;
 }
-#main-content .forabg:nth-child(6) li.row .dterm .newStyleDesc {
+.indexPage .forabg:nth-child(6) li.row .dterm .newStyleDesc {
   height:370px;
 }
 
-#main-content .forabg:nth-child(6) li.row.specialRow .dterm .newStyleDesc {
+.indexPage .forabg:nth-child(6) li.row.specialRow .dterm .newStyleDesc {
   height:270px;
 }
-#main-content .forabg:nth-child(6) li.row.specialRow .dterm .newStyleSubforums {
+.indexPage .forabg:nth-child(6) li.row.specialRow .dterm .newStyleSubforums {
   height:100px;
+  text-align:right;
 }
 
-/* ESPECÍFICO - SUBFORO Seijyuji Gakuen */
+/* FORABG - SPECIFIC - INDEX - Seijyuji Gakuen */
 #main-content .forabg:nth-child(7) li.row {
   float:left;
   width:224px;
@@ -394,52 +487,267 @@ a:hover {
   height:214px;
 }
 
-/* ESPECÍFICO - SUBFORO La Orden */
-#main-content .forabg:nth-child(8) li.row {
+/* FORABG - SPECIFIC - INDEX - La Orden */
+.indexPage .forabg:nth-child(8) li.row {
   float:left;
   width:224px;
-  height:300px;
 }
-#main-content .forabg:nth-child(8) li.row .newStyleDesc img {
-  width:235px;
-  height:134px;
+.indexPage .forabg:nth-child(8) li.row .dterm .newStyleDesc {
+  height:170px;
 }
-#main-content .forabg:nth-child(8) li.row .dterm .newStyleDesc {
-  height:144px;
+
+.indexPage .forabg:nth-child(8) li.row.specialRow .dterm .newStyleDesc {
+  height:110px;
+}
+.indexPage .forabg:nth-child(8) li.row.specialRow .dterm .newStyleSubforums {
+  height:60px;
+  text-align:right;
+}
+
+/* FORABG - SPECIFIC - INDEX - Kioto */
+.indexPage .forabg:nth-child(9) li.row {
+  float:left;
+  width:224px;
+}
+.indexPage .forabg:nth-child(9) li.row .dterm .newStyleDesc {
+  height:170px;
+}
+
+.indexPage .forabg:nth-child(9) li.row.specialRow .dterm .newStyleDesc {
+  height:70px;
+}
+.indexPage .forabg:nth-child(9) li.row.specialRow .dterm .newStyleSubforums {
+  height:100px;
+  text-align:right;
+}
+
+/* FORABG - SPECIFIC - NO-INDEX */
+.notIndexPage .forabg li.row {
+  float:left;
+  width:175px;
+  height:230px;
+  margin:0 10px;
+}
+.notIndexPage .forabg li.row .dterm .newStyleDesc {
+  height:100px;
 }
 
 
-#main-content .forabg li.row dl.icon {
-  padding:0;
-  margin:0;
+/* PRE FORUMBG - SPECIFIC - NO-INDEX */
+.notIndexPage .pagination {
+  clear:both;
+  float:none;
+  margin:10px;
+  font-size:12px;
 }
-#main-content .forabg li.row .dterm {
-  padding:0;
-  margin:0;
-}
-#main-content .forabg li.row .dterm br {
+.notIndexPage .pagination br {
   display:none;
 }
-#main-content .forabg li.row .topics {
-  display:inline-block;
-  font-size:12px;
+.notIndexPage .topic-actions {
+  padding:10px;
+  background:#222;
+}
+.notIndexPage .topic-actions .buttons {
+  float:left;
+}
+.notIndexPage .topic-actions .search-box {
+}
+.notIndexPage .topic-actions .path {
+  float:none;
+  clear:both;
+  padding:5px 0;
+  font-size:14px;
+}
+.notIndexPage .topic-actions .pagination {
   margin:0;
 }
-#main-content .forabg li.row .posts {
-  display:inline-block;
-  font-size:12px;
-  margin:0;
-  padding:0 0 0 10px;
+
+/* FORUMBG - GENERAL */
+.forumbg {
+  margin:0 0 20px 0;
 }
-#main-content .forabg li.row .lastpost {
+.forumbg ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.forumbg h2 {
+  font-weight:400;
+  font-size:14px;
+  padding:5px 0 0 0;
+}
+.forumbg dl.icon {
+  margin:0;
+  padding:0;
+}
+
+.forumbg li.header {
+  margin:0 10px;
+}
+.forumbg li.header dl.icon {
+  margin:0;
+  padding:0;
+}
+.forumbg li.header dt,
+.forumbg li.header .dterm {
+  padding:10px 0 0 0;
+  margin:0;
+  font-size:18px;
+}
+.forumbg li.header .posts,
+.forumbg li.header .views,
+.forumbg li.header .lastpost {
+  display:none;
+}
+
+.forumbg li.row {
+  margin:0;
+  height:54px;
+  padding:3px 10px;
+}
+.forumbg li.row:last-child {
+}
+.forumbg li.row:hover {
+  background:#222;
+}
+.forumbg li.row br {
+  display:none;
+}
+.forumbg li.row dl.icon {
+  height:54px;
+  background-position: 700px center;
+  background-repeat:no-repeat;
+  padding:0;
+  margin:0;
+}
+.forumbg li.row .dterm {
+  float:left;
+  padding:0;
+  margin:0 30px 0 0;
+  width:700px;
+  font-size:0;
+  height:40px;
+}
+.forumbg li.row .dterm strong {
+  font-weight:700;
+  text-transform:uppercase;
+  background:#026;
+  color:#CCC;
+  font-size:10px;
+  padding:1px 3px;
+  margin:0 3px 0 0;
+}
+.forumbg li.row .dterm .topic-title-container {
+  display:inline;
+}
+.forumbg li.row .dterm .topic-title-container .topic-title {
+  display:inline;
+}
+.forumbg li.row .dterm .span-tab {
+  padding:0 0 0 4px;
+  display:inline-block;
+  font-size:10px;
+}
+.forumbg li.row .dterm .span-tab strong {
+  font-weight:700;
+  text-transform:none;
+  background:none;
+  color:#666666;
+  padding:0;
+  margin:0;
+}
+.forumbg li.row .posts,
+.forumbg li.row .views,
+.forumbg li.row .lastpost {
+  font-size:11px;
+}
+
+.forumbg li.row .posts {
+  padding:0;
+  margin:0;
+  display:inline-block;
+}
+.forumbg li.row .views {
+  padding:0;
+  margin:0 0 0 15px;
+  display:inline-block;
+}
+.forumbg li.row .lastpost {
   text-align:right;
-  font-size:12px;
+}
+.forumbg li.row .lastpost dfn {
+  display:none;
+}
+/*
+
+	PARTE INFERIOR
+
+*/
+.img-whois {
+  float:left;
+  margin-right:5px;
+}
+p {
+  font-size:11px;
+}
+p.page-bottom {
+  margin:0 10px;
+  padding:0;
+}
+#picture_legend {
+  list-style:none;
+  font-size:11px;
+}
+#picture_legend li {
+  display:inline-block;
+  width:200px;
+}
+#picture_legend li img {
+  vertical-align:middle;
+}
+#afilitybar {
+  margin:0 10px;
+}
+ul#afilitylist {
+  list-style:none;
+  height:50px;
+  padding:0;
   margin:0;
 }
-#main-content .forabg li.row .lastpost:before {
-  content:'Último post: ';
+ul#afilitylist li {
+  float:left;
+  margin:0 3px 0 0;
 }
 
-/* SPECIFIC - FORUMS */
-
-/* SPECIFIC - THREADS */
+/* POST-FORUMBG - GENERAL */
+form[name='jumpbox'] {
+  margin:10px;
+  text-align:right;
+}
+#info_open {
+  margin:10px;
+  font-size:12px;
+}
+div.h3 {
+  margin:0 10px;
+}
+ul.ul-icons {
+  list-style:none;
+  float:left;
+  width:300px;
+  height:100px;
+  padding:0;
+  margin:10px 10px;
+  
+  font-size:12px;
+}
+#emptydivright {
+  clear:both;
+  float:none;
+}
+#page-footer {
+  background:#222;
+  padding:10px;
+  clear:both;
+  float:none;
+}
