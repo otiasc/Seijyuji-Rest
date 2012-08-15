@@ -57,6 +57,10 @@ fieldset {
   margin:0;
   padding:0;
 }
+p {
+  margin:0;
+  padding:0;
+}
 /* GENERAL - UI (button, text...) */
 .button-ui {
   width:16px;
@@ -96,6 +100,10 @@ fieldset {
 /* BODY - SPECIFIC - NO-INDEX */
 body.notIndexPage {
   background:#000 url('http://i38.servimg.com/u/f38/17/38/25/48/02fore10.jpg') no-repeat center -90px;
+}
+/* LOGO - GENERAL */
+#logo-desc>p {
+  display:none;
 }
 /* LOGO - SPECIFIC - ON INDEX */
 .indexPage #logo {
@@ -181,8 +189,8 @@ body.notIndexPage {
 #main-content {
   padding:0 0 0 0;
 }
-#main-content p:nth-child(1),
-#main-content p:nth-child(2) {
+#main-content>p:nth-child(1),
+#main-content>p:nth-child(2) {
   display:none;
 }
 .forabg {
@@ -464,25 +472,25 @@ body.notIndexPage {
 }
 
 /* FORABG - SPECIFIC - INDEX - Seijyuji Gakuen */
-#main-content .forabg:nth-child(7) li.row {
+.indexPage .forabg:nth-child(7) li.row {
   float:left;
   width:224px;
   height:320px;
 }
-#main-content .forabg:nth-child(7) li.row .dterm .newStyleDesc {
+.indexPage .forabg:nth-child(7) li.row .dterm .newStyleDesc {
   height:214px;
 }
-#main-content .forabg:nth-child(7) li.row.specialRow {
+.indexPage .forabg:nth-child(7) li.row.specialRow {
   width:470px;
 }
-#main-content .forabg:nth-child(7) li.row.specialRow:hover {
+.indexPage #main-content .forabg:nth-child(7) li.row.specialRow:hover {
   background:#191919;
 }
-#main-content .forabg:nth-child(7) li.row.specialRow .dterm .newStyleDesc {
+.indexPage #main-content .forabg:nth-child(7) li.row.specialRow .dterm .newStyleDesc {
   float:left;
   width:235px;
 }
-#main-content .forabg:nth-child(7) li.row.specialRow .dterm .newStyleSubforums {
+.indexPage #main-content .forabg:nth-child(7) li.row.specialRow .dterm .newStyleSubforums {
   padding-left:245px;
   height:214px;
 }
@@ -552,7 +560,8 @@ body.notIndexPage {
 }
 .notIndexPage .topic-actions .search-box {
 }
-.notIndexPage .topic-actions .path {
+.notIndexPage .topic-actions .path,
+.pathname-box {
   float:none;
   clear:both;
   padding:5px 0;
@@ -687,7 +696,7 @@ body.notIndexPage {
   float:left;
   margin-right:5px;
 }
-p {
+#info_open p {
   font-size:11px;
 }
 p.page-bottom {
@@ -750,4 +759,11 @@ ul.ul-icons {
   padding:10px;
   clear:both;
   float:none;
+}
+
+
+/* THREAD */
+ {
+  float:none;
+  clear:both;
 }
