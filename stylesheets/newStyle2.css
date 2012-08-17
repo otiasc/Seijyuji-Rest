@@ -1021,6 +1021,9 @@ fieldset.quickmod {
 
 */
 @media all and (max-width:1130px) {
+body {
+  font-size:1em;
+}
 /* LOGO - SPECIFIC - NO-INDEX */
 .notIndexPage #logo {
   position: absolute;
@@ -1041,14 +1044,41 @@ fieldset.quickmod {
 }
 }
 @media all and (max-width:850px) {
+.indexPage #logo img {
+  width: 72px;
+  height: 92px;
+}
+.indexPage #logo-desc2 h1 {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+.navbar {
+  margin:-20px 0 0 0;
+}
 .navlinks a[href="/groups"] {
   display: none;
 }
 .navlinks a[href="/faq"] {
   display: none;
 }
-}
 
+/* SEARCH-BOX - GENERAL */
+#search-box {
+  float:none;
+  clear:both;
+  width: auto;
+  height: 20px;
+  text-align:center;
+  margin:5px -10px;
+  border-radius: 0;
+  font-size: 0;
+}
+#search {
+  margin:0 auto;
+  width:200px;
+  text-align:left;
+}
+}
 
 /*
 
@@ -1063,7 +1093,7 @@ fieldset.quickmod {
   height: 92px;
 }
 .indexPage #page-header {
-  height: 120px;
+  height: auto;
 }
 .indexPage #page-header .headerbar {
   height: 100px;
@@ -1078,7 +1108,7 @@ fieldset.quickmod {
   margin: 0px 0 0 0px;
 }
 .indexPage #logo-desc2 h1 {
-  font-size: 36px;
+  font-size: 1.5em;
   font-weight: 300;
 }
 .indexPage #logo-desc2 h1,
@@ -1105,14 +1135,5 @@ fieldset.quickmod {
 }
 .notIndexPage #logo-desc2 {
   margin: 0px 0 0 0px;
-}
-.notIndexPage #logo-desc2 h1 {
-  font-size: 36px;
-  font-weight: 300;
-}
-.notIndexPage #logo-desc2 h1,
-.notIndexPage #logo-desc2 p {
-  padding: 0;
-  margin: 0;
 }
 }
