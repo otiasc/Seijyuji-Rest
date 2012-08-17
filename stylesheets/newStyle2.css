@@ -1041,3 +1041,67 @@ fieldset.quickmod {
   display: none;
 }
 }
+
+
+/*
+
+	MEDIA QUERIES III
+    tall < 700px
+
+*/
+@media all and (max-height:700px) {
+/* LOGO - GENERAL */
+#logo img {
+  width: 72px;
+  height: 92px;
+}
+/* LOGO - SPECIFIC - ON INDEX */
+.indexPage #logo {
+  float: right;
+}
+.indexPage #page-header {
+  height: 120px;
+}
+.indexPage #page-header .headerbar {
+  height: 100px;
+}
+.indexPage #logo-desc {
+  height: 100px;
+  padding: 0;
+  margin: 0;
+}
+.indexPage #logo-desc2 {
+  display: inline-block;
+  margin: 0px 0 0 0px;
+  padding: 0;
+  list-style: none;
+  background: #000000;
+}
+.indexPage #logo-desc2 h1 {
+  font-size: 36px;
+  font-weight: 300;
+}
+.indexPage #logo-desc2 h1,
+.indexPage #logo-desc2 p {
+  padding: 0;
+  margin: 0;
+}
+.indexPage #logo-desc-navi {
+  height: 16px;
+}
+.indexPage #logo-desc-navi.loading {
+  background: url('http://i38.servimg.com/u/f38/17/38/25/48/loader11.gif') no-repeat 5px 0;
+}
+/* LOGO - SPECIFIC - ON NOT-INDEX */
+.notIndexPage #page-header {
+  height: 180px;
+}
+.notIndexPage #page-header .headerbar {
+  height: 150px;
+}
+.notIndexPage #page-body {
+  background: #000000;
+  padding: 10px;
+  margin: 0 -10px;
+}
+}
