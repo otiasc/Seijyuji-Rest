@@ -13,7 +13,7 @@
 $(document).ready(function(e) {
 	var u = location.pathname.slice(location.pathname.lastIndexOf('/'));
 	// Distinguir entre subforo/categoría e índice  
-	if (u.indexOf('index.html')==0 || u=='/' || u=='' || !u) {
+	if (u.indexOf('index.html')==0 || u.indexOf('/index.html')==0 || u=='/' || u=='' || !u) {
 		// Si es índice poner la clase indexPage
 		$(document.body).addClass('indexPage');
 		
@@ -22,7 +22,7 @@ $(document).ready(function(e) {
 		$(document.body).addClass('notIndexPage');
 	}
 	//  Quitar el margen innecesario de los forabg                  
-	$('.forabg .dterm div').css('margin-left', 0);
+	$('.forabg .dterm div:not(.newStyleSubforums)').css('margin-left', 0);
 	
 	// Convertir el título del foro en un div por si acaso          
 	$('.forabg li.row a.forumtitle').each(function(index, element) {

@@ -48,7 +48,7 @@
 <link rel="alternate" type="application/rss+xml" title="Últimos temas (RSS 2.0)" href="http://seijyujigakuen.foroactivo.com/feed/">
 <link rel="alternate" type="application/atom+xml" title="Últimos temas (ATOM)" href="http://seijyujigakuen.foroactivo.com/feed/?type=atom">
 <meta name="title" content="Seijyuji Gakuen" />
-<link rel="stylesheet" href="/Seijyuji-Rest/stylesheets/newStyle2.css" type="text/css" />
+<link rel="stylesheet" href="stylesheets/newStyle2.css" type="text/css" />
 <link rel="search" type="application/opensearchdescription+xml" href="/improvedsearch.xml" title="Seijyuji Gakuen">
 <link rel="search" type="application/opensearchdescription+xml" href="http://www.directorio-foros.com/es/search/improvedsearch.xml" title="Buscar foros">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
@@ -152,17 +152,23 @@ function nextCode(id) {
 		$('#logo-desc2').hide('clip', {
 			direction:'vertical'
 		});
+	
 		setTimeout('changeHeaderPage(' + count + ')', 300);
 	}
 }
 function changeHeaderPage(id) {
-	var $li = $('<li></li>');
-	
 	var $ld = $('#logo-desc');
 	var $bg = $('#background2');
 	
 	$ld.hide('fade', {}, 300).delay(300).css('background', 'none');
 	$bg.hide('fade', {}, 300).delay(300).css('background', 'none');
+	
+	setTimeout('stepTwo(' + id + ')', 300);
+}
+function stepTwo(id) {
+	var $li = $('<li></li>');
+	var $ld = $('#logo-desc');
+	var $bg = $('#background2');
 	switch(id) {
 		case 1:
 			$li.append('<h1>¡Uoah! ¡Nuevo diseño!</h1>').append('<div>Ahora en Seijyuji Gakuen</div>');
@@ -221,7 +227,7 @@ function stepThree(h) {
           <div class="navbar">
             <div class="inner"><span class="corners-top"><span></span></span>
               <ul class="linklist navlinks">
-                <li><a class="mainmenu" href="/"><img id="i_icon_mini_index" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Índice" title="Índice">Índice</a> &nbsp;</li>
+                <li><a class="mainmenu" href="/"><img id="i_icon_mini_index" src="images/icon_home.png" border="0" hspace="2" alt="Índice" title="Índice">Índice</a> &nbsp;</li>
                 <li><a class="mainmenu" href="/faq"><img id="i_icon_mini_faq" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="FAQ" title="FAQ">FAQ</a> &nbsp;</li>
                 <li><a class="mainmenu" href="/search" onclick="showhide(document.getElementById('search_menu')); return false;"><img id="i_icon_mini_search" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Buscar" title="Buscar">Buscar</a> &nbsp;<script type="text/javascript">//<![CDATA[
 var url_search = '/search';
