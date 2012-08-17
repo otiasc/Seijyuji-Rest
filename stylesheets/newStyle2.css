@@ -1040,10 +1040,4 @@ fieldset.quickmod {
 .navlinks a[href="/groups"] {
   display: none;
 }
-.navlinks a {
-  font-size: 0;
-}
-.navlinks a img {
-  display: inline;
-}
 }
