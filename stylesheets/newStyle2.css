@@ -1018,7 +1018,7 @@ fieldset.quickmod {
     wide < 1130px
 
 */
-@media screen and (max-width:1130px) {
+@media all and (max-width:1130px) {
     /* LOGO - SPECIFIC - NO-INDEX */
     .notIndexPage #logo {
 	  position: absolute;
@@ -1032,14 +1032,14 @@ fieldset.quickmod {
 
 */
 
-@media screen and (max-width:1000px) {
+@media all and (max-width:1000px) {
   #wrap {
     width:auto;
     padding:10px;
   }
   
 }
-@media screen and (max-width:850px) {
+@media all and (max-width:850px) {
   .navlinks a[href="/groups"] {
     display:none;
   }
