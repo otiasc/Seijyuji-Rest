@@ -225,7 +225,7 @@ body.notIndexPage {
   float: right;
 }
 .indexPage #page-header {
-  height: 320px;
+  height: auto;
 }
 .indexPage #page-header .headerbar {
   height: 300px;
@@ -300,7 +300,7 @@ body.notIndexPage {
 #search-box {
   width: 140px;
   height: 30px;
-  padding: 10px 0 5px 20px;
+  padding: 10px 0 0 20px;
   margin: -5px -10px 0 0;
   border-radius: 20px 0 0 0;
   float: right;
@@ -343,7 +343,7 @@ body.notIndexPage {
 }
 /* NEWBAR - SPECIFIC - INDEX*/
 .indexPage #newbar {
-  margin: 10px -10px 15px -10px;
+  margin: 0 -10px 15px -10px;
   height: 260px;
   background: #222;
   padding: 10px;
@@ -1021,9 +1021,6 @@ fieldset.quickmod {
 
 */
 @media all and (max-width:1130px) {
-body {
-  font-size:1em;
-}
 /* LOGO - SPECIFIC - NO-INDEX */
 .notIndexPage #logo {
   position: absolute;
@@ -1069,15 +1066,19 @@ body {
   width: auto;
   height: 20px;
   text-align:center;
-  margin:5px -10px;
+  margin:5px -10px 0 -10px;
   border-radius: 0;
   font-size: 0;
+  
+  background:#060606;
 }
 #search {
   margin:0 auto;
   width:200px;
   text-align:left;
 }
+}
+@media all and (max-width:640px) {
 /* NEWBAR - SPECIFIC - INDEX*/
 .indexPage #newbar {
   font-size:0.7em;
@@ -1159,9 +1160,15 @@ body {
 }
 .newbar-content-staff ul#staff li {
   float: left;
-  width: 120px;
-  margin: 0 5px 0 0;
+  width: 25%;
+  margin: 0 0;
   font-size: 12px;
+}
+.newbar-content-staff ul#staff li:nth-child(5) {
+  float:none;
+  clear:both;
+  width:100%;
+  text-align:center;
 }
 .newbar-content-staff ul#staff li h3 {
   margin: 0;
