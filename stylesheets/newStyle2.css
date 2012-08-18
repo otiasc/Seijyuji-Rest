@@ -1080,7 +1080,7 @@ body {
 }
 /* NEWBAR - SPECIFIC - INDEX*/
 .indexPage #newbar {
-  font-size:0.5em;
+  font-size:0.7em;
   margin: 0 -10px 15px -10px;
   height: auto;
   background: #222;
@@ -1141,15 +1141,15 @@ body {
 }
 .newbar-content-history h2 {
   color: #999;
-  font-size: 13px;
+  font-size: 1em;
   font-weight: 700;
 }
 .newbar-content-history h2:first-line {
-  font-size: 17px;
+  font-size: 1.1em;
 }
 .newbar-content-staff h2 {
   color: #999;
-  font-size: 17px;
+  font-size: 1.1em;
   font-weight: 700;
 }
 .newbar-content-staff ul#staff {
