@@ -1080,7 +1080,8 @@ body {
 }
 /* NEWBAR - SPECIFIC - INDEX*/
 .indexPage #newbar {
-  margin: 10px -10px 15px -10px;
+  font-size:0.5em;
+  margin: 0 -10px 15px -10px;
   height: auto;
   background: #222;
   padding: 10px;
