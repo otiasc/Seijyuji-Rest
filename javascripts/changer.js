@@ -45,4 +45,11 @@ $(document).ready(function(e) {
 		// Sustituir el Todo por sí mismo
 		$(this).html('<span style="color:#FFF">Acción <strong>' + chosen_action.name + '</strong> a ' + chosen_target.split('/')[0] +  '.<br /> Resultado: <strong>' + resultString + '</strong></span>');
     });
+	
+	// Sistema de Tienda
+	
+	$('.SSAsk').each(function(index, element) {
+		
+	});
+	
 });
