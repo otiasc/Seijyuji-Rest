@@ -26,7 +26,7 @@ Converter.toNumber = function(_string) {
 		number += Converter.CONVERSION.indexOf(_string.charAt(i)) * Math.pow(Converter.LENGTH, _string.length - i - 1);
 	}
 	return number;
-}
+};
 
 Converter.toString = function(_number) {
 	var string = '';
@@ -41,7 +41,7 @@ Converter.toString = function(_number) {
 	}
 	
 	return string;
-}
+};
 
 
 
@@ -63,7 +63,7 @@ var Item = function(_id, _name, _description, _image, _moreData) {
 	} else {
 		this.moreData = _moreData;
 	}
-}
+};
 
 /*
 	CLASE HistoryStep
@@ -82,7 +82,7 @@ var HistoryStep = function(_action, _prize, _thread, _post) {
 	this.prize = _prize;
 	this.thread = _thread;
 	this.post = _post;
-}
+};
 
 /*
 	CLASE ItemList
@@ -97,7 +97,7 @@ ItemList.prototype.addItem = function(_item, _amount) {
 	for (var i=0; i<_amount; i++) {
 		this.push(_item);
 	}
-}
+};
 
 ItemList.prototype.removeItem = function(_item, _amount) {
 	if (!_amount) {_amount = 1}
@@ -111,7 +111,7 @@ ItemList.prototype.removeItem = function(_item, _amount) {
 			i++;
 		}
 	}
-}
+};
 
 ItemList.prototype.getItemFromId = function(_id) {
 	var it;
@@ -121,7 +121,7 @@ ItemList.prototype.getItemFromId = function(_id) {
 		}
 	}
 	return it;
-}
+};
 
 ItemList.prototype.getString = function() {
 	var subArray = new Array();
@@ -136,7 +136,7 @@ ItemList.prototype.getString = function() {
 		}
 	}
 	return str.slice(0,-1);
-}
+};
 
 
 ItemList.fromString = function(str) {
@@ -148,4 +148,4 @@ ItemList.fromString = function(str) {
 		r.addItem(ALL_ITEMS.getItemFromId(id), amount);
 	}
 	return r;
-}
+};
