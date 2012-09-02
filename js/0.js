@@ -7,6 +7,10 @@ $(document).ready(function(e) {
 	*/
 	$(document.body).addClass('notIndexPage');
 	
+	if (s.indexOf('/Seijyuji-Rest/')==0) {
+		s = s.slice(15);
+	}
+	
 	if (!s || s=='' || s=='/' || s=='/index.html') {
 		/*
 			índice
