@@ -14,13 +14,17 @@
 		defaults: {
 			items: new ItemList()
 		}
-	}
+	};
 	$.fn.extend({
 		objectField:function() {
-			this.items = ItemList.fromString($(this).val());
+			if ($(this).val()) {
+				this.items = ItemList.fromString($(this).val());
+			} else {
+				this.items = ItemList.fromString($(this).text());
+			}
 			
 			// Crear el UL
-			var myUL = $('<ul></ul>');
+			var myUL = $('<ul class="itemList"></ul>');
 			
 			// Sustituir el field por el UL
 			$(this).parent().append(myUL);
@@ -35,11 +39,11 @@
 					var newLI = $('<li></li>')
 						.append( $('<span class="amount"></span>').text(1) )
 						.append( $('<span>x </span>') )
-						.append( $('<span class="name"></span>').text(currentItem.name) )
+						.append( $('<span class="name"></span>').text(currentItem.name) );
 					myUL.append(newLI);
 				} else {
 					var myLI = myUL.children(':last-child');
-					var newValue = parseInt(myLI.find('.amount').text(), 10)+1
+					var newValue = parseInt(myLI.find('.amount').text(), 10)+1;
 					myLI.find('.amount').text(newValue);
 				}
 				

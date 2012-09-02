@@ -9,9 +9,15 @@
 <meta name="robots" content="noindex, follow">
 <meta name="title" content="Editar tu perfil">
 <link rel="stylesheet" href="stylesheets/newStyle2.css" type="text/css">
-<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script><script src="http://illiweb.com/rsc/35/frm/lang/es.js" type="text/javascript"></script><script type="text/javascript">//<![CDATA[
-$(document).ready(function(){});//]]></script>
-<script type="text/javascript" src="javascripts/identifyIndex.js"></script>
+<!----->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+<script src="http://illiweb.com/rsc/35/frm/jquery/json/jquery.json-1.3.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/0.js"></script>
+<script type="text/javascript" src="js/itemSystem.0.js"></script>
+<script type="text/javascript" src="js/itemSystem.itemsLists.js"></script>
+<script type="text/javascript" src="js/itemSystem.jquery.js"></script>
+<!------>
 <style type="text/css">
 #page-footer,
 div.navbar,
@@ -27,508 +33,542 @@ ul.linklist li.rightside a.copyright {
 </head>
 <body id="phpbb">
 <div class="conteneur_minwidth_IE">
-    <div class="conteneur_layout_IE">
-        <div class="conteneur_container_IE">
-            <div id="wrap"><a id="top" name="top" accesskey="t"></a>
-                <div id="page-header">
-                    <div class="headerbar">
-                        <div class="inner"><span class="corners-top"><span></span></span>
-                            <div id="logo-desc"><a href="/" id="logo"><img src="http://i48.servimg.com/u/f48/17/38/25/48/headin10.png" alt="Seijyuji Gakuen"></a>
-                                <p>Foro de rol de Ao no Exorcist</p>
-                            </div>
-                            <span class="corners-bottom"><span></span></span></div>
-                    </div>
-                    <div class="navbar">
-                        <div class="inner"><span class="corners-top"><span></span></span>
-                            <ul class="linklist navlinks">
-                                <li><a class="mainmenu" href="/"><img id="i_icon_mini_index" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Índice" title="Índice">Índice</a> &nbsp;</li>
-                                <li><a class="mainmenu" href="/faq"><img id="i_icon_mini_faq" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="FAQ" title="FAQ">FAQ</a> &nbsp;</li>
-                                <li><a class="mainmenu" href="/search" onclick="showhide(document.getElementById('search_menu')); return false;"><img id="i_icon_mini_search" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Buscar" title="Buscar">Buscar</a> &nbsp;<script type="text/javascript">//<![CDATA[
+  <div class="conteneur_layout_IE">
+    <div class="conteneur_container_IE">
+      <div id="wrap"><a id="top" name="top" accesskey="t"></a>
+        <div id="page-header">
+          <div class="headerbar">
+            <div class="inner"><span class="corners-top"><span></span></span>
+              <div id="logo-desc"><a href="/" id="logo"><img src="http://i48.servimg.com/u/f48/17/38/25/48/headin10.png" alt="Seijyuji Gakuen"></a>
+                <p>Foro de rol de Ao no Exorcist</p>
+              </div>
+              <span class="corners-bottom"><span></span></span></div>
+          </div>
+          <div class="navbar">
+            <div class="inner"><span class="corners-top"><span></span></span>
+              <ul class="linklist navlinks">
+                <li><a class="mainmenu" href="/"><img id="i_icon_mini_index" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Índice" title="Índice">Índice</a> &nbsp;</li>
+                <li><a class="mainmenu" href="/faq"><img id="i_icon_mini_faq" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="FAQ" title="FAQ">FAQ</a> &nbsp;</li>
+                <li><a class="mainmenu" href="/search" onclick="showhide(document.getElementById('search_menu')); return false;"><img id="i_icon_mini_search" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Buscar" title="Buscar">Buscar</a> &nbsp;<script type="text/javascript">//<![CDATA[
 var url_search = '/search';
 insert_search_menu_new();//]]>
 </script>
-                                    <div class="overview row3" id="search_menu" style="display:none;position:absolute;width:350px;z-index:10000">
-                                        <form action="/search" method="get">
-                                            <input type="hidden" name="mode" value="searchbox">
-                                            <p class="title-overview row2">Buscar</p>
-                                            <p class="center-overview">
-                                                <input type="text" class="inputbox medium" name="search_keywords">
-                                                <input type="submit" class="button1" value="Go">
-                                                <br>
-                                                Resultados por:
-                                                <label for="rposts">
-                                                    <input id="rposts" type="radio" name="show_results" value="posts">
-                                                    Mensajes</label>
-                                                <label for="rtopics">
-                                                    <input id="rtopics" type="radio" name="show_results" value="topics" checked="checked">
-                                                    Temas</label>
-                                            </p>
-                                            <hr class="dashed">
-                                            <p class="center-overview"><a href="/search" rel="nofollow" title="Búsqueda avanzada"><img src="http://illiweb.com/fa/empty.gif" width="12" height="13" alt="Búsqueda avanzada"> Búsqueda avanzada</a></p>
-                                        </form>
-                                    </div>
-                                </li>
-                                <li><a class="mainmenu" href="/memberlist" rel="nofollow"><img id="i_icon_mini_members" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Miembros" title="Miembros">Miembros</a> &nbsp;</li>
-                                <li><a class="mainmenu" href="/groups"><img id="i_icon_mini_groups" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Grupos de Usuarios" title="Grupos de Usuarios">Grupos de Usuarios</a> &nbsp;</li>
-                                <li><a class="mainmenu" href="/profile?mode=editprofile"><img id="i_icon_mini_profile" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Perfil" title="Perfil">Perfil</a> &nbsp;</li>
-                                <li><a class="mainmenu" href="/h5-calendario">Calendario</a> &nbsp;</li>
-                                <li><a class="mainmenu" href="/privmsg?folder=inbox"><img id="i_icon_mini_message" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Mensajería" title="Mensajería">Mensajería</a> &nbsp;</li>
-                                <li><a class="mainmenu" href="/login?logout=1&amp;tid=1cb645947fa1a69c5ad7c2612b37ce51&amp;key=b7b7f4" rel="nofollow" id="logout"><img id="i_icon_mini_logout" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Desconectarse [ Admin ]" title="Desconectarse [ Admin ]">Desconectarse [ Admin ]</a> &nbsp;</li>
-                            </ul>
-                            <div id="search-box">
-                                <form method="get" action="/search?search_where=11" id="search">
-                                    <p class="nomargin">
-                                        <input type="text" name="search_keywords" id="keywords" maxlength="128" class="inputbox search" value="Buscar..." onclick="if (this.value == 'Buscar...') this.value = '';" onblur="if (this.value == '') this.value = 'Buscar...';">
-                                        <input class="button2" type="submit" value="Buscar">
-                                    </p>
-                                </form>
-                            </div>
-                            <span class="corners-bottom"><span></span></span></div>
-                    </div>
-                </div>
-                <div id="page-body">
-                    <div id="content-container">
-                        <div id="outer-wrapper">
-                            <div id="wrapper">
-                                <div id="container">
-                                    <div id="content">
-                                        <div id="left"><script type="text/javascript" src="https://raw.github.com/otiasc/Battle-System/master/v3/actions.js"></script> 
-                                            <script type="text/javascript" src="https://raw.github.com/otiasc/Battle-System/master/v3/core.js"></script> 
-                                            <script type="text/javascript" src="http://otiasc.github.com/Seijyuji-Rest/javascripts/statschecker2.js"></script>
-                                            <div style="height:1px"></div>
-                                            <!-- Aquí va el contenido de la nueva barra de herramientaaas -->
-                                            <div id="newbar">
-                                                <div id="newbar-menu">
-                                                    <ul>
-                                                        <li class="selected"><a href="javascript:;">Historia</a></li>
-                                                        <li><a href="javascript:;">Staff</a></li>
-                                                        <li><a href="javascript:;">Mini-guía del foro</a></li>
-                                                        <li><a href="javascript:;">Tramas activas</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div id="newbar-content" class="history">
-                                                    <h2 class="">Los demonios existen...<br>
-                                                        <span class="highlight">...en nuestros corazones</span></h2>
-                                                    <p class="nomargin">El mundo que ves se encuentra compuesto por dos dimensiones opuestas, unidas en una, cual espejo. Assiah, el mundo humano, se encuentra conectado a Gehenna, el mundo de los demonios, gobernado por Satán. Los demonios solo pueden habitar en Assiah si estos poseen algún cuerpo existente en este mundo, y es por esto por lo que surgieron los exorcistas de la orden Seijyuji, con la intención de erradicar a los demonios.</p>
-                                                </div>
-                                                <div id="newbar-links">
-                                                    <ul class="linklist">
-                                                        <li>Normas del foro</li>
-                                                        <li>Personajes cannon</li>
-                                                        <li>Pruebas de rol</li>
-                                                        <li>Feedback (sugerencias, errores...)</li>
-                                                        <li>Afiliaciones</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <!-- BARRA DE HERRAMIENTAS END -->
-                                            <div style="height:1px"></div>
-                                        </div>
-                                        <div id="main">
-                                            <div id="main-content"><script src="http://illiweb.com/rsc/35/frm/jquery/pwd_strength/passwordStrengthMeter.js"></script>
-                                                <div id="tabs">
-                                                    <ul>
-                                                        <li class="activetab"><a href="#"><span>Informaciones</span></a></li>
-                                                        <li><a href="/profile?mode=editprofile&amp;page_profil=preferences"><span>Preferencias</span></a></li>
-                                                        <li><a href="/profile?mode=editprofile&amp;page_profil=signature"><span>Firma</span></a></li>
-                                                        <li><a href="/profile?mode=editprofile&amp;page_profil=avatars"><span>Avatar</span></a></li>
-                                                        <li><a href="/profile?mode=editprofile&amp;page_profil=friendsfoes"><span>Amigos e ignorados</span></a></li>
-                                                        <li><a href="/search?search_id=watchsearch"><span>Temas supervisados</span></a></li>
-                                                        <li><a href="/search?search_id=favouritesearch"><span>Favoritos</span></a></li>
-                                                        <li><a href="/search?search_id=draftsearch"><span>Bosquejos</span></a></li>
-                                                        <li><a href="/rpg_sheet_edit?u=1"><span>Ficha de personaje</span></a></li>
-                                                        <li><a href="/profile?mode=editprofile&amp;page_profil=facebook"><span>Invitación Facebook</span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="panel row3">
-                                                    <div class="inner"><span class="corners-top"><span></span></span>
-                                                        <div id="cp-main" class="ucp-main">
-                                                            <form action="/profile" enctype="multipart/form-data" method="post" name="post" id="ucp">
-                                                                <h1 class="page-title">Información de Registro - <a href="/u1" target="_blank" style="color:#bbbbbb;">Ver mi perfil</a></h1>
-                                                                <div class="panel">
-                                                                    <div class="inner"><span class="corners-top"><span></span></span>
-                                                                        <p>Los campos marcados con un asterisco * son obligatorios.</p>
-                                                                        <fieldset>
-                                                                            <dl>
-                                                                                <dt>
-                                                                                    <label>Nombre de Usuario : *</label>
-                                                                                </dt>
-                                                                                <dd>
-                                                                                    <input type="hidden" name="username" value="Admin" class="inputbox">
-                                                                                    <strong>Admin</strong></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt>
-                                                                                    <label>Dirección de correo electrónico : *</label>
-                                                                                </dt>
-                                                                                <dd>
-                                                                                    <input type="text" name="email" value="seijyujigakuen@live.com" class="inputbox">
-                                                                                </dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt>
-                                                                                    <label>Cambiar tu contraseña : *</label>
-                                                                                </dt>
-                                                                                <dd>
-                                                                                    <input class="mainoption" type="submit" name="change_password" value="Modificar">
-                                                                                </dd>
-                                                                            </dl>
-                                                                        </fieldset>
-                                                                        <span class="corners-bottom"><span></span></span></div>
-                                                                </div>
-                                                                <h1 class="page-title">Perfil personalizado</h1>
-                                                                <div class="panel">
-                                                                    <div class="inner"><span class="corners-top"><span></span></span>
-                                                                        <fieldset>
-                                                                            <dl>
-                                                                                <dt><span style="color:#FF0000;">Avisado</span>: </dt>
-                                                                                <dd>Día&nbsp;
-                                                                                    <select class="gensmall" id="profile_field_4_10_2" name="profile_field_4_10[]" size="1">
-                                                                                        <option value="">Ningún</option>
-                                                                                        <option value="1">1</option>
-                                                                                        <option value="2">2</option>
-                                                                                        <option value="3">3</option>
-                                                                                        <option value="4">4</option>
-                                                                                        <option value="5">5</option>
-                                                                                        <option value="6">6</option>
-                                                                                        <option value="7">7</option>
-                                                                                        <option value="8">8</option>
-                                                                                        <option value="9">9</option>
-                                                                                        <option value="10">10</option>
-                                                                                        <option value="11">11</option>
-                                                                                        <option value="12">12</option>
-                                                                                        <option value="13">13</option>
-                                                                                        <option value="14">14</option>
-                                                                                        <option value="15">15</option>
-                                                                                        <option value="16">16</option>
-                                                                                        <option value="17">17</option>
-                                                                                        <option value="18">18</option>
-                                                                                        <option value="19">19</option>
-                                                                                        <option value="20">20</option>
-                                                                                        <option value="21">21</option>
-                                                                                        <option value="22">22</option>
-                                                                                        <option value="23">23</option>
-                                                                                        <option value="24">24</option>
-                                                                                        <option value="25">25</option>
-                                                                                        <option value="26">26</option>
-                                                                                        <option value="27">27</option>
-                                                                                        <option value="28">28</option>
-                                                                                        <option value="29">29</option>
-                                                                                        <option value="30">30</option>
-                                                                                        <option value="31">31</option>
-                                                                                    </select>
-                                                                                    Mes&nbsp;
-                                                                                    <select class="gensmall" id="profile_field_4_10_1" name="profile_field_4_10[]" size="1">
-                                                                                        <option value="">Ningún</option>
-                                                                                        <option value="1">Enero</option>
-                                                                                        <option value="2">Febrero</option>
-                                                                                        <option value="3">Marzo</option>
-                                                                                        <option value="4">Abril</option>
-                                                                                        <option value="5">Mayo</option>
-                                                                                        <option value="6">Junio</option>
-                                                                                        <option value="7">Julio</option>
-                                                                                        <option value="8">Agosto</option>
-                                                                                        <option value="9">Septiembre</option>
-                                                                                        <option value="10">Octubre</option>
-                                                                                        <option value="11">Noviembre</option>
-                                                                                        <option value="12">Diciembre</option>
-                                                                                    </select>
-                                                                                    Año&nbsp;
-                                                                                    <input type="text" class="inputbox" id="profile_field_4_10_0" name="profile_field_4_10[]" style="width:50px" size="5" maxlength="4" value="0">
-                                                                                    <br>
-                                                                                    <span class="italic">Fecha en la que se ha avisado</span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi14.jpg" alt="Fuerza"> Fuerza</span>: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_10_1" name="profile_field_10_1" style="width:10px" size="2" maxlength="1" value="4">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi17.jpg" alt="Velocidad"> Velocidad</span>: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_10_3" name="profile_field_10_3" style="width:10px" size="2" maxlength="1" value="3">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi16.jpg" alt="Inteligencia"> Inteligencia</span>: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_10_2" name="profile_field_10_2" style="width:10px" size="2" maxlength="1" value="3">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi15.jpg" alt="Fuerza de Voluntad"> Fuerza de Voluntad</span>: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_10_4" name="profile_field_10_4" style="width:10px" size="2" maxlength="1" value="3">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi20.jpg" alt="Puntería"> Puntería</span>: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_10_5" name="profile_field_10_5" style="width:10px" size="2" maxlength="1" value="3">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi21.jpg" alt="Habilidad con la espada"> Habilidad con la espada</span>: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_10_6" name="profile_field_10_6" style="width:10px" size="2" maxlength="1" value="3">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi22.jpg" alt="Fuerza de familiar"> Fuerza de familiar</span>: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_10_8" name="profile_field_10_8" style="width:10px" size="2" maxlength="1" value="3">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi18.jpg" alt="Memoria"> Memoria</span>: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_10_9" name="profile_field_10_9" style="width:10px" size="2" maxlength="1" value="3">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi19.jpg" alt="Medicina"> Medicina</span>: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_10_7" name="profile_field_10_7" style="width:10px" size="2" maxlength="1" value="4">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt><span style="color:#888888;">Sexo</span>: </dt>
-                                                                                <dd>
-                                                                                    <ul id="profile_field_16_-7" class="profile_field_list">
-                                                                                        <li>
-                                                                                            <label>
-                                                                                                <input type="radio" id="profile_field_16_-7" name="profile_field_16_-7" value="1">
-                                                                                                &nbsp;<img src="http://illiweb.com/fa/icon_gender_male.gif" alt="" title="Masculino">&nbsp;Masculino</label>
-                                                                                        </li>
-                                                                                        <li>
-                                                                                            <label>
-                                                                                                <input type="radio" id="profile_field_16_-7" name="profile_field_16_-7" value="2">
-                                                                                                &nbsp;<img src="http://illiweb.com/fa/icon_gender_female.gif" alt="" title="Femenino">&nbsp;Femenino</label>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt><span style="color:#888888;">Fecha de nacimiento</span>: </dt>
-                                                                                <dd>Día&nbsp;
-                                                                                    <select class="gensmall" id="profile_field_4_-12_2" name="profile_field_4_-12[]" size="1">
-                                                                                        <option value="">Ningún</option>
-                                                                                        <option value="1">1</option>
-                                                                                        <option value="2">2</option>
-                                                                                        <option value="3">3</option>
-                                                                                        <option value="4">4</option>
-                                                                                        <option value="5">5</option>
-                                                                                        <option value="6">6</option>
-                                                                                        <option value="7">7</option>
-                                                                                        <option value="8">8</option>
-                                                                                        <option value="9">9</option>
-                                                                                        <option value="10">10</option>
-                                                                                        <option value="11">11</option>
-                                                                                        <option value="12">12</option>
-                                                                                        <option value="13">13</option>
-                                                                                        <option value="14">14</option>
-                                                                                        <option value="15">15</option>
-                                                                                        <option value="16">16</option>
-                                                                                        <option value="17">17</option>
-                                                                                        <option value="18">18</option>
-                                                                                        <option value="19">19</option>
-                                                                                        <option value="20">20</option>
-                                                                                        <option value="21">21</option>
-                                                                                        <option value="22">22</option>
-                                                                                        <option value="23">23</option>
-                                                                                        <option value="24">24</option>
-                                                                                        <option value="25">25</option>
-                                                                                        <option value="26">26</option>
-                                                                                        <option value="27">27</option>
-                                                                                        <option value="28">28</option>
-                                                                                        <option value="29">29</option>
-                                                                                        <option value="30">30</option>
-                                                                                        <option value="31">31</option>
-                                                                                    </select>
-                                                                                    Mes&nbsp;
-                                                                                    <select class="gensmall" id="profile_field_4_-12_1" name="profile_field_4_-12[]" size="1">
-                                                                                        <option value="">Ningún</option>
-                                                                                        <option value="1">Enero</option>
-                                                                                        <option value="2">Febrero</option>
-                                                                                        <option value="3">Marzo</option>
-                                                                                        <option value="4">Abril</option>
-                                                                                        <option value="5">Mayo</option>
-                                                                                        <option value="6">Junio</option>
-                                                                                        <option value="7">Julio</option>
-                                                                                        <option value="8">Agosto</option>
-                                                                                        <option value="9">Septiembre</option>
-                                                                                        <option value="10">Octubre</option>
-                                                                                        <option value="11">Noviembre</option>
-                                                                                        <option value="12">Diciembre</option>
-                                                                                    </select>
-                                                                                    Año&nbsp;
-                                                                                    <input type="text" class="inputbox" id="profile_field_4_-12_0" name="profile_field_4_-12[]" style="width:50px" size="5" maxlength="4" value="0">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt><span style="color:#888888;">Localización</span>: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_13_-11" name="profile_field_13_-11" style="width:250px" value="">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt><span style="color:#888888;">Empleo /Ocio</span>: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_13_-9" name="profile_field_13_-9" style="width:250px" value="">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt><span style="color:#888888;">Humor</span>: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_13_-8" name="profile_field_13_-8" style="width:250px" value="">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt><span style="color:#888888;">Comentarios</span>: </dt>
-                                                                                <dd>
-                                                                                    <textarea class="inputbox" id="profile_field_2_-20" name="profile_field_2_-20" rows="7" cols="60"></textarea>
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                        </fieldset>
-                                                                        <span class="corners-bottom"><span></span></span></div>
-                                                                </div>
-                                                                <h1 class="page-title">Campos de contacto</h1>
-                                                                <div class="panel">
-                                                                    <div class="inner"><span class="corners-top"><span></span></span>
-                                                                        <fieldset>
-                                                                            <dl>
-                                                                                <dt>Sitio Web: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_3_-10" name="profile_field_3_-10" value="http://seijyujigakuen.foroactivo.com">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt>Número ICQ: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_3_-15" name="profile_field_3_-15" value="">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt>Dirección AIM: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_3_-16" name="profile_field_3_-16" value="">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt>MSN Messenger: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_3_-17" name="profile_field_3_-17" value="">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt>Yahoo Messenger: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_3_-18" name="profile_field_3_-18" value="">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                            <dl>
-                                                                                <dt>Skype: </dt>
-                                                                                <dd>
-                                                                                    <input type="text" class="inputbox" id="profile_field_3_-19" name="profile_field_3_-19" value="">
-                                                                                    <br>
-                                                                                    <span class="italic"></span></dd>
-                                                                            </dl>
-                                                                        </fieldset>
-                                                                        <span class="corners-bottom"><span></span></span></div>
-                                                                </div>
-                                                                <fieldset class="submit-buttons">
-                                                                    <input type="hidden" name="page_profil" value="informations">
-                                                                    <input type="hidden" name="mode" value="editprofile">
-                                                                    <input type="hidden" name="agreed" value="true">
-                                                                    <input type="hidden" name="coppa" value="">
-                                                                    <input type="hidden" name="user_id" value="1">
-                                                                    <input type="hidden" name="current_email" value="seijyujigakuen@live.com">
-                                                                    <input class="button1" type="submit" name="submit" value="Registrar">
-                                                                    &nbsp;
-                                                                    <input class="button2" type="reset" name="reset" value="Inicializar de nuevo">
-                                                                </fieldset>
-                                                            </form>
-                                                        </div>
-                                                        <div class="clear"></div>
-                                                        <span class="corners-bottom"><span></span></span></div>
-                                                </div>
-                                                <script type="text/javascript">$(function(){$('input[name=reset]').click(function(){$("#pwd_good,#pwd_middle,#pwd_bad").hide();});$('input[name=new_password],input[name=username]').keyup(function() {if ( $('input[name=new_password]').val() != "" ){var level = passwordStrength($('input[name=new_password]').val(),$('input[name=username]').val());switch(level){case 'bad' :$("#pwd_middle,#pwd_good").hide();$("#pwd_bad").show();break;case 'good' :$("#pwd_good,#pwd_bad").hide();$("#pwd_middle").show();break;case 'strong' :$("#pwd_middle,#pwd_bad").hide();$("#pwd_good").show();break;}}else{$("#pwd_middle,#pwd_good,#pwd_bad").hide();}});});</script></div>
-                                            <div id="afilitybar">
-                                                <h3>Afiliados de élite / <a href="/h8-">Más afiliados</a></h3>
-                                                <ul id="afilitylist">
-                                                    <li><a href="http://exorcistgakuen.activoforo.com/"><img src="http://i1179.photobucket.com/albums/x386/MayuuRa11/banner1de40x40.png" alt="Foro de Ao no exorcist"></a></li>
-                                                    <li><a href="http://dragonball-world.foroactivo.mx/"><img src="http://i1188.photobucket.com/albums/z408/Reborn_24/Goku40x40.png" alt="Foro Dragon Ball"></a></li>
-                                                    <li><a href="http://hitman-world.activoforo.com/"><img src="http://i856.photobucket.com/albums/ab126/dino_cava/Hitoman/Banner/hw407.png" alt="Foro rol Hitman"></a></li>
-                                                    <li><a href="http://kyubi.foros.ws/index.php/"><img src="http://i50.tinypic.com/aaizpw.png" alt="Foro Naruto"></a></li>
-                                                    <li><a href="http://dgm-fallenangels.foroactivo.mx/"><img src="http://i1029.photobucket.com/albums/y354/SuomiNillson5/4040.gif" alt="Foro Fallen Angels"></a></li>
-                                                    <li><a href="http://no-heaven.foroac.com/"><img src="http://img546.imageshack.us/img546/3733/marcabanner.png" alt="Foro Mafias"></a></li>
-                                                    <li><a href="http://sweet-amoris.foroactivo.com/"><img src="http://i94.photobucket.com/albums/l98/camusa_verseau/sweetamoris/40-1.png" alt="Foro sweet"></a></li>
-                                                    <li><a href="http://cardcaptorsakurarol.foroactivo.com//"><img src="http://img43.imageshack.us/img43/4213/40x40a.png" alt="Foro rol Sakura"></a></li>
-                                                    <li><a href="http://world-fans-vocaloid.webmaster-foro.com/"><img src="http://i1134.photobucket.com/albums/m612/RainbowColorFull/Sweetboton.png" alt="Foro Rol Vocaloid"></a></li>
-                                                    <li><a href="http://sweet-sounds.foroactivo.com/"><img src="http://img580.imageshack.us/img580/8742/40x40.png" alt="Foro Vocaloid"></a></li>
-                                                    <li><a href="http://petsacademy.foroactivo.com/"><img src="http://i.imgur.com/ncVqj.gif?1" alt="Foro Rol Nekos"></a></li>
-                                                    <li><a href="http://dark-souls.foros-activos.com/"><img src="http://i1068.photobucket.com/albums/u460/DarkShadows99/Banners/40-1.png" alt="Foro Dark Souls"></a></li>
-                                                    <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
-                                                    <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
-                                                    <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
-                                                    <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
-                                                    <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
-                                                    <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
-                                                    <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
-                                                    <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
-                                                    <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
-                                                    <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="emptyidright"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="page-footer">
-                    <div class="navbar">
-                        <div class="inner"><span class="corners-top"><span></span></span>
-                            <ul class="linklist clearfix">
-                                <li class="footer-home"><a class="icon-home" href="/" accesskey="h">Índice</a></li>
-                                <li class="rightside"><strong><a href="http://www.foroactivo.com/foro-gratis" target="_blank">Crear un foro gratis</a></strong>&nbsp;|&nbsp;<span class="gensmall">©</span> <a href="http://www.foroactivo.com/es/phpbb/" target="_blank">phpBB</a>&nbsp;|&nbsp;<a name="bottom" href="http://asistencia.foroactivo.com/" target="_blank">Foro gratis de asistencia</a>&nbsp;|&nbsp;<a name="bottom" href="/statistics" rel="nofollow">Estadísticas</a>&nbsp;|&nbsp;<a name="bottom" href="/contact" rel="nofollow">Contactar</a>&nbsp;|&nbsp;<a href="/abuse?page=%2Fprofile%3Fmode%3Deditprofile&amp;report=1" rel="nofollow">Denunciar un abuso</a></li>
-                            </ul>
-                            <span class="corners-bottom"><span></span></span></div>
-                    </div>
-                    <p class="copyright"><strong><a href="/admin/index.forum?part=admin&amp;tid=1cb645947fa1a69c5ad7c2612b37ce51">Ir al Panel de Administración</a><br>
+                  <div class="overview row3" id="search_menu" style="display:none;position:absolute;width:350px;z-index:10000">
+                    <form action="/search" method="get">
+                      <input type="hidden" name="mode" value="searchbox">
+                      <p class="title-overview row2">Buscar</p>
+                      <p class="center-overview">
+                        <input type="text" class="inputbox medium" name="search_keywords">
+                        <input type="submit" class="button1" value="Go">
                         <br>
-                        </strong></p>
-                </div>
-            </div>
+                        Resultados por:
+                        <label for="rposts">
+                          <input id="rposts" type="radio" name="show_results" value="posts">
+                          Mensajes</label>
+                        <label for="rtopics">
+                          <input id="rtopics" type="radio" name="show_results" value="topics" checked="checked">
+                          Temas</label>
+                      </p>
+                      <hr class="dashed">
+                      <p class="center-overview"><a href="/search" rel="nofollow" title="Búsqueda avanzada"><img src="http://illiweb.com/fa/empty.gif" width="12" height="13" alt="Búsqueda avanzada"> Búsqueda avanzada</a></p>
+                    </form>
+                  </div>
+                </li>
+                <li><a class="mainmenu" href="/memberlist" rel="nofollow"><img id="i_icon_mini_members" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Miembros" title="Miembros">Miembros</a> &nbsp;</li>
+                <li><a class="mainmenu" href="/groups"><img id="i_icon_mini_groups" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Grupos de Usuarios" title="Grupos de Usuarios">Grupos de Usuarios</a> &nbsp;</li>
+                <li><a class="mainmenu" href="/profile?mode=editprofile"><img id="i_icon_mini_profile" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Perfil" title="Perfil">Perfil</a> &nbsp;</li>
+                <li><a class="mainmenu" href="/h5-calendario">Calendario</a> &nbsp;</li>
+                <li><a class="mainmenu" href="/privmsg?folder=inbox"><img id="i_icon_mini_message" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Mensajería" title="Mensajería">Mensajería</a> &nbsp;</li>
+                <li><a class="mainmenu" href="/login?logout=1&amp;tid=a0e2c60efe11486edebe3ef67e825ff4&amp;key=f58126" rel="nofollow" id="logout"><img id="i_icon_mini_logout" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Desconectarse [ Admin ]" title="Desconectarse [ Admin ]">Desconectarse [ Admin ]</a> &nbsp;</li>
+                <!--<li style="float:right; vertical-align:middle"><a href="http://facebook.com/seijyujigakuen"><img src="http://i48.servimg.com/u/f48/17/38/25/48/fb_log10.jpg" style="vertical-align:text-bottom"> Seijyuji en facebook</a>
+                  <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fseijyujigakuen&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px; vertical-align:text-bottom" allowtransparency="true"></iframe>
+                </li>-->
+              </ul>
+              <div id="search-box">
+                <form method="get" action="/search?search_where=11" id="search">
+                  <p class="nomargin">
+                    <input type="text" name="search_keywords" id="keywords" maxlength="128" class="inputbox search" value="Buscar..." onclick="if (this.value == 'Buscar...') this.value = '';" onblur="if (this.value == '') this.value = 'Buscar...';">
+                    <input class="button2" type="submit" value="Buscar">
+                  </p>
+                </form>
+              </div>
+              <span class="corners-bottom"><span></span></span></div>
+          </div>
         </div>
+        <div id="page-body">
+          <div id="content-container">
+            <div id="outer-wrapper">
+              <div id="wrapper">
+                <div id="container">
+                  <div id="content">
+                    <div id="left"><!-- Sistema de batalla --> 
+                      <script type="text/javascript" src="https://raw.github.com/otiasc/Battle-System/master/v3/actions.js"></script> 
+                      <script type="text/javascript" src="https://raw.github.com/otiasc/Battle-System/master/v3/core.js"></script> 
+                      <!-- El vigilante --> 
+                      <script type="text/javascript" src="http://otiasc.github.com/Seijyuji-Rest/javascripts/statschecker2.js"></script> 
+                      <!-- Objetos -->
+                      <div style="height:1px"></div>
+                      <!-- Aquí va el contenido de la nueva barra de herramientaaas -->
+                      <div id="newbar">
+                        <div id="newbar-menu">
+                          <ul>
+                            <li class="selected"><a href="javascript:;">Historia</a></li>
+                            <li><a href="javascript:;">Staff</a></li>
+                            <li><a href="javascript:;">Mini-guía del foro</a></li>
+                            <li><a href="javascript:;">Tramas activas</a></li>
+                          </ul>
+                        </div>
+                        <div id="newbar-content" class="history">
+                          <h2 class="">Los demonios existen...<br>
+                            <span class="highlight">...en nuestros corazones</span></h2>
+                          <p class="nomargin">El mundo que ves se encuentra compuesto por dos dimensiones opuestas, unidas en una, cual espejo. Assiah, el mundo humano, se encuentra conectado a Gehenna, el mundo de los demonios, gobernado por Satán. Los demonios solo pueden habitar en Assiah si estos poseen algún cuerpo existente en este mundo, y es por esto por lo que surgieron los exorcistas de la orden Seijyuji, con la intención de erradicar a los demonios.</p>
+                        </div>
+                        <div id="newbar-links">
+                          <ul class="linklist">
+                            <li>Normas del foro</li>
+                            <li>Personajes cannon</li>
+                            <li>Pruebas de rol</li>
+                            <li>Feedback (sugerencias, errores...)</li>
+                            <li>Afiliaciones</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- BARRA DE HERRAMIENTAS END -->
+                      <div style="height:1px"></div>
+                    </div>
+                    <div id="main">
+                      <div id="main-content"><script src="http://illiweb.com/rsc/35/frm/jquery/pwd_strength/passwordStrengthMeter.js"></script>
+                        <div id="tabs">
+                          <ul>
+                            <li class="activetab"><a href="#"><span>Informaciones</span></a></li>
+                            <li><a href="/profile?mode=editprofile&amp;page_profil=preferences"><span>Preferencias</span></a></li>
+                            <li><a href="/profile?mode=editprofile&amp;page_profil=signature"><span>Firma</span></a></li>
+                            <li><a href="/profile?mode=editprofile&amp;page_profil=avatars"><span>Avatar</span></a></li>
+                            <li><a href="/profile?mode=editprofile&amp;page_profil=friendsfoes"><span>Amigos e ignorados</span></a></li>
+                            <li><a href="/search?search_id=watchsearch"><span>Temas supervisados</span></a></li>
+                            <li><a href="/search?search_id=favouritesearch"><span>Favoritos</span></a></li>
+                            <li><a href="/search?search_id=draftsearch"><span>Bosquejos</span></a></li>
+                            <li><a href="/rpg_sheet_edit?u=1"><span>Ficha de personaje</span></a></li>
+                            <li><a href="/profile?mode=editprofile&amp;page_profil=facebook"><span>Invitación Facebook</span></a></li>
+                          </ul>
+                        </div>
+                        <div class="panel row3">
+                          <div class="inner"><span class="corners-top"><span></span></span>
+                            <div id="cp-main" class="ucp-main">
+                              <form action="/profile" enctype="multipart/form-data" method="post" name="post" id="ucp">
+                                <h1 class="page-title">Información de Registro - <a href="/u1" target="_blank" style="color:#bbbbbb;">Ver mi perfil</a></h1>
+                                <div class="panel">
+                                  <div class="inner"><span class="corners-top"><span></span></span>
+                                    <p>Los campos marcados con un asterisco * son obligatorios.</p>
+                                    <fieldset>
+                                      <dl>
+                                        <dt>
+                                          <label>Nombre de Usuario : *</label>
+                                        </dt>
+                                        <dd>
+                                          <input type="hidden" name="username" value="Admin" class="inputbox">
+                                          <strong>Admin</strong></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt>
+                                          <label>Dirección de correo electrónico : *</label>
+                                        </dt>
+                                        <dd>
+                                          <input type="text" name="email" value="seijyujigakuen@live.com" class="inputbox">
+                                        </dd>
+                                      </dl>
+                                      <dl>
+                                        <dt>
+                                          <label>Cambiar tu contraseña : *</label>
+                                        </dt>
+                                        <dd>
+                                          <input class="mainoption" type="submit" name="change_password" value="Modificar">
+                                        </dd>
+                                      </dl>
+                                    </fieldset>
+                                    <span class="corners-bottom"><span></span></span></div>
+                                </div>
+                                <h1 class="page-title">Perfil personalizado</h1>
+                                <div class="panel">
+                                  <div class="inner"><span class="corners-top"><span></span></span>
+                                    <fieldset>
+                                      <dl>
+                                        <dt><span style="color:#888888;">Historial de uso</span>: </dt>
+                                        <dd>
+                                          <textarea class="inputbox" id="profile_field_2_14" name="profile_field_2_14" rows="7" cols="60"></textarea>
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;">Historial de compra</span>: </dt>
+                                        <dd>
+                                          <textarea class="inputbox" id="profile_field_2_13" name="profile_field_2_13" rows="7" cols="60"></textarea>
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;">Objetos</span>: </dt>
+                                        <dd>
+                                          <textarea class="inputbox" id="profile_field_2_12" name="profile_field_2_12" rows="7" cols="60">0/3|1/A</textarea>
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#FF0000;">Avisado</span>: </dt>
+                                        <dd>Día&nbsp;
+                                          <select class="gensmall" id="profile_field_4_10_2" name="profile_field_4_10[]" size="1">
+                                            <option value="">Ningún</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                          </select>
+                                          Mes&nbsp;
+                                          <select class="gensmall" id="profile_field_4_10_1" name="profile_field_4_10[]" size="1">
+                                            <option value="">Ningún</option>
+                                            <option value="1">Enero</option>
+                                            <option value="2">Febrero</option>
+                                            <option value="3">Marzo</option>
+                                            <option value="4">Abril</option>
+                                            <option value="5">Mayo</option>
+                                            <option value="6">Junio</option>
+                                            <option value="7">Julio</option>
+                                            <option value="8">Agosto</option>
+                                            <option value="9">Septiembre</option>
+                                            <option value="10">Octubre</option>
+                                            <option value="11">Noviembre</option>
+                                            <option value="12">Diciembre</option>
+                                          </select>
+                                          Año&nbsp;
+                                          <input type="text" class="inputbox" id="profile_field_4_10_0" name="profile_field_4_10[]" style="width:50px" size="5" maxlength="4" value="0">
+                                          <br>
+                                          <span class="italic">Fecha en la que se ha avisado</span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi14.jpg" alt="Fuerza"> Fuerza</span>: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_10_1" name="profile_field_10_1" style="width:10px" size="2" maxlength="1" value="4">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi17.jpg" alt="Velocidad"> Velocidad</span>: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_10_3" name="profile_field_10_3" style="width:10px" size="2" maxlength="1" value="3">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi16.jpg" alt="Inteligencia"> Inteligencia</span>: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_10_2" name="profile_field_10_2" style="width:10px" size="2" maxlength="1" value="3">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi15.jpg" alt="Fuerza de Voluntad"> Fuerza de Voluntad</span>: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_10_4" name="profile_field_10_4" style="width:10px" size="2" maxlength="1" value="3">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi20.jpg" alt="Puntería"> Puntería</span>: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_10_5" name="profile_field_10_5" style="width:10px" size="2" maxlength="1" value="3">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi21.jpg" alt="Habilidad con la espada"> Habilidad con la espada</span>: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_10_6" name="profile_field_10_6" style="width:10px" size="2" maxlength="1" value="3">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi22.jpg" alt="Fuerza de familiar"> Fuerza de familiar</span>: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_10_8" name="profile_field_10_8" style="width:10px" size="2" maxlength="1" value="3">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi18.jpg" alt="Memoria"> Memoria</span>: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_10_9" name="profile_field_10_9" style="width:10px" size="2" maxlength="1" value="3">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;"><img src="http://i48.servimg.com/u/f48/17/38/25/48/microi19.jpg" alt="Medicina"> Medicina</span>: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_10_7" name="profile_field_10_7" style="width:10px" size="2" maxlength="1" value="4">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;">Dinero</span>&nbsp;*: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_10_11" name="profile_field_10_11" style="width:100px" size="11" maxlength="10" value="100">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;">Sexo</span>: </dt>
+                                        <dd>
+                                          <ul id="profile_field_16_-7" class="profile_field_list">
+                                            <li>
+                                              <label>
+                                                <input type="radio" id="profile_field_16_-7" name="profile_field_16_-7" value="1">
+                                                &nbsp;<img src="http://illiweb.com/fa/icon_gender_male.gif" alt="" title="Masculino">&nbsp;Masculino</label>
+                                            </li>
+                                            <li>
+                                              <label>
+                                                <input type="radio" id="profile_field_16_-7" name="profile_field_16_-7" value="2">
+                                                &nbsp;<img src="http://illiweb.com/fa/icon_gender_female.gif" alt="" title="Femenino">&nbsp;Femenino</label>
+                                            </li>
+                                          </ul>
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;">Fecha de nacimiento</span>: </dt>
+                                        <dd>Día&nbsp;
+                                          <select class="gensmall" id="profile_field_4_-12_2" name="profile_field_4_-12[]" size="1">
+                                            <option value="">Ningún</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                          </select>
+                                          Mes&nbsp;
+                                          <select class="gensmall" id="profile_field_4_-12_1" name="profile_field_4_-12[]" size="1">
+                                            <option value="">Ningún</option>
+                                            <option value="1">Enero</option>
+                                            <option value="2">Febrero</option>
+                                            <option value="3">Marzo</option>
+                                            <option value="4">Abril</option>
+                                            <option value="5">Mayo</option>
+                                            <option value="6">Junio</option>
+                                            <option value="7">Julio</option>
+                                            <option value="8">Agosto</option>
+                                            <option value="9">Septiembre</option>
+                                            <option value="10">Octubre</option>
+                                            <option value="11">Noviembre</option>
+                                            <option value="12">Diciembre</option>
+                                          </select>
+                                          Año&nbsp;
+                                          <input type="text" class="inputbox" id="profile_field_4_-12_0" name="profile_field_4_-12[]" style="width:50px" size="5" maxlength="4" value="0">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;">Localización</span>: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_13_-11" name="profile_field_13_-11" style="width:250px" value="">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;">Empleo /Ocio</span>: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_13_-9" name="profile_field_13_-9" style="width:250px" value="">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;">Humor</span>: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_13_-8" name="profile_field_13_-8" style="width:250px" value="">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt><span style="color:#888888;">Comentarios</span>: </dt>
+                                        <dd>
+                                          <textarea class="inputbox" id="profile_field_2_-20" name="profile_field_2_-20" rows="7" cols="60"></textarea>
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                    </fieldset>
+                                    <span class="corners-bottom"><span></span></span></div>
+                                </div>
+                                <h1 class="page-title">Campos de contacto</h1>
+                                <div class="panel">
+                                  <div class="inner"><span class="corners-top"><span></span></span>
+                                    <fieldset>
+                                      <dl>
+                                        <dt>Sitio Web: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_3_-10" name="profile_field_3_-10" value="http://seijyujigakuen.foroactivo.com">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt>Número ICQ: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_3_-15" name="profile_field_3_-15" value="">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt>Dirección AIM: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_3_-16" name="profile_field_3_-16" value="">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt>MSN Messenger: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_3_-17" name="profile_field_3_-17" value="">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt>Yahoo Messenger: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_3_-18" name="profile_field_3_-18" value="">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                      <dl>
+                                        <dt>Skype: </dt>
+                                        <dd>
+                                          <input type="text" class="inputbox" id="profile_field_3_-19" name="profile_field_3_-19" value="">
+                                          <br>
+                                          <span class="italic"></span></dd>
+                                      </dl>
+                                    </fieldset>
+                                    <span class="corners-bottom"><span></span></span></div>
+                                </div>
+                                <fieldset class="submit-buttons">
+                                  <input type="hidden" name="page_profil" value="informations">
+                                  <input type="hidden" name="mode" value="editprofile">
+                                  <input type="hidden" name="agreed" value="true">
+                                  <input type="hidden" name="coppa" value="">
+                                  <input type="hidden" name="user_id" value="1">
+                                  <input type="hidden" name="current_email" value="seijyujigakuen@live.com">
+                                  <input class="button1" type="submit" name="submit" value="Registrar">
+                                  &nbsp;
+                                  <input class="button2" type="reset" name="reset" value="Inicializar de nuevo">
+                                </fieldset>
+                              </form>
+                            </div>
+                            <div class="clear"></div>
+                            <span class="corners-bottom"><span></span></span></div>
+                        </div>
+                        <script type="text/javascript">$(function(){$('input[name=reset]').click(function(){$("#pwd_good,#pwd_middle,#pwd_bad").hide();});$('input[name=new_password],input[name=username]').keyup(function() {if ( $('input[name=new_password]').val() != "" ){var level = passwordStrength($('input[name=new_password]').val(),$('input[name=username]').val());switch(level){case 'bad' :$("#pwd_middle,#pwd_good").hide();$("#pwd_bad").show();break;case 'good' :$("#pwd_good,#pwd_bad").hide();$("#pwd_middle").show();break;case 'strong' :$("#pwd_middle,#pwd_bad").hide();$("#pwd_good").show();break;}}else{$("#pwd_middle,#pwd_good,#pwd_bad").hide();}});});</script></div>
+                      <div id="afilitybar">
+                        <h3>Afiliados de élite / <a href="/h8-">Más afiliados</a></h3>
+                        <ul id="afilitylist">
+                          <li><a href="http://exorcistgakuen.activoforo.com/"><img src="http://i1179.photobucket.com/albums/x386/MayuuRa11/banner1de40x40.png" alt="Foro de Ao no exorcist"></a></li>
+                          <li><a href="http://dragonball-world.foroactivo.mx/"><img src="http://i1188.photobucket.com/albums/z408/Reborn_24/Goku40x40.png" alt="Foro Dragon Ball"></a></li>
+                          <li><a href="http://hitman-world.activoforo.com/"><img src="http://i856.photobucket.com/albums/ab126/dino_cava/Hitoman/Banner/hw407.png" alt="Foro rol Hitman"></a></li>
+                          <li><a href="http://kyubi.foros.ws/index.php/"><img src="http://i50.tinypic.com/aaizpw.png" alt="Foro Naruto"></a></li>
+                          <li><a href="http://dgm-fallenangels.foroactivo.mx/"><img src="http://i1029.photobucket.com/albums/y354/SuomiNillson5/4040.gif" alt="Foro Fallen Angels"></a></li>
+                          <li><a href="http://no-heaven.foroac.com/"><img src="http://img546.imageshack.us/img546/3733/marcabanner.png" alt="Foro Mafias"></a></li>
+                          <li><a href="http://sweet-amoris.foroactivo.com/"><img src="http://i94.photobucket.com/albums/l98/camusa_verseau/sweetamoris/40-1.png" alt="Foro sweet"></a></li>
+                          <li><a href="http://cardcaptorsakurarol.foroactivo.com//"><img src="http://img43.imageshack.us/img43/4213/40x40a.png" alt="Foro rol Sakura"></a></li>
+                          <li><a href="http://world-fans-vocaloid.webmaster-foro.com/"><img src="http://i1134.photobucket.com/albums/m612/RainbowColorFull/Sweetboton.png" alt="Foro Rol Vocaloid"></a></li>
+                          <li><a href="http://sweet-sounds.foroactivo.com/"><img src="http://img580.imageshack.us/img580/8742/40x40.png" alt="Foro Vocaloid"></a></li>
+                          <li><a href="http://petsacademy.foroactivo.com/"><img src="http://i.imgur.com/ncVqj.gif?1" alt="Foro Rol Nekos"></a></li>
+                          <li><a href="http://dark-souls.foros-activos.com/"><img src="http://i1068.photobucket.com/albums/u460/DarkShadows99/Banners/40-1.png" alt="Foro Dark Souls"></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="emptyidright"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="page-footer">
+          <div class="navbar">
+            <div class="inner"><span class="corners-top"><span></span></span>
+              <ul class="linklist clearfix">
+                <li class="footer-home"><a class="icon-home" href="/" accesskey="h">Índice</a></li>
+                <li class="rightside"><strong><a href="http://www.foroactivo.com/" target="_blank">Crear foro</a></strong>&nbsp;|&nbsp;<span class="gensmall">©</span> <a href="http://www.foroactivo.com/es/phpbb/" target="_blank">phpBB</a>&nbsp;|&nbsp;<a name="bottom" href="http://asistencia.foroactivo.com/" target="_blank">Foro gratis de asistencia</a>&nbsp;|&nbsp;<a name="bottom" href="/statistics" rel="nofollow">Estadísticas</a>&nbsp;|&nbsp;<a name="bottom" href="/contact" rel="nofollow">Contactar</a>&nbsp;|&nbsp;<a href="/abuse?page=%2Fprofile%3Fmode%3Deditprofile&amp;report=1" rel="nofollow">Denunciar un abuso</a></li>
+              </ul>
+              <span class="corners-bottom"><span></span></span></div>
+          </div>
+          <p class="copyright"><strong><a href="/admin/index.forum?part=admin&amp;tid=a0e2c60efe11486edebe3ef67e825ff4">Ir al Panel de Administración</a><br>
+            <br>
+            </strong></p>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 <script type="text/javascript">//<![CDATA[
 fa_endpage();//]]></script>
 <div id="flamegif"></div>
-<div id="flameBG1" style="opacity: -16.702059202251018; ">-</div>
+<div id="flameBG1" style="opacity: -6.157852331530736; ">-</div>
 </body>
 </html>

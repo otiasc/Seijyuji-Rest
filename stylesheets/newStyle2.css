@@ -63,6 +63,10 @@ p {
 p.right {
   text-align: right;
 }
+
+label img {
+  vertical-align:middle;
+}
 /* GENERAL - UI (button, text...) */
 #tabs {
   height: 20px;
@@ -95,10 +99,11 @@ fiedset dl {
 }
 fieldset dt {
   float: left;
-  width: 340px;
+  width: 270px;
+  text-align: right;
 }
 fieldset dd {
-  margin: 0 0 0 340px;
+  margin: 0 0 0 280px;
 }
 input,
 textarea,
@@ -108,14 +113,7 @@ select {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   border: #333 1px solid;
-}
-input:focus,
-button:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  box-shadow: #039 0 7px 20px -3px inset;
-  border: #039 1px solid;
+  resize:none;
 }
 input:hover,
 button:hover,
@@ -130,6 +128,10 @@ textarea {
   background: black;
   box-shadow: #333 0 -7px 20px -3px inset;
 }
+input.inputbox.medium {
+  width: 60%;
+}
+
 input.button1,
 button.button1 {
   font-size: 13px;
@@ -172,6 +174,14 @@ input.button2:hover,
 button.button2:hover,
 input[type=submit].mainoption:hover {
   background: #666;
+}
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: #039 0 7px 20px -3px inset;
+  border: #039 1px solid;
 }
 .submit-buttons {
   text-align: center;
@@ -287,8 +297,8 @@ body.notIndexPage {
   float: left;
 }
 .navlinks li {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 .navlinks a {
   margin: 0 3px 0 0;
@@ -416,34 +426,37 @@ body.notIndexPage {
   font-size: 12px;
 }
 .newbar-content-staff ul#staff li:nth-child(5) {
-  float:none;
-  clear:both;
-  width:100%;
-  text-align:center;
+  float: none;
+  clear: both;
+  width: 100%;
+  text-align: center;
 }
 .newbar-content-staff ul#staff li h3 {
-  white-space:nowrap;
-  overflow:hidden;
+  white-space: nowrap;
+  overflow: hidden;
   margin: 0;
   padding: 0;
   font-size: 14px;
 }
 .newbar-content-staff ul#staff li img {
-  width:100%;
-  max-width:120px;
+  width: 100%;
+  max-width: 120px;
 }
 .newbar-content-miniguide ul#miniguide {
-  list-style: none;
+  list-style:none;
   padding: 0;
-  margin: 0 -10px 0 0;
+  margin: 0;
 }
 .newbar-content-miniguide ul#miniguide li {
   float: left;
-  width: 16%;
-  min-width:110px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 50%;
+  min-width: 110px;
   height: 230px;
-  padding: 0;
-  margin: 0 4px 0 0;
+  padding: 10px;
+  margin: 0;
   font-size: 12px;
 }
 .newbar-content-miniguide ul#miniguide li .empty {
@@ -451,20 +464,20 @@ body.notIndexPage {
   height: 120px;
 }
 .newbar-content-miniguide ul#miniguide li h3 {
-  padding: 10px 3px 13px 3px;
+  padding: 16px 3px 12px 0px;
   margin: 0;
   font-weight: 300;
+  font-size:17px;
 }
 .newbar-content-miniguide ul#miniguide li p {
-  padding: 0 3px;
+  padding: 0 0 6px 0;
   margin: 0;
-  font-size: 10px;
-  text-align: center;
+  font-size: 13px;
 }
 #newbar-links {
-  float:none;
-  clear:both;
-  margin:10px 0 0 0;
+  float: none;
+  clear: both;
+  margin: 10px 0 0 0;
 }
 #newbar-links li {
   margin: 0 10px 0 0;
@@ -634,7 +647,7 @@ body.notIndexPage {
 .indexPage .forabg:nth-child(7) li.row {
   float: left;
   width: 25%;
-  height: 290px;
+  height: 310px;
   margin: 0 0 26px 0;
   padding: 10px;
 }
@@ -899,6 +912,9 @@ p.page-bottom {
   vertical-align: middle;
 }
 #afilitybar {
+  padding: 0;
+  float: none;
+  clear: both;
   margin: 0;
 }
 ul#afilitylist {
@@ -944,13 +960,20 @@ ul.ul-icons {
 .post {
   padding: 5px 0 33px 0;
 }
+.panel {
+}
 /* POST - POSTBODY */
-.post .postbody {
+.post .postbody,
+.panel .postbody {
   font-size: 10px;
   clear: both;
   float: right;
   width: 680px;
   padding: 0 26px 0 10px;
+}
+.panel .postbody {
+  padding:20px 0 30px 0;
+  border-top:#333 1px dashed;
 }
 .post .postbody .profile-icons {
   float: right;
@@ -977,7 +1000,8 @@ ul.ul-icons {
   font-size: 18px;
   color: #CCC;
 }
-.post .postbody .author {
+.post .postbody .author,
+.panel .postbody .author {
   padding: 4px;
   text-align: center;
   font-style: italic;
@@ -988,7 +1012,8 @@ ul.ul-icons {
 .post .postbody .topic-title img {
   display: none;
 }
-.post .postbody .content {
+.post .postbody .content,
+.panel .postbody .content {
   color: #777;
   text-align: justify;
   text-justify: auto;
@@ -1029,8 +1054,153 @@ fieldset.jumpbox {
 fieldset.quickmod {
   display: none;
 }
+/* PROFILE - */
+#profile-advanced-layout {
+  float: left;
+  width: 70%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0 20px 0 0;
+}
+#profile-advanced-right {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0 0 0 70%;
+  padding: 0 20px;
+}
+#profile-tab-field-profil dl {
+  float: none;
+  clear: both;
+  margin: 0;
+  padding: 10px 0;
+}
+#profile-tab-field-profil dl dt {
+  float: left;
+  text-align: left;
+  width: 270px;
+  margin: 0;
+  padding: 0;
+}
+#profile-tab-field-profil dl dd {
+  margin: 0 0 0 280px;
+  padding: 0;
+}
+#profile-tab-field-profil div.separator {
+  height: 0;
+}
+.invisible {
+  display: none;
+}
+.ajax-profil_edit {
+  float: left;
+  margin: -16px 0 0 -16px;
+  cursor: pointer;
+}
+.module {
+  overflow: hidden;
+}
+.friend-block {
+  float: left;
+}
+.friend-block .avatar img {
+  height: 50px;
+}
+.friend-block span {
+  display: none;
+}
+.friend_list_online_status {
+  display: none;
+}
+.itemList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.itemList li {
+  padding: 0;
+  margin: 2px 0;
+}
+.itemList .amount {
+  width: 30px;
+  display: inline-block;
+  text-align: right;
+}
 
 
+/* REPLY AND NEW THREAD */
+#text_editor_select_controls {
+  height:0;
+}
+#text_editor_controls {
+  height:44px;
+  background:#333;
+  padding:10px 10px 0 10px;
+  border-radius:10px 10px 0 0;
+  -moz-border-radius:10px 10px 0 0;
+  -webkit-border-radius:10px 10px 0 0;
+}
+#text_edit {
+  font-size:1px;
+}
+#format-buttons {
+  height:28px;
+}
+#format-buttons .button2 {
+  background:#CCC;
+  color:#000;
+  padding:2px;
+  height:22px;
+  border-radius:0;
+  -moz-border-radius:0;
+  -webkit-border-radius:0;
+  float:left;
+  vertical-align:middle;
+}
+#format-buttons .button2 img {
+  vertical-align:middle;
+}
+#format-buttons img[src="http://illiweb.com/fa/wysiwyg/separator.png"] {
+  float:left;
+  opacity:0;
+}
+#helpbox {
+  display:block;
+  font-size:0.8em;
+}
+#smiley-box {
+  display:none;
+  position:absolute;
+  width:230px;
+  height:350px;
+  margin:0 0 0 705px;
+  border-left:#666 5px solid;
+  font-size:0.7em;
+  background:#000;
+}
+#smiley-box iframe {
+  width:100%;
+  height:300px;
+}
+#message-box {
+  line-height:1px;
+  line-height:0;
+  line-height:none;
+  height:350px;
+}
+#textarea_content {
+  width:100%;
+  height:100%;
+}
+#text_editor_textarea {
+  width:100%;
+  height:100%;
+  padding:10px;
+}
+#list_dice {
+  display:none;
+}
 
 /*
 
@@ -1068,7 +1238,7 @@ fieldset.quickmod {
   font-weight: 300;
 }
 .navbar {
-  margin:-20px 0 0 0;
+  margin: -20px 0 0 0;
 }
 .navlinks a[href="/groups"] {
   display: none;
@@ -1076,26 +1246,23 @@ fieldset.quickmod {
 .navlinks a[href="/faq"] {
   display: none;
 }
-
 /* SEARCH-BOX - GENERAL */
 #search-box {
-  float:none;
-  clear:both;
+  float: none;
+  clear: both;
   width: auto;
   height: 20px;
-  text-align:center;
-  margin:5px -10px 0 -10px;
+  text-align: center;
+  margin: 5px -10px 0 -10px;
   border-radius: 0;
   font-size: 0;
-  
-  background:#060606;
+  background: #060606;
 }
 #search {
-  margin:0 auto;
-  width:200px;
-  text-align:left;
+  margin: 0 auto;
+  width: 200px;
+  text-align: left;
 }
-
 /* NEWBAR - SPECIFIC - INDEX*/
 .indexPage #newbar {
   height: auto;
@@ -1113,31 +1280,31 @@ fieldset.quickmod {
 @media all and (max-width:640px) {
 /* NEWBAR - SPECIFIC - INDEX*/
 .indexPage #newbar {
-  font-size:0.7em;
+  font-size: 0.7em;
 }
 .indexPage #newbar-menu {
   float: none;
   width: 100%;
   height: 30px;
   border-right: none;
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 .indexPage #newbar-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  width:100%;
+  width: 100%;
 }
 .indexPage #newbar-menu li {
-  display:inline-block;
-  box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  width:24%;
-  margin:0;
-  padding:0;
-  text-align:center;
+  display: inline-block;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 24%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 .indexPage #newbar-menu li.selected {
   background: #333;
@@ -1148,7 +1315,7 @@ fieldset.quickmod {
 }
 .indexPage #newbar-menu a {
   display: block;
-  padding:0;
+  padding: 0;
 }
 .indexPage #newbar-content {
   margin: 0;
@@ -1180,9 +1347,8 @@ fieldset.quickmod {
   color: #999;
   font-size: 1.2em;
   font-weight: 700;
-  
-  white-space:nowrap;
-  overflow:hidden;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .newbar-content-staff ul#staff {
   list-style: none;
