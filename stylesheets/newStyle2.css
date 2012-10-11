@@ -619,83 +619,94 @@ body.notIndexPage {
 .notIndexPage .forabg li.row .lastpost:before {
   content: 'Último: ';
 }
+
+/* FORABG - SPECIFIC - INDEX - Administración */
+.indexPage .forabg:nth-child(5) {
+  display:none;
+}
+.indexPage .forabg:nth-child(6) {
+  display:none;
+}
+.indexPage .forabg:nth-child(7) {
+  display:none;
+}
 /* FORABG - SPECIFIC - INDEX - Off-rol */
-.indexPage .forabg:nth-child(5) li.row {
+.indexPage .forabg:nth-child(8) li.row {
   float: left;
   width: 33%;
   margin: 0 0 20px 0;
 }
-.indexPage .forabg:nth-child(5) li.row .dterm .newStyleDesc {
+.indexPage .forabg:nth-child(8) li.row .dterm .newStyleDesc {
   height: 100px;
 }
 /* FORABG - SPECIFIC - INDEX - Ciudad Seijyuji */
-.indexPage .forabg:nth-child(6) li.row {
+.indexPage .forabg:nth-child(9) li.row {
   float: left;
   width: 25%;
 }
-.indexPage .forabg:nth-child(6) li.row .dterm .newStyleDesc {
+.indexPage .forabg:nth-child(9) li.row .dterm .newStyleDesc {
   height: 370px;
 }
-.indexPage .forabg:nth-child(6) li.row.specialRow .dterm .newStyleDesc {
+.indexPage .forabg:nth-child(9) li.row.specialRow .dterm .newStyleDesc {
   height: 270px;
 }
-.indexPage .forabg:nth-child(6) li.row.specialRow .dterm .newStyleSubforums {
+.indexPage .forabg:nth-child(9) li.row.specialRow .dterm .newStyleSubforums {
   height: 100px;
   text-align: right;
 }
 /* FORABG - SPECIFIC - INDEX - Seijyuji Gakuen */
-.indexPage .forabg:nth-child(7) li.row {
+.indexPage .forabg:nth-child(10) li.row {
   float: left;
   width: 25%;
   height: 310px;
   margin: 0 0 26px 0;
   padding: 10px;
 }
-.indexPage .forabg:nth-child(7) li.row .dterm .newStyleDesc {
+.indexPage .forabg:nth-child(10) li.row .dterm .newStyleDesc {
   height: 214px;
 }
-.indexPage .forabg:nth-child(7) li.row.specialRow {
+.indexPage .forabg:nth-child(10) li.row.specialRow {
   width: 50%;
 }
-.indexPage #main-content .forabg:nth-child(7) li.row.specialRow:hover {
+.indexPage .forabg:nth-child(10) li.row.specialRow:hover {
   background: #191919;
 }
-.indexPage #main-content .forabg:nth-child(7) li.row.specialRow .dterm .newStyleDesc {
+.indexPage .forabg:nth-child(10) li.row.specialRow .dterm .newStyleDesc {
   float: left;
   width: 50%;
 }
-.indexPage #main-content .forabg:nth-child(7) li.row.specialRow .dterm .newStyleSubforums {
+.indexPage .forabg:nth-child(10) li.row.specialRow .dterm .newStyleSubforums {
   margin-left: 50%;
   padding-left: 10px;
   height: 214px;
 }
 /* FORABG - SPECIFIC - INDEX - La Orden */
-.indexPage .forabg:nth-child(8) li.row {
+.indexPage .forabg:nth-child(11) li.row {
   float: left;
   width: 25%;
 }
-.indexPage .forabg:nth-child(8) li.row .dterm .newStyleDesc {
+.indexPage .forabg:nth-child(11) li.row .dterm .newStyleDesc {
   height: 170px;
 }
-.indexPage .forabg:nth-child(8) li.row.specialRow .dterm .newStyleDesc {
+.indexPage .forabg:nth-child(11) li.row.specialRow .dterm .newStyleDesc {
   height: 110px;
 }
-.indexPage .forabg:nth-child(8) li.row.specialRow .dterm .newStyleSubforums {
+.indexPage .forabg:nth-child(11) li.row.specialRow .dterm .newStyleSubforums {
   height: 60px;
   text-align: right;
 }
 /* FORABG - SPECIFIC - INDEX - Kioto */
-.indexPage .forabg:nth-child(9) li.row {
+.indexPage .forabg:nth-child(12) li.row {
   float: left;
   width: 25%;
 }
-.indexPage .forabg:nth-child(9) li.row .dterm .newStyleDesc {
+.indexPage .forabg:nth-child(12) li.row .dterm .newStyleDesc {
   height: 170px;
 }
-.indexPage .forabg:nth-child(9) li.row.specialRow .dterm .newStyleDesc {
+.indexPage .forabg:nth-child(12) li.row.specialRow .dterm .newStyleDesc {
   height: 70px;
 }
-.indexPage .forabg:nth-child(9) li.row.specialRow .dterm .newStyleSubforums {
+.indexPage .forabg:nth-child(12) li.row.specialRow .dterm .newStyleSubforums {
   height: 100px;
   text-align: right;
 }

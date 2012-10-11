@@ -16,8 +16,11 @@
 				if ($(this).css('background-image')=='url(http://i48.servimg.com/u/f48/17/38/25/48/icons_11.png)') {
 					$(this).parents('li.row').addClass('forum-newmessages');
 					setInterval(loop, config.time*2, config, $(this).find('.newStyleDesc'));
+					
+					$(this).css('background-position','right top');
+				} else {
+					$(this).css('background-image','none');
 				}
-				$(this).css('background-image','none');
 			});
 		}
 	});
