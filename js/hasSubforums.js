@@ -1,5 +1,6 @@
 /*
 	jQuery plugin
+	HAS SUBFORUMS
 
 */
 (function($) {
@@ -11,4 +12,4 @@
 			});
 		}
 	});
-})(jQuery)
+})(jQuery);

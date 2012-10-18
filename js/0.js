@@ -22,7 +22,12 @@ $(document).ready(function(e) {
 			'http://i38.servimg.com/u/f38/17/38/25/48/00seij10.jpg'
 		]);
 		$(document).hasSubforums();
-		$('.forabg .forums .row').hasNewMessages();
+		$('.forabg .forums .row:has(a[href|="/f21"])').hasNewMessages({where:$('#newbar-links a[href|="/f21"]')});
+		$('.forabg .forums .row:has(a[href|="/f80"])').hasNewMessages({where:$('#newbar-links a[href|="/f80"]')});
+		$('.forabg .forums .row:has(a[href|="/f83"])').hasNewMessages({where:$('#newbar-links a[href|="/f83"]')});
+		$('.forabg .forums .row').each(function() {
+			$(this).hasNewMessages('');
+		});
 		$(document.body).removeClass('notIndexPage');
 		$(document.body).addClass('indexPage');
 		

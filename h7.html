@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Documento sin título</title>
+<link rel="stylesheet" href="http://seijyujigakuen.foroactivo.com/105-ltr.css" />
+<style type="text/css">
+body {
+  background: #000;
+}
+h2 {
+  padding: 0;
+}
+h3 {
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+#battlecontainer {
+  max-width: 180px;
+  max-height: 200px;
+  padding: 10px;
+}
+#home {
+  padding-top: -10px;
+}
+#actions {
+  text-align: left;
+  padding-top: 20px;
+}
+#options {
+  padding-bottom: 90px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#home li a {
+  display: block;
+  padding: 7px 0;
+  height: 12px;
+  margin: 1px 5px;
+  background: #222;
+  color: #666;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 7px;
+  box-shadow: 0px 20px 20px 0px #111 inset;
+}
+#home li.arrow {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: url(imgs/icons_normal.png) -64px 0;
+}
+#home li:first-child a {
+  background: #555555;
+  box-shadow: 0px 20px 20px 0px #333 inset;
+  display: block;
+  padding: 7px 0;
+  height: 12px;
+  color: #FFF;
+}
+#home li:first-child a:hover {
+  box-shadow: 0px 20px 20px 0px #666 inset;
+}
+a.disabled {
+  cursor: default;
+}
+.icon {
+}
+.search {
+  background-image: url(imgs/icons_normal.png);
+  background-position: -160px -112px;
+}
+/**/
+#switch {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: table;
+}
+#switch li {
+  display: table-cell;
+  width: 50%;
+  height: 30px;
+  text-align: center;
+}
+#switch a {
+  box-shadow: #666 0px 8px 20px -5px inset;
+  text-decoration: none;
+  height: 10px;
+  padding: 10px 0 10px 0;
+  display: block;
+}
+#switch a:hover {
+  color: #00CCFF;
+}
+#switch a.selected {
+  box-shadow: #0CF 0px 8px 20px -5px inset;
+}
+#searchbox {
+  box-sizing: border-box;
+  padding: 3px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+}
+div.disabled {
+  display: none;
+}
+#search_bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #999;
+  width: 100%;
+  text-align: center;
+}
+#search_bar #searchbox {
+  width: 90%;
+  height: 18px;
+  margin: 5px auto;
+  padding: 0 0 0 16px;
+  background: #FFF;
+  box-shadow: none;
+  color: #000;
+}
+#actionList a {
+ /* border-bottom: #333333 1px solid;*/
+  display: block;
+  padding: 4px 0;
+}
+#targetList {
+  margin: 3px 0 0 0;
+}
+#targetList li {
+  float: left;
+}
+#targetList img {
+  height: 50px;
+}
+#optionList li {
+  height: 16px;
+}
+#optionList label {
+  vertical-align: middle;
+}
+#submit_bar {
+  background: #000000;
+  border-top: #999 1px solid;
+  text-align: center;
+  padding: 4px 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+#options {
+  text-align:left;
+}
+.loading_gif {
+  text-align: center;
+  display: none;
+}
+.loading .loading_gif {
+  display: block;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script><script src="http://illiweb.com/rsc/31/frm/lang/es.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://raw.github.com/otiasc/Battle-System/master/v3/core.js"></script>
+<script type="text/javascript" src="https://raw.github.com/otiasc/Battle-System/master/v3/actions.js"></script>
+<script type="text/javascript" src="https://raw.github.com/otiasc/Battle-System/master/v3/options.js"></script>
+</head>
+
+<body>
+<div id="battlecontainer">
+  <form action="javascript:void(0)" method="get" onsubmit="pasteCode()">
+    <div id="home">
+      <h2>Sistema de Batalla</h2>
+      <p>Para usarlo tan solo elige la acción, el objetivo y las condiciones de la batalla</p>
+      <input type="button" value="Elegir acción" class="button1" />
+    </div>
+    <div id="actions" class="disabled">
+      <div id="search_bar">
+        <input name="searchbox" type="text" id="searchbox" class="inputbox" placeholder="Buscar acción" />
+      </div>
+      <ul id="actionList">
+        <li>Patada</li>
+      </ul>
+    </div>
+    <!----->
+    <div id="targets" class="disabled">
+      <h3>Selecciona objetivo</h3>
+      <div class="loading_gif"><img src="imgs/loader_black.gif" /></div>
+      <ul id="targetList">
+        <li>Patada</li>
+      </ul>
+    </div>
+    <!---->
+    <div id="options" class="disabled">
+      <h3>Acción</h3>
+      <div id="chosenAction"><strong></strong> <a href="javascript:;" onclick="loadActions()">Cambiar</a></div>
+      <h3>Objetivo</h3>
+      <div id="chosenTarget"><strong></strong> <a href="javascript:;" onclick="loadTargets()">Cambiar</a></div>
+      <h3>(opcional) Opciones</h3>
+      <ul id="optionList">
+        <li>Patada</li>
+      </ul>
+      <div id="submit_bar">
+        <p>Recuerda que debes narrar la acción antes de pegar el código</p>
+        <button type="submit" style="font-size: 10px; padding: 5px 5px;" class="button1">Pegar código</button>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>

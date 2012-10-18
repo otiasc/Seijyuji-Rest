@@ -1,6 +1,6 @@
 /*
 	jQuery plugin
-
+	INDEX HEADER TICKER
 */
 (function($) {
 	var $logodesc2;
@@ -40,10 +40,10 @@
 			$logodesc2 = $('<ul id="logo-desc2"></ul>')
 				.append(
 					$('<li></li>')
-						.append( $('<span class="background"></span>').css('background', 'url(\"' + config.background + '\") no-repeat top center') )
+						.append( $('<span class="background"></span>').css('background', 'url("' + config.background + '") no-repeat top center') )
 						.append('<h1>' + config.title + '</h1>')
 						.append('<div>' + config.subtitle + '</div>')
-				)
+				);
 			
 			// 1. Poner el heading con "Seijyuji Gakuen..." independientemente del source
 			$bg = $('<div></div>').attr('id', 'background2');
@@ -63,7 +63,7 @@
 			
 			$logodesc2.append(
 				$('<li></li>')
-					.append( $('<span class="background"></span>').css('background', 'url(\"' + config.background + '\") no-repeat top center') )
+					.append( $('<span class="background"></span>').css('background', 'url("' + config.background + '") no-repeat top center') )
 					.append('<h1>' + config.title + '</h1>')
 					.append('<div>' + config.subtitle + '</div>')
 			);
@@ -120,7 +120,7 @@
 		
 		
 		// 2. Esperar a que se oculte
-		var $t = $logodesc2.find('li:nth-child(' + id + ')')
+		var $t = $logodesc2.find('li:nth-child(' + id + ')');
 		$bg.attr('style' , $t.find('.background').attr('style')).hide();
 		$t.delay(300).show(config.fadeIn.animation, config.fadeIn.options, config.fadeIn.speed);
 		

@@ -12,7 +12,7 @@
 <meta name="robots" content="index, follow, noodp">
 <meta name="title" content="Seijyuji Gakuen" />
 <link rel="stylesheet" href="stylesheets/newStyle2.css" type="text/css" />
-<link href="stylesheets/jquery-bubble-popup-v3.css" rel="stylesheet" type="text/css" />
+<!--<link href="stylesheets/jquery-bubble-popup-v3.css" rel="stylesheet" type="text/css" />-->
 <!----->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
 <script src="http://illiweb.com/rsc/35/frm/jquery/json/jquery.json-1.3.min.js" type="text/javascript"></script>
@@ -21,12 +21,9 @@
 <script type="text/javascript" src="js/hasSubforums.js"></script>
 <script type="text/javascript" src="js/hasNewMessages.js"></script>
 <script type="text/javascript" src="js/indexHeaderTicker.js"></script>
-
-
-<script type="text/javascript" src="js/itemSystem.0.js"></script>
-<script type="text/javascript" src="js/itemSystem.jquery.js"></script>
-
-<script src="js/jquery-bubble-popup-v3.min.js" type="text/javascript"></script>
+<!--<script type="text/javascript" src="js/areYouRegistered.js"></script>-->
+<!--<script type="text/javascript" src="js/itemSystem.0.js"></script>
+<script type="text/javascript" src="js/itemSystem.jquery.js"></script>-->
 <!------>
 <script>$(document).ready(function(){});//]]></script>
 <script type="text/javascript" src="javascripts/identifyIndex.js"></script>
@@ -58,16 +55,81 @@ function activatePage(id) {
 }
 </script>
 </head>
-<body id="phpbb"><div class="conteneur_minwidth_IE"><div class="conteneur_layout_IE"><div class="conteneur_container_IE"><div id="wrap"><a id="top" name="top" accesskey="t"></a><div id="page-header"><div class="headerbar"><div class="inner"><span class="corners-top"><span></span></span><div id="logo-desc"><a href="/" id="logo"><img src="http://i48.servimg.com/u/f48/17/38/25/48/headin10.png" alt="Seijyuji Gakuen"></a><p>Foro de rol de Ao no Exorcist</p></div><span class="corners-bottom"><span></span></span></div></div><div class="navbar"><div class="inner"><span class="corners-top"><span></span></span><ul class="linklist navlinks"><li><a class="mainmenu" href="/"><img id="i_icon_mini_index" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Índice" title="Índice">Índice</a> &nbsp;</li><li><a class="mainmenu" href="/search" onclick="showhide(document.getElementById('search_menu')); return false;"><img id="i_icon_mini_search" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Buscar" title="Buscar">Buscar</a> &nbsp;<script type="text/javascript">//<![CDATA[
+<body id="phpbb">
+<div class="conteneur_minwidth_IE">
+  <div class="conteneur_layout_IE">
+    <div class="conteneur_container_IE">
+      <div id="wrap"><a id="top" name="top" accesskey="t"></a>
+        <div id="page-header">
+          <div class="headerbar">
+            <div class="inner"><span class="corners-top"><span></span></span>
+              <div id="logo-desc"><a href="/" id="logo"><img src="http://i48.servimg.com/u/f48/17/38/25/48/headin10.png" alt="Seijyuji Gakuen"></a>
+                <p>Foro de rol de Ao no Exorcist</p>
+              </div>
+              <span class="corners-bottom"><span></span></span></div>
+          </div>
+          <div class="navbar">
+            <div class="inner"><span class="corners-top"><span></span></span>
+              <ul class="linklist navlinks">
+                <li><a class="mainmenu" href="/"><img id="i_icon_mini_index" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Índice" title="Índice">Índice</a> &nbsp;</li>
+                <li><a class="mainmenu" href="/search" onclick="showhide(document.getElementById('search_menu')); return false;"><img id="i_icon_mini_search" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Buscar" title="Buscar">Buscar</a> &nbsp;<script type="text/javascript">//<![CDATA[
 var url_search = '/search';
 insert_search_menu_new();//]]>
-</script><div class="overview row3" id="search_menu" style="display:none;position:absolute;width:350px;z-index:10000"><form action="/search" method="get"><input type="hidden" name="mode" value="searchbox"><p class="title-overview row2">Buscar</p><p class="center-overview"><input type="text" class="inputbox medium" name="search_keywords"><input type="submit" class="button1" value="Go"><br>Resultados por: <label for="rposts"><input id="rposts" type="radio" name="show_results" value="posts"> Mensajes</label> <label for="rtopics"><input id="rtopics" type="radio" name="show_results" value="topics" checked="checked"> Temas</label></p><hr class="dashed"><p class="center-overview"><a href="/search" rel="nofollow" title="Búsqueda avanzada"><img src="http://illiweb.com/fa/empty.gif" width="12" height="13" alt="Búsqueda avanzada"> Búsqueda avanzada</a></p></form></div></li><li><a class="mainmenu" href="/memberlist" rel="nofollow"><img id="i_icon_mini_members" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Miembros" title="Miembros">Miembros</a> &nbsp;</li><li><a class="mainmenu" href="/groups"><img id="i_icon_mini_groups" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Grupos de Usuarios" title="Grupos de Usuarios">Grupos de Usuarios</a> &nbsp;</li><li><a class="mainmenu" href="/profile?mode=editprofile"><img id="i_icon_mini_profile" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Perfil" title="Perfil">Perfil</a> &nbsp;</li><li><a class="mainmenu" href="/privmsg?folder=inbox"><img id="i_icon_mini_message" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Mensajería" title="Mensajería">Mensajería</a> &nbsp;</li><li><a class="mainmenu" href="/login?logout=1&amp;tid=085d98aec3083c53969e8e76c118f057&amp;key=00d72f" rel="nofollow" id="logout"><img id="i_icon_mini_logout" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Desconectarse [ Ryûji Suguro ]" title="Desconectarse [ Ryûji Suguro ]">Desconectarse [ Ryûji Suguro ]</a> &nbsp;</li><li style="float:right; vertical-align:middle"><a href="http://facebook.com/seijyujigakuen"><img src="http://i48.servimg.com/u/f48/17/38/25/48/fb_log10.jpg" style="vertical-align:text-bottom"> Seijyuji en facebook</a> <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fseijyujigakuen&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px; vertical-align:text-bottom" allowtransparency="true"></iframe></li></ul><div id="search-box"><form method="get" action="/search?search_where=11" id="search"><p class="nomargin"><input type="text" name="search_keywords" id="keywords" maxlength="128" class="inputbox search" value="Buscar..." onclick="if (this.value == 'Buscar...') this.value = '';" onblur="if (this.value == '') this.value = 'Buscar...';"><input class="button2" type="submit" value="Buscar"></p></form></div><span class="corners-bottom"><span></span></span></div></div></div><div id="page-body"><div id="content-container"><div id="outer-wrapper"><div id="wrapper"><div id="container"><div id="content"><div id="left"><!-- Sistema de batalla -->
-<script type="text/javascript" src="https://raw.github.com/otiasc/Battle-System/master/v3/actions.js"></script>
-<script type="text/javascript" src="https://raw.github.com/otiasc/Battle-System/master/v3/core.js"></script>
-<!-- El vigilante -->
-<script type="text/javascript" src="http://otiasc.github.com/Seijyuji-Rest/javascripts/statschecker2.js"></script>
-<!-- Objetos -->
-<div style="height:1px"></div><div style="height:1px"></div>
+</script>
+                  <div class="overview row3" id="search_menu" style="display:none;position:absolute;width:350px;z-index:10000">
+                    <form action="/search" method="get">
+                      <input type="hidden" name="mode" value="searchbox">
+                      <p class="title-overview row2">Buscar</p>
+                      <p class="center-overview">
+                        <input type="text" class="inputbox medium" name="search_keywords">
+                        <input type="submit" class="button1" value="Go">
+                        <br>
+                        Resultados por:
+                        <label for="rposts">
+                          <input id="rposts" type="radio" name="show_results" value="posts">
+                          Mensajes</label>
+                        <label for="rtopics">
+                          <input id="rtopics" type="radio" name="show_results" value="topics" checked="checked">
+                          Temas</label>
+                      </p>
+                      <hr class="dashed">
+                      <p class="center-overview"><a href="/search" rel="nofollow" title="Búsqueda avanzada"><img src="http://illiweb.com/fa/empty.gif" width="12" height="13" alt="Búsqueda avanzada"> Búsqueda avanzada</a></p>
+                    </form>
+                  </div>
+                </li>
+                <li><a class="mainmenu" href="/memberlist" rel="nofollow"><img id="i_icon_mini_members" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Miembros" title="Miembros">Miembros</a> &nbsp;</li>
+                <li><a class="mainmenu" href="/groups"><img id="i_icon_mini_groups" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Grupos de Usuarios" title="Grupos de Usuarios">Grupos de Usuarios</a> &nbsp;</li>
+                <li><a class="mainmenu" href="/profile?mode=editprofile"><img id="i_icon_mini_profile" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Perfil" title="Perfil">Perfil</a> &nbsp;</li>
+                <li><a class="mainmenu" href="/privmsg?folder=inbox"><img id="i_icon_mini_message" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Mensajería" title="Mensajería">Mensajería</a> &nbsp;</li>
+                <li><a class="mainmenu" href="/login?logout=1&amp;tid=4de3da80d4aac90d3635f12915be4079&amp;key=11befd" rel="nofollow" id="logout"><img id="i_icon_mini_logout" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Desconectarse [ Ryûji Suguro ]" title="Desconectarse [ Ryûji Suguro ]">Desconectarse [ Ryûji Suguro ]</a> &nbsp;</li>
+                <li style="float:right; vertical-align:middle"><a href="http://facebook.com/seijyujigakuen"><img src="http://i48.servimg.com/u/f48/17/38/25/48/fb_log10.jpg" style="vertical-align:text-bottom"> Seijyuji en facebook</a>
+                  <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fseijyujigakuen&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px; vertical-align:text-bottom" allowtransparency="true"></iframe>
+                </li>
+              </ul>
+              <div id="search-box">
+                <form method="get" action="/search?search_where=11" id="search">
+                  <p class="nomargin">
+                    <input type="text" name="search_keywords" id="keywords" maxlength="128" class="inputbox search" value="Buscar..." onclick="if (this.value == 'Buscar...') this.value = '';" onblur="if (this.value == '') this.value = 'Buscar...';">
+                    <input class="button2" type="submit" value="Buscar">
+                  </p>
+                </form>
+              </div>
+              <span class="corners-bottom"><span></span></span></div>
+          </div>
+        </div>
+        <div id="page-body">
+          <div id="content-container">
+            <div id="outer-wrapper">
+              <div id="wrapper">
+                <div id="container">
+                  <div id="content">
+                    <div id="left"><!-- Sistema de batalla --> 
+                      <script type="text/javascript" src="https://raw.github.com/otiasc/Battle-System/master/v3/actions.js"></script> 
+                      <script type="text/javascript" src="https://raw.github.com/otiasc/Battle-System/master/v3/core.js"></script> 
+                      <!-- El vigilante --> 
+                      <script type="text/javascript" src="http://otiasc.github.com/Seijyuji-Rest/javascripts/statschecker2.js"></script> 
+                      <!-- Objetos -->
+                      <div style="height:1px"></div>
                       <div id="newbar">
                         <div id="newbar-menu">
                           <ul>
@@ -82,6 +144,7 @@ insert_search_menu_new();//]]>
                             <h2 class="">Los demonios existen...<br>
                               <span class="highlight">...en nuestros corazones</span></h2>
                             <p class="nomargin">El mundo que ves se encuentra compuesto por dos dimensiones opuestas, unidas en una, cual espejo. Assiah, el mundo humano, se encuentra conectado a Gehenna, el mundo de los demonios, gobernado por Satán. Los demonios solo pueden habitar en Assiah si estos poseen algún cuerpo existente en este mundo, y es por esto por lo que surgieron los exorcistas de la orden Seijyuji, con la intención de erradicar a los demonios.</p>
+                            <p style="text-align:right"><a href="/h10-">Sigue leyendo...</a></p>
                           </div>
                           <div class="newbar-content-staff">
                             <h2>Clic sobre ellos para enviarles un mensaje privado</h2>
@@ -130,52 +193,1025 @@ insert_search_menu_new();//]]>
                         <div id="newbar-links">
                           <ul class="linklist">
                             <li>Otros temas administrativos:</li>
-                            <li><a href="">Normas del foro</a></li>
-                            <li><a href="">Personajes cannon</a></li>
-                            <li><a href="/f21-" id="pruebasderol">Pruebas de rol</a></li>
-                            <li><a href="">Feedback (sugerencias, errores...)</a></li>
-                            <li><a href="">Afiliaciones</a></li>
+                            <li><a href="/t190-">Normas del foro</a></li>
+                            <li><a href="/t123-">Personajes cannon</a></li>
+                            <li><a href="/f21-" id="pruebasderol"><span class="newStyleDesc">Pruebas de rol</span></a></li>
+                            <li><a href="/f83-">Feedback (sugerencias, errores...)</a></li>
+                            <li><a href="/f80-">Afiliaciones</a></li>
                           </ul>
                           <br class="clear">
                         </div>
-                      </div><div style="height:1px"></div><div class="newsTickerSource">
+                      </div>
+                      <div style="height:1px"></div>
+                      <div class="newsTickerSource">
                         <ul>
                           <li> <span class="background" style="background:url('http://i38.servimg.com/u/f38/17/38/25/48/01rin10.jpg') no-repeat top center"></span>
                             <h1>¡Uoah! ¡Nuevo diseño!</h1>
-                            <p>Ahora en Seijyuji Gakuen</p>
+                            <p>Seijyuji Next.</p>
                           </li>
-                          <li> <span class="background" style="background:url('http://i38.servimg.com/u/f38/17/38/25/48/02fore10.jpg') no-repeat top center"></span> <a href="/t154-">
-                            <h1>Clase especial en el bosque</h1>
-                            <p>Trama activa actualmente</p>
-                            </a> </li>
-                          <li> <span class="background" style="background:url('http://i38.servimg.com/u/f38/17/38/25/48/03rins10.jpg') no-repeat top center"></span> <a href="/t42-">
-                            <h1>El lado demoníaco de Rin</h1>
-                            <p>Una vez no pudo controlarse. ¿Lo recuerdas?</p>
+                          <li> <span class="background" style="background:url('http://i38.servimg.com/u/f38/17/38/25/48/03rins10.jpg') no-repeat top center"></span> <a href="/h10-">
+                            <h1>Seijyuji Book</h1>
+                            <p>Todo lo que pasó en la Seijyuji, en formato libro</p>
                             </a> </li>
                         </ul>
-                      </div><div style="height:1px"></div></div><div id="main"><div id="main-content"><p class="right rightside">Tu última visita fue: 13/10/12, 02:37 am</p><p>Fecha y hora actual: 13/10/12, 03:04 am</p><br class="clear"><ul class="linklist"><li><a href="/search?search_id=newposts">Ver mensajes desde la última visita</a>&nbsp;•&nbsp;</li><li><a href="/search?search_id=egosearch">Ver tus mensajes</a>&nbsp;•&nbsp;</li><li><a href="/search?search_id=unanswered">Ver mensajes sin respuesta</a></li><li class="rightside"><a href="/?mark=forums" accesskey="m">Marcar todos los foros como leídos</a></li></ul><div class="forabg"><div class="inner"><ul class="topiclist news"><li class="header"><dl class="icon"><dd class="dterm"><div class="table-title"><h2>Tablón de anuncios</h2><span><a href="javascript:void(0)" id="news-4-btn" class="newstitle selected" onclick="news_activate(&quot;news-4&quot;)">Mi 2º yo</a><a href="javascript:void(0)" id="news-1-btn" class="newstitle" onclick="news_activate(&quot;news-1&quot;)">Evento</a><a href="javascript:void(0)" id="news-2-btn" class="newstitle" onclick="news_activate(&quot;news-2&quot;)">¿Y el reloj?</a></span></div></dd></dl></li></ul><ul class="topiclist news"><li id="news-4" class="row" style="display: block; "><a href="http://seijyujigakuen.foroactivo.com/t143-nuevo-seijyuji-gakuen#1370" class="newstitle"><h3>Mi segundo yo</h3><p>Ahora puedes estar en dos sitios a la vez pero con limitaciones…</p></a></li><li id="news-1" class="row" style="display: none; "><span class="newstitle" href="#"><h3>Clase especial</h3><p>En <a href="http://seijyujigakuen.foroactivo.com/t147-primer-dia-de-acampada">el bosque</a></p></span></li><li id="news-2" class="row" style="display: none; "><span class="newstitle" href="#"><h3>El día 17 de julio de 2012, el reloj ha muerto</h3><p>Puedes dejar tu mensaje de despedida <a href="http://seijyujigakuen.foroactivo.com/t142-el-reloj-ha-muerto">aquí</a></p></span></li></ul></div></div><div class="forabg category-hidden"><div class="inner"><span class="corners-top"><span></span></span><ul class="topiclist"><li class="header"><dl class="icon"><dd class="dterm"><div class="table-title"><h2>IMPORTANTE: cómo conseguir permiso para postear en el foro</h2></div></dd><dd class="topics">Temas</dd><dd class="posts">Mensajes</dd><dd class="lastpost"><span>Últimos Mensajes</span></dd></dl></li></ul><ul class="topiclist forums"><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_14.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h2 class="hierarchy"><a href="/f24-importante-como-conseguir-permiso-para-postear-en-el-foro" class="forumtitle">IMPORTANTE: cómo conseguir permiso para postear en el foro</a></h2><br><div style="font-size:12px"><a href="http://seijyujigakuen.foroactivo.com/f24-importante-como-conseguir-permiso-para-postear-en-el-foro">Actualmente eres Visitante. Esto quiere decir que aunque te hayas registrado no puedes rolear, es decir, solo puedes escribir en "Off-rol"<br> <br>
-Para conseguir permiso para rolear debes rellenar la Ficha del Jugador y enviar una Prueba de Rol. Entra para más información</a></div><br><strong></strong> </div></dd><dd class="topics">1 <dfn>Temas</dfn></dd><dd class="posts">5 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>22/04/12, 05:36 pm<br><strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t2-como-crear-la-ficha-del-jugador-y-realizar-la-prueba-de-rol-incluye-ejemplos#182" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Cómo crear la ficha del jugador y realizar la prueba de rol (incluye ejemplos)" title="Cómo crear la ficha del jugador y realizar la prueba de rol (incluye ejemplos)"></a></span></dd></dl></li></ul><span class="corners-bottom"><span></span></span></div></div><div class="forabg"><div class="inner"><span class="corners-top"><span></span></span><ul class="topiclist"><li class="header"><dl class="icon"><dd class="dterm"><div class="table-title"><h2>Administración</h2></div></dd><dd class="topics">Temas</dd><dd class="posts">Mensajes</dd><dd class="lastpost"><span>Últimos Mensajes</span></dd></dl></li></ul><ul class="topiclist forums"><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f22-informacion-importante" class="forumtitle">Información importante</a></h3><br>Reglas del foro e información relevante. Obligatorio de leer para las primeras visitas<br><strong></strong> </div></dd><dd class="topics">6 <dfn>Temas</dfn></dd><dd class="posts">23 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>30/09/12, 04:12 pm<br><strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t223-normas-de-clase-que-deben-seguir-los-profesores#1563" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Normas de clase que deben seguir los profesores" title="Normas de clase que deben seguir los profesores"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f21-pruebas-de-rol" class="forumtitle">Pruebas de Rol</a></h3><br>En este subforo SOLO se permiten escribir pruebas de Rol<br><strong></strong> </div></dd><dd class="topics">30 <dfn>Temas</dfn></dd><dd class="posts">77 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>Ayer a las 11:48 pm<br><strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t244-prueba-de-rol-ryu-tadashi#1717" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Prueba de Rol - Ryu Tadashi" title="Prueba de Rol - Ryu Tadashi"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f85-historia-ambientacion" class="forumtitle">Historia &amp; Ambientación</a></h3><br><strong></strong> </div></dd><dd class="topics">2 <dfn>Temas</dfn></dd><dd class="posts">2 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>03/08/12, 09:31 pm<br><strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t174-historia-trama-actual#1267" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Historia &amp; trama actual" title="Historia &amp; trama actual"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f83-comentarios-feedback" class="forumtitle">Comentarios (feedback)</a></h3><br>Postea aquí cualquier comentario sobre el funcionamiento del foro<br><a href="/f84-problemas-tecnicos" title="" class="gensmall">Problemas técnicos</a><strong></strong> </div></dd><dd class="topics">7 <dfn>Temas</dfn></dd><dd class="posts">15 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>13/09/12, 01:00 am<br><strong><a href="/u27" class="gensmall"><span style="color:#888" class="color-groups"><strong>Fox Kuroishi</strong></span></a></strong>&nbsp;<a href="/t199-dominio-del-foro#1449" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Dominio del foro" title="Dominio del foro"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f80-afiliaciones" class="forumtitle">Afiliaciones</a></h3><br><strong></strong> </div></dd><dd class="topics">9 <dfn>Temas</dfn></dd><dd class="posts">12 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>06/10/12, 06:54 pm<br>AF1.0 &nbsp;<a href="/t232-afiliaforos#1659" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="AfiliaForos" title="AfiliaForos"></a></span></dd></dl></li></ul><span class="corners-bottom"><span></span></span></div></div><div class="forabg"><div class="inner"><span class="corners-top"><span></span></span><ul class="topiclist"><li class="header"><dl class="icon"><dd class="dterm"><div class="table-title"><h2>Off rol</h2></div></dd><dd class="topics">Temas</dd><dd class="posts">Mensajes</dd><dd class="lastpost"><span>Últimos Mensajes</span></dd></dl></li></ul><ul class="topiclist forums"><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f3-presentaciones" class="forumtitle">Presentaciones</a></h3><br>¿Acabas de llegar al foro? ¡Date a conocer a todos y no seas tímido! <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/presen10.jpg" title="¡No seas tímido y date a conocer!"> </div><br><strong></strong> </div></dd><dd class="topics">24 <dfn>Temas</dfn></dd><dd class="posts">187 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>Hoy a las 02:11 am<br><strong><a href="/u48" class="gensmall"><span style="color:#888" class="color-groups"><strong>Ariel Ariadna Angel</strong></span></a></strong>&nbsp;<a href="/t242-me-presento-ryu-tadashi#1718" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Me Presento!! - Ryu Tadashi" title="Me Presento!! - Ryu Tadashi"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f75-zona-de-entrenamiento" class="forumtitle">Zona de entrenamiento</a></h3><br>¿No te has acostumbrado al sistema de batalla del foro? ¡Practica aquí! <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/zonaen10.jpg" title="¿No te has acostumbrado al sistema de batalla del foro? ¡Practica aquí!"> </div><br><strong></strong> </div></dd><dd class="topics">11 <dfn>Temas</dfn></dd><dd class="posts">153 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>Ayer a las 01:24 am<br><strong><a href="/u48" class="gensmall"><span style="color:#888" class="color-groups"><strong>Ariel Ariadna Angel</strong></span></a></strong>&nbsp;<a href="/t239-entrenando-con-mi-familiar#1703" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Entrenando con mi familiar" title="Entrenando con mi familiar"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f82-noticias" class="forumtitle">Noticias</a></h3><br>Información complementaria del foro. <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/notici10.jpg" title="Información complementaria del foro"> </div><br><strong></strong> </div></dd><dd class="topics">2 <dfn>Temas</dfn></dd><dd class="posts">6 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>20/08/12, 02:26 am<br><strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t143-nuevo-seijyuji-gakuen#1370" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Nuevo Seijyuji Gakuen" title="Nuevo Seijyuji Gakuen"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f23-relaciones" class="forumtitle">Relaciones</a></h3><br><strong></strong> </div></dd><dd class="topics">1 <dfn>Temas</dfn></dd><dd class="posts">1 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>Ayer a las 01:43 pm<br><strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t240-relaciones-entre-personajes#1708" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Relaciones entre personajes" title="Relaciones entre personajes"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f28-busco-rol" class="forumtitle">Busco rol</a></h3><br><strong></strong> </div></dd><dd class="topics">2 <dfn>Temas</dfn></dd><dd class="posts">2 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>Ayer a las 11:18 pm<br><strong><a href="/u4" class="gensmall"><span style="color:#999" class="color-groups"><strong>Ryûji Suguro</strong></span></a></strong>&nbsp;<a href="/t243-buscamos-rol#1715" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Buscamos Rol" title="Buscamos Rol"></a></span></dd></dl></li></ul><span class="corners-bottom"><span></span></span></div></div><div class="forabg"><div class="inner"><span class="corners-top"><span></span></span><ul class="topiclist"><li class="header"><dl class="icon"><dd class="dterm"><div class="table-title"><h2>Ciudad de Seijyuji</h2></div></dd><dd class="topics">Temas</dd><dd class="posts">Mensajes</dd><dd class="lastpost"><span>Últimos Mensajes</span></dd></dl></li></ul><ul class="topiclist forums"><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f1-monasterio" class="forumtitle">Monasterio</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/monast10.jpg" title="Este es el pequeño monasterio masculino que lleva el padre Fujimoto, el cual se encuentra al sur, en el pueblo de Seijyuji Gakuen"> </div><br><strong></strong> </div></dd><dd class="topics">1 <dfn>Temas</dfn></dd><dd class="posts">5 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>14/04/12, 11:21 pm<br><strong><a href="/u2" class="gensmall"><span style="color:#999" class="color-groups"><strong>Okumura Yukio</strong></span></a></strong>&nbsp;<a href="/t20-precuela-mismo-dia#125" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="(Precuela) Mismo dia..." title="(Precuela) Mismo dia..."></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f2-parque-del-sur" class="forumtitle">Parque del Sur</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/parque10.jpg" title="Un pequeño parque que se encuentra cerca del monasterio. Además de un bonito jardín tiene diversos columpios para niños"> </div><br><strong></strong> </div></dd><dd class="topics">1 <dfn>Temas</dfn></dd><dd class="posts">5 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>28/08/12, 06:01 pm<br><strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t192-caza-de-demonios#1408" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Caza de demonios" title="Caza de demonios"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f4-calle-de-la-cruz-sur" class="forumtitle">Calle de la Cruz Sur</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/callec10.jpg" title="La calle principal del pueblo, donde pasea mucha gente, comprando o hablando. Está llena de tiendas de todo tipo."> </div><div class="newStyleSubforums"><ul>
-<li><a href="/f25-supermercado-nico-nico">Supermercado Nico Nico</a></li>
-<li><a href="/f26-pabellon-cruz-del-sur">Pabellón Cruz del Sur</a></li>
-<li><a href="/f27-callejones">Callejones</a></li>
-</ul></div><br><a href="/f25-supermercado-nico-nico" title="  " class="gensmall">Supermercado Nico Nico</a>, <a href="/f26-pabellon-cruz-del-sur" title="  " class="gensmall">Pabellón Cruz del Sur</a>, <a href="/f27-callejones" title="  " class="gensmall">Callejones</a><strong></strong> </div></dd><dd class="topics">5 <dfn>Temas</dfn></dd><dd class="posts">18 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>13/08/12, 09:06 pm<br><strong><a href="/u26" class="gensmall"><span style="color:#888" class="color-groups"><strong>kida kuran</strong></span></a></strong>&nbsp;<a href="/t177-robando-en-el-supermercado#1320" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Robando en el supermercado" title="Robando en el supermercado"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f60-area-residencial" class="forumtitle">Área residencial</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/areare10.jpg" title="Una de las zonas más pobladas de la ciudad, donde se encuentran gran cantidad de edificios poblados de ciudadanos."> </div><br><strong></strong> </div></dd><dd class="topics">0 <dfn>Temas</dfn></dd><dd class="posts">0 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span></span></dd></dl></li></ul><span class="corners-bottom"><span></span></span></div></div><div class="forabg"><div class="inner"><span class="corners-top"><span></span></span><ul class="topiclist"><li class="header"><dl class="icon"><dd class="dterm"><div class="table-title"><h2>Seijyuji Gakuen</h2></div></dd><dd class="topics">Temas</dd><dd class="posts">Mensajes</dd><dd class="lastpost"><span>Últimos Mensajes</span></dd></dl></li></ul><ul class="topiclist forums"><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f17-entrada-principal" class="forumtitle">Entrada principal</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/vestib10.jpg" title="Flanqueada por amplios jardines con arboles altos. La puerta principal tiene tres escalinatas, una al frente y dos en los laterales."> </div><br><strong></strong> </div></dd><dd class="topics">5 <dfn>Temas</dfn></dd><dd class="posts">28 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>08/10/12, 08:19 am<br><strong><a href="/u45" class="gensmall"><span style="color:#888" class="color-groups"><strong>Ikeda Koyuki</strong></span></a></strong>&nbsp;<a href="/t235-primeros-pasos#1675" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Primeros Pasos." title="Primeros Pasos."></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f16-salon-de-actos" class="forumtitle">Salón de Actos</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/salon_10.jpg" title="Aquí es donde se celebra la ceremonia de bienvenida de los nuevos estudiantes, así como las conferencias o actos importantes."> </div><br><strong></strong> </div></dd><dd class="topics">1 <dfn>Temas</dfn></dd><dd class="posts">26 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>20/06/12, 01:35 pm<br><strong><a href="/u19" class="gensmall"><span style="color:#888" class="color-groups"><strong>Kumiko Yagami</strong></span></a></strong>&nbsp;<a href="/t75p15-presentacion-del-curso-2011-2012#650" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Presentación del curso 2011-2012" title="Presentación del curso 2011-2012"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f77-gran-parque-seijyuji-gakuen" class="forumtitle">Gran parque Seijyuji Gakuen</a></h3><br>Un lugar común para toda la Seijyuji Gakuen, sean exorcistas o no. Aquí los alumnos aprovechan para relajarse, comer, etc. <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/granpa10.jpg" title="Un lugar común para toda la Seijyuji Gakuen, sean exorcistas o no. Aquí los alumnos aprovechan para relajarse, comer, etc."> </div><br><strong></strong> </div></dd><dd class="topics">10 <dfn>Temas</dfn></dd><dd class="posts">102 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>Ayer a las 01:57 pm<br><strong><a href="/u45" class="gensmall"><span style="color:#888" class="color-groups"><strong>Ikeda Koyuki</strong></span></a></strong>&nbsp;<a href="/t228-tomando-aire-fresco#1709" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Tomando aire fresco" title="Tomando aire fresco"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f15-cafeteria-y-comedor" class="forumtitle">Cafetería y comedor</a></h3><br>Aquí los mejores chef preparan la comida de los estudiantes. Los precios son muy elevados y solo unos pocos pueden permitirse algo.<div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/cafete11.jpg" title="Aquí los mejores chef preparan la comida de los estudiantes. Los precios son muy elevados y solo unos pocos pueden permitirse algo."> </div><br><strong></strong> </div></dd><dd class="topics">4 <dfn>Temas</dfn></dd><dd class="posts">15 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>11/10/12, 10:13 pm<br><strong><a href="/u39" class="gensmall"><span style="color:#888" class="color-groups"><strong>BellBirthday</strong></span></a></strong>&nbsp;<a href="/t234-aliviando-el-hambre-de-bell#1698" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Aliviando el hambre de Bell" title="Aliviando el hambre de Bell"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f14-hospital" class="forumtitle">Hospital</a></h3><br>El hospital de la Seijyuji Gakuen, donde va todo aquel que esté herido o necesite atención medica. <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/hospit10.jpg" title="El hospital de la Seijyuji Gakuen, donde va todo aquel que esté herido o necesite atención medica."> </div><br><strong></strong> </div></dd><dd class="topics">4 <dfn>Temas</dfn></dd><dd class="posts">28 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>01/08/12, 11:15 pm<br><strong><a href="/u27" class="gensmall"><span style="color:#888" class="color-groups"><strong>Fox Kuroishi</strong></span></a></strong>&nbsp;<a href="/t169-curando-la-mano#1228" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Curando la mano" title="Curando la mano"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f11-escuela-de-exorcistas" class="forumtitle">Escuela de Exorcistas</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/escuel10.jpg" title="Oculta para la gran parte de los alumnos, salvo aquellos que tienen la llave para acceder a ella. Es un largo pasillo lleno de aulas."> </div><div class="newStyleSubforums"><ul>
-<li><a href="/f20-aula-1106" title="  " class="gensmall">Aula 1106</a></li>
-<li><a href="/f33-pasillo" title="Un largo pasillo lleno de puertas que dan a diversas aulas de la escuela de exorcistas.  " class="gensmall">Pasillo</a></li>
-<li><a href="/f19-gimnasio" title="  " class="gensmall">Gimnasio</a></li>
-<li><a href="/f18-campo-de-practicas" title="Una aula que consta con una instalación de entrenamiento para exorcistas.   " class="gensmall">Campo de prácticas</a></li>
-<li><a href="/f34-jardin" title="Un pequeño jardín en forma redondeada en cuyo centro se encuentra una fuente donde los exorcistas suelen tomarse un descanso y pasar el rato libre.  " class="gensmall">Jardín</a></li>
-<li><a href="/f35-laboratorio" title="El laboratorio es una zona a la que solo pueden entrar los exorcistas de alto nivel, en el hay materiales altamente peligrosos, así como diversas sustancias de investigación y herramientas para llevar a cabo análisis y experimentos.   " class="gensmall">Laboratorio</a></li>
-</ul></div><br><a href="/f20-aula-1106" title="  " class="gensmall">Aula 1106</a>, <a href="/f33-pasillo" title="  " class="gensmall">Pasillo</a>, <a href="/f19-gimnasio" title="  " class="gensmall">Gimnasio</a>, <a href="/f18-campo-de-practicas" title="  " class="gensmall">Campo de prácticas</a>, <a href="/f34-jardin" title="  " class="gensmall">Jardín</a>, <a href="/f35-laboratorio" title="  " class="gensmall">Laboratorio</a><strong></strong> </div></dd><dd class="topics">10 <dfn>Temas</dfn></dd><dd class="posts">198 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>27/09/12, 03:58 pm<br><strong><a href="/u5" class="gensmall"><span style="color:#888" class="color-groups"><strong>Shima Renzou</strong></span></a></strong>&nbsp;<a href="/t215-dando-un-pequeno-paseo-antes-de-ir-a-clase#1509" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Dando un pequeño paseo antes de ir a clase" title="Dando un pequeño paseo antes de ir a clase"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f12-biblioteca" class="forumtitle">Biblioteca</a></h3><br>La biblioteca es un sitio de estudio, así que recordar guardar silencio. <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/biblio10.jpg" title="La biblioteca es un sitio de estudio, así que recordar guardar silencio."> </div><br><strong></strong> </div></dd><dd class="topics">2 <dfn>Temas</dfn></dd><dd class="posts">23 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>04/10/12, 09:25 pm<br><strong><a href="/u5" class="gensmall"><span style="color:#888" class="color-groups"><strong>Shima Renzou</strong></span></a></strong>&nbsp;<a href="/t214-a-estudiar-se-ha-dicho#1648" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="A estudiar se ha dicho" title="A estudiar se ha dicho"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f10-residencia-de-estudiantes-y-profesores" class="forumtitle">Residencia de estudiantes y profesores</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/resi_010.jpg" title="Las habitaciones de estudiantes son dobles y las de profesores son más majestuosas e individuales"> </div><div class="newStyleSubforums"><ul>
-<li><a href="/f36-habitaciones" title="Las habitaciones de los diversos estudiantes de la Seijyuji Gakuen. Las habitaciones son compartidas entre dos personas." class="gensmall">Habitaciones</a></li>
-<li><a href="/f76-habitaciones-de-profesores" title="" class="gensmall">Habitaciones de profesores</a></li>
-<li><a href="/f37-comedor" title="El comer sirve tanto el desayuno como la comida y la cena a los estudiantes que se encuentran hospedados en la residencia." class="gensmall">Comedor</a></li>
-<li><a href="/f38-banos" title="Los baños y lavabos de la residencia, separados por sexos." class="gensmall">Baños</a></li>
-<li><a href="/f39-terraza" title="La terraza de la residencia se encuentra abierta para cualquiera que quiera ir, además es donde se tiende la ropa." class="gensmall">Terraza</a></li>
-</ul></div><br><a href="/f36-habitaciones" title="  " class="gensmall">Habitaciones</a>, <a href="/f76-habitaciones-de-profesores" title="" class="gensmall">Habitaciones de profesores</a>, <a href="/f37-comedor" title="  " class="gensmall">Comedor</a>, <a href="/f38-banos" title="  " class="gensmall">Baños</a>, <a href="/f39-terraza" title="  " class="gensmall">Terraza</a><strong></strong> </div></dd><dd class="topics">36 <dfn>Temas</dfn></dd><dd class="posts">194 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>07/10/12, 10:09 pm<br><strong><a href="/u39" class="gensmall"><span style="color:#888" class="color-groups"><strong>BellBirthday</strong></span></a></strong>&nbsp;<a href="/t207-habitacion-bell-birthday-llegada-al-cuarto#1665" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="[Habitación Bell Birthday.] Llegada al cuarto." title="[Habitación Bell Birthday.] Llegada al cuarto."></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f9-antigua-residencia" class="forumtitle">Antigua residencia</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/resi_a12.jpg" title="La antigua residencia de la Seijyuji Gakuen es un viejo edificio el cual se encuentra aparentemente desocupado."> </div><div class="newStyleSubforums"><ul>
-<li><a href="/f40-habitacion-602" title="La habitación de Yukio y Rin Okumura" class="gensmall">Habitación 602</a></li>
-<li><a href="/f41-comedor-y-cocina" title="El comedor de la antigua residencia, la cocina se encuentra en desuso, aparentemente." class="gensmall">Comedor y Cocina</a></li>
-<li><a href="/f42-banos" title="Los baños y los lavabos de la antigua residencia masculina." class="gensmall">Baños</a></li>
-<li><a href="/f43-terraza" title="La terraza de la residencia se encuentra abierta para cualquiera que quiera ir, además es donde se tiende la ropa." class="gensmall">Terraza</a></li>
-</ul></div><br><a href="/f40-habitacion-602" title="  " class="gensmall">Habitación 602</a>, <a href="/f41-comedor-y-cocina" title="  " class="gensmall">Comedor y Cocina</a>, <a href="/f42-banos" title="  " class="gensmall">Baños</a>, <a href="/f43-terraza" title="  " class="gensmall">Terraza</a><strong></strong> </div></dd><dd class="topics">10 <dfn>Temas</dfn></dd><dd class="posts">138 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>10/10/12, 05:56 pm<br><strong><a href="/u44" class="gensmall"><span style="color:#888" class="color-groups"><strong>Hoshi-Sora Ariadna</strong></span></a></strong>&nbsp;<a href="/t236-dandose-un-bano#1688" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Dándose un baño..." title="Dándose un baño..."></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f8-tienda-de-suministros-futsumaya" class="forumtitle">Tienda de suministros Futsumaya</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/tienda11.jpg" title="La tienda solo para exorcistas de la cual está a cargo la señora Moriyama."> </div><br><strong></strong> </div></dd><dd class="topics">5 <dfn>Temas</dfn></dd><dd class="posts">5 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>28/09/12, 09:01 pm<br><strong><a href="/u10" class="gensmall"><span style="color:#888" class="color-groups"><strong>Shiemi Moriyama</strong></span></a></strong>&nbsp;<a href="/t221-el-despues-del-bosque#1527" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="El después del bosque" title="El después del bosque"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f13-kiosko" class="forumtitle">Kiosko</a></h3><br>Pequeño puesto donde venden bocatas para los alumnos de la academia a un precio mucho más económico que la cafetería. <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/kiosko10.jpg" title="Pequeño puesto donde venden bocatas para los alumnos de la academia a un precio mucho más económico que la cafetería."> </div><br><strong></strong> </div></dd><dd class="topics">1 <dfn>Temas</dfn></dd><dd class="posts">17 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>21/06/12, 12:16 am<br><strong><a href="/u15" class="gensmall"><span style="color:#888" class="color-groups"><strong>Kira Okami</strong></span></a></strong>&nbsp;<a href="/t74p15-intentando-robar-algo-para-comer#674" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Intentando robar algo para comer..." title="Intentando robar algo para comer..."></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f49-puesto-de-monja-yaki" class="forumtitle">Puesto de Monja-yaki</a></h3><br>El puesto de delicioso Monja-yaki de la Seijyuji Gakuen. Se rumorea que es una de las comidas preferidas del director. <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/monjay10.jpg" title="El puesto de delicioso Monja-yaki de la Seijyuji Gakuen. Se rumorea que es una de las comidas preferidas del director."> </div><br><strong></strong> </div></dd><dd class="topics">2 <dfn>Temas</dfn></dd><dd class="posts">13 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>18/08/12, 03:03 am<br><strong><a href="/u26" class="gensmall"><span style="color:#888" class="color-groups"><strong>kida kuran</strong></span></a></strong>&nbsp;<a href="/t178-que-rico#1365" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="¡Que rico!" title="¡Que rico!"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f7-mansion-de-johann-fausto-v" class="forumtitle">Mansión de Johann Fausto V</a></h3><br>La mansión y despacho del director de la academia, Johann Fausto V, también conocido por otros pocos como Mephisto Pheles <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/mansio10.jpg" title="La mansión y despacho del director de la academia, Johann Fausto V, también conocido por otros pocos como Mephisto Pheles"> </div><br><strong></strong> </div></dd><dd class="topics">0 <dfn>Temas</dfn></dd><dd class="posts">0 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f81-sala-de-profesores" class="forumtitle">Sala de Profesores</a></h3><br>La sala de reunión de los profesores de la Seijyuji Gakuen. <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/sala_d10.jpg" title="La sala de reunión de los profesores de la Seijyuji Gakuen."> </div><br><strong></strong> </div></dd><dd class="topics">2 <dfn>Temas</dfn></dd><dd class="posts">14 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>08/07/12, 08:29 pm<br><strong><a href="/u6" class="gensmall"><span style="color:#999" class="color-groups"><strong>Night Knightley</strong></span></a></strong>&nbsp;<a href="/t117-despues-de-clase#949" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Después de clase " title="Después de clase "></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f48-mephyland" class="forumtitle">Mephyland</a></h3><br>¡El parque de atracciones de la Seijyuji! El nombre viene a honor de su director, y tiene las atracciones más divertidas e incluso terroríficas de toda la zona. <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/mephyl10.jpg" title="¡El parque de atracciones de la Seijyuji! El nombre viene a honor de su director, y tiene las atracciones más divertidas e incluso terroríficas de toda la zona."> </div><br><strong></strong> </div></dd><dd class="topics">1 <dfn>Temas</dfn></dd><dd class="posts">5 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>18/07/12, 10:48 am<br><strong><a href="/u15" class="gensmall"><span style="color:#888" class="color-groups"><strong>Kira Okami</strong></span></a></strong>&nbsp;<a href="/t127-mephiland#1007" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Mephi...land?" title="Mephi...land?"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f6-bosque" class="forumtitle">Bosque</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/bosque10.jpg" title="El bosque de la academia, donde se llevan a cabo examenes y entrenamientos. De noche es un nido de demonios de nivel bajo."> </div><br><strong></strong> </div></dd><dd class="topics">12 <dfn>Temas</dfn></dd><dd class="posts">257 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>11/10/12, 10:01 pm<br><strong><a href="/u6" class="gensmall"><span style="color:#999" class="color-groups"><strong>Night Knightley</strong></span></a></strong>&nbsp;<a href="/t222p30-dando-un-paseo-por-el-bosque#1697" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Dando un paseo por el bosque" title="Dando un paseo por el bosque"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f5-estacion-de-tren" class="forumtitle">Estación de tren</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/estaci10.jpg" title="Para ir lejos de la Seijyuji Gakuen la mayoria de personas utiliza el tren, en especial los exorcistas cuando deben salir a misiones lejanas"> </div><br><strong></strong> </div></dd><dd class="topics">1 <dfn>Temas</dfn></dd><dd class="posts">1 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>24/05/12, 04:48 am<br><strong><a href="/u11" class="gensmall"><span style="color:#888" class="color-groups"><strong>Shima Kinzou</strong></span></a></strong>&nbsp;<a href="/t47-un-viajecito-que-merece-la-pena#260" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Un viajecito que merece la pena~~" title="Un viajecito que merece la pena~~"></a></span></dd></dl></li></ul><span class="corners-bottom"><span></span></span></div></div><div class="forabg"><div class="inner"><span class="corners-top"><span></span></span><ul class="topiclist"><li class="header"><dl class="icon"><dd class="dterm"><div class="table-title"><h2>La Orden</h2></div></dd><dd class="topics">Temas</dd><dd class="posts">Mensajes</dd><dd class="lastpost"><span>Últimos Mensajes</span></dd></dl></li></ul><ul class="topiclist forums"><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f50-rama-japonesa-de-la-seijyuji" class="forumtitle">Rama Japonesa de la Seijyuji</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/japan10.jpg" title="Se encuentra en un subterráneo bajo la Seijyuji Gakuen, Tokyo. Se encuentra bajo el liderazgo de Mephisto Pheles."> </div><br><a href="/f51-central-de-exorcistas" title="Aquí es donde se reúnen todos los exorcistas de la rama para acordar decisiones o reunirse con el jefe de la misma." class="gensmall">Central de exorcistas</a>, <a href="/f52-celdas" title="Las celdas sirven para encerrar a aquellos que hallan cometido delitos o interrogar." class="gensmall">Celdas</a><strong></strong> </div></dd><dd class="topics">1 <dfn>Temas</dfn></dd><dd class="posts">1 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>03/08/12, 03:08 pm<br><strong><a href="/u27" class="gensmall"><span style="color:#888" class="color-groups"><strong>Fox Kuroishi</strong></span></a></strong>&nbsp;<a href="/t173-haciendome-profesor#1264" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Haciéndome profesor. " title="Haciéndome profesor. "></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f53-rama-inglesa-de-la-seijyuji" class="forumtitle">Rama Inglesa de la Seijyuji</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/englan10.jpg" title="La rama inglesa de la orden se encuentra oculta en algún lugar de Londres, Inglaterra."> </div><br><a href="/f55-central-de-exorcistas" title="Aquí es donde se reúnen todos los exorcistas de la rama para acordar decisiones o reunirse con el jefe de la misma." class="gensmall">Central de exorcistas</a>, <a href="/f56-celdas" title="Las celdas sirven para encerrar a aquellos que hallan cometido delitos o interrogar." class="gensmall">Celdas</a><strong></strong> </div></dd><dd class="topics">1 <dfn>Temas</dfn></dd><dd class="posts">3 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>16/04/12, 03:34 pm<br><strong><a href="/u6" class="gensmall"><span style="color:#999" class="color-groups"><strong>Night Knightley</strong></span></a></strong>&nbsp;<a href="/t17-precuela-en-la-rama-inglesa-night#149" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Precuela en la rama inglesa (Night)" title="Precuela en la rama inglesa (Night)"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f61-rama-de-kyoto-de-la-seijyuji" class="forumtitle">Rama de Kyoto de la Seijyuji</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/kyoto10.jpg" title="La rama de Kyoto de la orden se encuentra en la misma capital. Su líderazgo es compartido entre Yaozo Shima y Uwabami Hojo"> </div><br><a href="/f67-sala-del-interior" title="Sala principal del interior de la rama de Kyoto, en ella hay una pequeña hoguera con una pequeña estatua de Buda. En lo alto de un altar se encuentra el ojo derecho del Rey Impuro, sellado en una urna. Es por esto que esta sala está sellada con barreras mágicas, para evitar que sea robado." class="gensmall">Sala del interior</a>, <a href="/f69-celdas" title="Las celdas sirven para encerrar a aquellos que hallan cometido delitos o interrogar." class="gensmall">Celdas</a><strong></strong> </div></dd><dd class="topics">0 <dfn>Temas</dfn></dd><dd class="posts">0 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f54-el-vaticano-sede-principal-de-la-orden" class="forumtitle">El Vaticano: Sede principal de la orden</a></h3><br><div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/vatica11.jpg" title="En Roma, concretamente en el Vaticano, se encuentra la sede principal de la Seijyuji. Se encuentra dirigida por el actual Paladín, así como por el consejo de los Gregori. Ellos son quienes dictan lo que se ha de hacer y son la autoridad máxima en la orden."> </div><br><a href="/f57-oficinas-principales-de-la-orden" title="Aquí es donde se reúnen todos los exorcistas de todas las ramas para acordar decisiones que afectan a todas las ramas y a la orden en general." class="gensmall">Oficinas principales de la orden</a>, <a href="/f58-celdas" title="En estas celdas se encierra a aquellos que hayan cometido delitos graves a visión del Vaticano, así como aquellos condenados a muerte." class="gensmall">Celdas</a>, <a href="/f59-sala-de-juicios" title="La sala de juicios es aquella donde se juzga a los que hayan cometido un delito a visión de la orden. En los jucios siempre están presente tanto los Gregori como el paladín actual, además de una serie de exorcistas de alto rango cualificados." class="gensmall">Sala de juicios</a><strong></strong> </div></dd><dd class="topics">3 <dfn>Temas</dfn></dd><dd class="posts">3 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>05/07/12, 01:49 am<br><strong><a href="/u16" class="gensmall"><span style="color:#888" class="color-groups"><strong>Shura Kirigakure</strong></span></a></strong>&nbsp;<a href="/t113-a-punto-de-emprender-el-viaje-hacia-la-seijyuji#864" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="A punto de emprender el viaje hacia la Seijyuji" title="A punto de emprender el viaje hacia la Seijyuji"></a></span></dd></dl></li></ul><span class="corners-bottom"><span></span></span></div></div><div class="forabg"><div class="inner"><span class="corners-top"><span></span></span><ul class="topiclist"><li class="header"><dl class="icon"><dd class="dterm"><div class="table-title"><h2>Kyoto</h2></div></dd><dd class="topics">Temas</dd><dd class="posts">Mensajes</dd><dd class="lastpost"><span>Últimos Mensajes</span></dd></dl></li></ul><ul class="topiclist forums"><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f62-posada" class="forumtitle">Posada</a></h3><br>Una humilde posada de Kyoto destinada a hospedar a gente. Tiene un estilo típico de las casas japonesas y los templos. La dueña es la madre de  Suguro Ryuuji, por lo que a su vez está es la casa de toda la familia Suguro. También vive aquí el Monje Tatsuma Suguro, cabecilla de la secta budista Myoda. Corren rumores de que se trata de un sacerdote corrupto.<br><a href="/f63-habitaciones" title="Habitaciones de estilo japonés destinadas a los huéspedes del hostal." class="gensmall">Habitaciones</a>, <a href="/f65-comedor" title="Un gran comedor con grandes mesas tradicionales" class="gensmall">Comedor</a>, <a href="/f66-sala-principal-espacio-del-ruisenor" title="La sala principal de la posada, normalmente se reserva para eventos importantes, como las reuniones del Myoda." class="gensmall">Sala principal: Espacio del ruiseñor.</a>, <a href="/f68-cementerio" title="Pequeño cementerio particular donde se encuentran enterrados los familiares fallecidos tanto de la familia Suguro, como de la familia Miwa, principalmente durante la noche azul." class="gensmall">Cementerio</a><strong></strong> </div></dd><dd class="topics">1 <dfn>Temas</dfn></dd><dd class="posts">1 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>17/09/12, 04:01 pm<br><strong><a href="/u11" class="gensmall"><span style="color:#888" class="color-groups"><strong>Shima Kinzou</strong></span></a></strong>&nbsp;<a href="/t206-un-sueno-extrano#1483" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Un sueño extraño" title="Un sueño extraño"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f73-calles" class="forumtitle">Calles</a></h3><br>Las calles de Kyoto, tanto las de la ciudad más moderna de altos edificios como las más antiguas, rodeadas de un paisaje más tradicional.<br><strong></strong> </div></dd><dd class="topics">3 <dfn>Temas</dfn></dd><dd class="posts">27 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>21/08/12, 09:57 pm<br><strong><a href="/u5" class="gensmall"><span style="color:#888" class="color-groups"><strong>Shima Renzou</strong></span></a></strong>&nbsp;<a href="/t191-un-dia-corriente-de-shima-y-bon#1384" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Un día corriente de Shima y Bon" title="Un día corriente de Shima y Bon"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f64-la-torre-de-kyoto" class="forumtitle">La torre de Kyoto</a></h3><br>La torre de Kyoto es una torre de observación de 131 metros de altura que se encuentra en el barrio de Shimogyō-ku.<br><strong></strong> </div></dd><dd class="topics">1 <dfn>Temas</dfn></dd><dd class="posts">9 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>07/04/12, 05:53 pm<br><strong><a href="/u4" class="gensmall"><span style="color:#999" class="color-groups"><strong>Ryûji Suguro</strong></span></a></strong>&nbsp;<a href="/t16-precuela-frio-anochecer#44" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="(Precuela) Frío anochecer" title="(Precuela) Frío anochecer"></a></span></dd></dl></li><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h3 class="hierarchy"><a href="/f70-montanas-kongo" class="forumtitle">Montañas Kongo</a></h3><br>Las montañas más lejanas, rodeadas por un espeso bosque<br><a href="/f72-bosque" title="Un profundo bosque en el cual es bastante fácil perderse si no se conoce el camino a seguir." class="gensmall">Bosque</a>, <a href="/f71-gomado" title="El gomado es la antigua base central de la secta Budista Myoda. A parte del monje principal, es un sitio en el cual técnicamente no podía entrar nadie más. En su interior hay una pequeña plataforma con fuego aun encendido. Bajo una trampilla, y tras pasar un a puerta, se encuentra un gran secreto sellado...El rey impuro." class="gensmall">Gomado</a><strong></strong> </div></dd><dd class="topics">0 <dfn>Temas</dfn></dd><dd class="posts">0 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span></span></dd></dl></li></ul><span class="corners-bottom"><span></span></span></div></div><div class="forabg"><div class="inner"><span class="corners-top"><span></span></span><ul class="topiclist"><li class="header"><dl class="icon"><dd class="dterm"><div class="table-title"><h2>Tablón de Anuncios</h2></div></dd><dd class="topics">Temas</dd><dd class="posts">Mensajes</dd><dd class="lastpost"><span>Últimos Mensajes</span></dd></dl></li></ul><ul class="topiclist forums"><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h2 class="hierarchy"><a href="/f32-tablon-de-anuncios" class="forumtitle">Tablón de Anuncios</a></h2><br>Las noticias más relevantes del foro, aquí<br><strong></strong> </div></dd><dd class="topics">4 <dfn>Temas</dfn></dd><dd class="posts">4 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>18/08/12, 04:28 pm<br><strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t189-orden-vaticana-2012-002-mision-de-proteccion-de-la-seijyuji-gakuen#1367" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Orden Vaticana 2012/002 . Misión de protección de la Seijyuji Gakuen" title="Orden Vaticana 2012/002 . Misión de protección de la Seijyuji Gakuen"></a></span></dd></dl></li></ul><span class="corners-bottom"><span></span></span></div></div><div class="forabg"><div class="inner"><span class="corners-top"><span></span></span><ul class="topiclist"><li class="header"><dl class="icon"><dd class="dterm"><div class="table-title"><h2>Beta</h2></div></dd><dd class="topics">Temas</dd><dd class="posts">Mensajes</dd><dd class="lastpost"><span>Últimos Mensajes</span></dd></dl></li></ul><ul class="topiclist forums"><li class="row"><dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;"><dd class="dterm"><div style="display: block; margin : 0 0px 0 42px;"><h2 class="hierarchy"><a href="/f74-beta" class="forumtitle">Beta</a></h2><br><strong></strong> </div></dd><dd class="topics">9 <dfn>Temas</dfn></dd><dd class="posts">40 <dfn>Mensajes</dfn></dd><dd class="lastpost"><span>27/08/12, 10:03 pm<br><strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t195-dinero-y-sueldo-referencia-basica#1406" class="last-post-icon"><img class="sprite-icon_topic_latest" src="http://illiweb.com/fa/empty.gif" alt="Dinero y sueldo - Referencia básica" title="Dinero y sueldo - Referencia básica"></a></span></dd></dl></li></ul><span class="corners-bottom"><span></span></span></div></div><ul class="linklist"><li><a href="/search?search_id=activetopics">Temas activos del día</a>&nbsp;•&nbsp;</li><li><a href="/memberlist?mode=today_posters">Top 20 posteadores hoy</a>&nbsp;•&nbsp;</li><li class="last"><a href="/memberlist?mode=overall_posters">Top 20 posteadores del foro</a></li><li class="rightside"><a href="/?mode=delete_cookies">Suprimir las cookies del foro</a></li></ul><div class="h3"><a href="/viewonline" rel="nofollow">¿Quién está en línea?</a></div><img src="http://i48.servimg.com/u/f48/17/38/25/48/whoiso10.jpg" id="i_whosonline" alt="¿Quién está en línea?" class="img-whois"><p>En total hay <strong>3</strong> usuarios en línea: 1 Registrado, 1 Ocultos y 1 Invitado <br>La mayor cantidad de usuarios en línea fue <strong>15</strong> el 10/06/12, 12:45 am.<br><br>Usuarios registrados: <a href="/u4"><span style="color:#999"><strong>Ryûji Suguro</strong></span></a><br><br><br style="line-height:5px;">Ningún miembro celebra su cumpleaños hoy<br>Ningún miembro celebra su cumpleaños en los 7 próximos días<br><br><em>Leyenda&nbsp;:&nbsp; [ <b><a style="color: #999" class="gensmall" href="/g2-moderadores">Moderadores</a></b> ] [ <b><a style="color: #888" class="gensmall" href="/g4-estudiante">Estudiante</a></b> ] [ <b><a style="color: #888" class="gensmall" href="/g5-profesor">Profesor</a></b> ] [ <b><a style="color: #8A0000" class="gensmall" href="/g8-gente-avisada">Gente avisada</a></b> ] [ <b><a style="color: #888" class="gensmall" href="/g6-otros-ni-estudiante-ni-profesor">Otros (ni estudiante ni profesor)</a></b> ] [ <b><a style="color: #FF0000" class="gensmall" href="/g3-visitante">Visitante</a></b> ]</em></p><div class="clear"></div><div class="h3"><a href="/statistics" rel="nofollow">Estadísticas</a></div><p class="page-bottom">Nuestros miembros han publicado un total de <strong>1668</strong> mensajes</p><p class="page-bottom">Tenemos <strong>45</strong> miembros registrados.</p><p class="page-bottom">El último usuario registrado es <strong><a href="/u49"><span style="color:#888"><strong>Ryu Tadashi</strong></span></a></strong>.</p><br style="clear:both"><ul id="picture_legend"><li><img src="http://i48.servimg.com/u/f48/17/38/25/48/icons_11.png" alt="Nuevos mensajes">Nuevos mensajes</li><li><img src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes">No hay nuevos mensajes</li><li><img src="http://i48.servimg.com/u/f48/17/38/25/48/icons_14.png" alt="Foro cerrado">Foro cerrado</li></ul></div><div id="afilitybar"><h3>Afiliados de élite / <a href="/h8-">Más afiliados</a></h3><ul id="afilitylist"><li><a href="http://centrolewis-cal.foroactivo.com/"><img src="http://i1091.photobucket.com/albums/i384/natzumi1/Story/Clafl4.png" alt="centro lewis"></a></li><li><a href="http://dragonball-world.foroactivo.mx/"><img src="http://i1188.photobucket.com/albums/z408/Reborn_24/Goku40x40.png" alt="Foro Dragon Ball"></a></li><li><a href="http://hitman-world.activoforo.com/"><img src="http://i856.photobucket.com/albums/ab126/dino_cava/Hitoman/Banner/hw407.png" alt="Foro rol Hitman"></a></li><li><a href="http://kyubi.foros.ws/index.php/"><img src="http://i50.tinypic.com/aaizpw.png" alt="Foro Naruto"></a></li><li><a href="http://dgm-fallenangels.foroactivo.mx/"><img src="http://i1029.photobucket.com/albums/y354/SuomiNillson5/4040.gif" alt="Foro Fallen Angels"></a></li><li><a href="http://no-heaven.foroac.com/"><img src="http://img546.imageshack.us/img546/3733/marcabanner.png" alt="Foro Mafias"></a></li><li><a href="http://sweet-amoris.foroactivo.com/"><img src="http://i94.photobucket.com/albums/l98/camusa_verseau/sweetamoris/40-1.png" alt="Foro sweet"></a></li><li><a href="http://cardcaptorsakurarol.foroactivo.com//"><img src="http://img43.imageshack.us/img43/4213/40x40a.png" alt="Foro rol Sakura"></a></li><li><a href="http://world-fans-vocaloid.webmaster-foro.com/"><img src="http://i1134.photobucket.com/albums/m612/RainbowColorFull/Sweetboton.png" alt="Foro Rol Vocaloid"></a></li><li><a href="http://sweet-sounds.foroactivo.com/"><img src="http://img580.imageshack.us/img580/8742/40x40.png" alt="Foro Vocaloid"></a></li><li><a href="http://petsacademy.foroactivo.com/"><img src="http://i.imgur.com/ncVqj.gif?1" alt="Foro Rol Nekos"></a></li><li><a href="http://dark-souls.foros-activos.com/"><img src="http://i1068.photobucket.com/albums/u460/DarkShadows99/Banners/40-1.png" alt="Foro Dark Souls"></a></li><li><a href="http://ecuacion-humana.foro.bz"><img src="http://i701.photobucket.com/albums/ww12/alastorsparda/40x404.gif" alt="La educacion Humana"></a></li><li><a href="http://demonsblood.foroactivo.com"><img src="http://i1267.photobucket.com/albums/jj557/julyloid/xx-40x40.png" alt="Demos souls"></a></li><li><a href="http://www.zeldarol.com"><img src="http://i51.tinypic.com/muh9oh.png" alt=" Foro de rol Zelda"></a></li><li><a href=""><img src="" alt=""></a></li><li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li><li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li><li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li><li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li><li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li><li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li></ul></div></div></div></div><div id="emptyidright"></div></div></div></div></div><div id="page-footer"><div class="navbar"><div class="inner"><span class="corners-top"><span></span></span><ul class="linklist clearfix"><li class="footer-home"><a class="icon-home" href="/" accesskey="h">Índice</a></li><li class="rightside"><strong><a href="http://www.foroactivo.com/es/crear-un-foro/" target="_blank">Crear foro</a></strong>&nbsp;|&nbsp;<span class="gensmall">©</span> <a href="http://www.foroactivo.com/es/phpbb/" target="_blank">phpBB</a>&nbsp;|&nbsp;<a name="bottom" href="http://asistencia.foroactivo.com/" target="_blank">Foro gratis de asistencia</a>&nbsp;|&nbsp;<a name="bottom" href="/contact" rel="nofollow">Contactar</a>&nbsp;|&nbsp;<a href="/abuse?page=%2F&amp;report=1" rel="nofollow">Denunciar un abuso</a></li></ul><span class="corners-bottom"><span></span></span></div></div><p class="copyright"><strong></strong></p></div></div></div></div></div><script type="text/javascript">//<![CDATA[
-fa_endpage();//]]></script><div id="flamegif"></div><div id="flameBG1" style="opacity: -63.51335254232258; ">-</div><div style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); text-align: center; background-position: initial initial; background-repeat: initial initial; ">Alojados en<br><a href="http://www.foroactivo.com"><img src="http://www.illiweb.com/fa/banner/es/banner5.png" alt="Crear foro" title="foroactivo.com"></a></div></body>
+                      </div>
+                      <div style="height:1px"></div>
+                    </div>
+                    <div id="main">
+                      <div id="main-content">
+                        <p class="right rightside">Tu última visita fue: 13/10/12, 10:07 pm</p>
+                        <p>Fecha y hora actual: 13/10/12, 11:10 pm</p>
+                        <br class="clear">
+                        <ul class="linklist">
+                          <li><a href="/search?search_id=newposts">Ver mensajes desde la última visita</a>&nbsp;•&nbsp;</li>
+                          <li><a href="/search?search_id=egosearch">Ver tus mensajes</a>&nbsp;•&nbsp;</li>
+                          <li><a href="/search?search_id=unanswered">Ver mensajes sin respuesta</a></li>
+                          <li class="rightside"><a href="/?mark=forums" accesskey="m">Marcar todos los foros como leídos</a></li>
+                        </ul>
+                        <div class="forabg">
+                          <div class="inner">
+                            <ul class="topiclist news">
+                              <li class="header">
+                                <dl class="icon">
+                                  <dd class="dterm">
+                                    <div class="table-title">
+                                      <h2>Tablón de anuncios</h2>
+                                      <span><a href="javascript:void(0)" id="news-4-btn" class="newstitle selected" onclick="news_activate(&quot;news-4&quot;)">Mi 2º yo</a><a href="javascript:void(0)" id="news-1-btn" class="newstitle" onclick="news_activate(&quot;news-1&quot;)">Evento</a><a href="javascript:void(0)" id="news-2-btn" class="newstitle" onclick="news_activate(&quot;news-2&quot;)">¿Y el reloj?</a></span></div>
+                                  </dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <ul class="topiclist news">
+                              <li id="news-4" class="row" style="display: block; "><a href="http://seijyujigakuen.foroactivo.com/t143-nuevo-seijyuji-gakuen#1370" class="newstitle">
+                                <h3>Mi segundo yo</h3>
+                                <p>Ahora puedes estar en dos sitios a la vez pero con limitaciones…</p>
+                                </a></li>
+                              <li id="news-1" class="row" style="display: none; "><span class="newstitle" href="#">
+                                <h3>Clase especial</h3>
+                                <p>En <a href="http://seijyujigakuen.foroactivo.com/t147-primer-dia-de-acampada">el bosque</a></p>
+                                </span></li>
+                              <li id="news-2" class="row" style="display: none; "><span class="newstitle" href="#">
+                                <h3>El día 17 de julio de 2012, el reloj ha muerto</h3>
+                                <p>Puedes dejar tu mensaje de despedida <a href="http://seijyujigakuen.foroactivo.com/t142-el-reloj-ha-muerto">aquí</a></p>
+                                </span></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="forabg category-hidden">
+                          <div class="inner"><span class="corners-top"><span></span></span>
+                            <ul class="topiclist">
+                              <li class="header">
+                                <dl class="icon">
+                                  <dd class="dterm">
+                                    <div class="table-title">
+                                      <h2>IMPORTANTE: cómo conseguir permiso para postear en el foro</h2>
+                                    </div>
+                                  </dd>
+                                  <dd class="topics">Temas</dd>
+                                  <dd class="posts">Mensajes</dd>
+                                  <dd class="lastpost"><span>Últimos Mensajes</span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <ul class="topiclist forums">
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_14.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h2 class="hierarchy"><a href="/f24-importante-como-conseguir-permiso-para-postear-en-el-foro" class="forumtitle">IMPORTANTE: cómo conseguir permiso para postear en el foro</a></h2>
+                                      <br>
+                                      <div style="font-size:12px"><a href="http://seijyujigakuen.foroactivo.com/f24-importante-como-conseguir-permiso-para-postear-en-el-foro">Actualmente eres Visitante. Esto quiere decir que aunque te hayas registrado no puedes rolear, es decir, solo puedes escribir en "Off-rol"<br>
+                                        <br>
+                                        Para conseguir permiso para rolear debes rellenar la Ficha del Jugador y enviar una Prueba de Rol. Entra para más información</a></div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">1 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">5 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>22/04/12, 05:36 pm<br>
+                                    <strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t2-como-crear-la-ficha-del-jugador-y-realizar-la-prueba-de-rol-incluye-ejemplos#182" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Cómo crear la ficha del jugador y realizar la prueba de rol (incluye ejemplos)" title="Cómo crear la ficha del jugador y realizar la prueba de rol (incluye ejemplos)"></a></span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <span class="corners-bottom"><span></span></span></div>
+                        </div>
+                        <div class="forabg">
+                          <div class="inner"><span class="corners-top"><span></span></span>
+                            <ul class="topiclist">
+                              <li class="header">
+                                <dl class="icon">
+                                  <dd class="dterm">
+                                    <div class="table-title">
+                                      <h2>Administración</h2>
+                                    </div>
+                                  </dd>
+                                  <dd class="topics">Temas</dd>
+                                  <dd class="posts">Mensajes</dd>
+                                  <dd class="lastpost"><span>Últimos Mensajes</span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <ul class="topiclist forums">
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f22-informacion-importante" class="forumtitle">Información importante</a></h3>
+                                      <br>
+                                      Reglas del foro e información relevante. Obligatorio de leer para las primeras visitas<br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">6 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">23 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>30/09/12, 04:12 pm<br>
+                                    <strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t223-normas-de-clase-que-deben-seguir-los-profesores#1563" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Normas de clase que deben seguir los profesores" title="Normas de clase que deben seguir los profesores"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f21-pruebas-de-rol" class="forumtitle">Pruebas de Rol</a></h3>
+                                      <br>
+                                      En este subforo SOLO se permiten escribir pruebas de Rol<br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">30 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">77 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>Ayer a las 11:48 pm<br>
+                                    <strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t244-prueba-de-rol-ryu-tadashi#1717" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Prueba de Rol - Ryu Tadashi" title="Prueba de Rol - Ryu Tadashi"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f85-historia-ambientacion" class="forumtitle">Historia &amp; Ambientación</a></h3>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">2 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">2 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>03/08/12, 09:31 pm<br>
+                                    <strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t174-historia-trama-actual#1267" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Historia &amp; trama actual" title="Historia &amp; trama actual"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f83-comentarios-feedback" class="forumtitle">Comentarios (feedback)</a></h3>
+                                      <br>
+                                      Postea aquí cualquier comentario sobre el funcionamiento del foro<br>
+                                      <a href="/f84-problemas-tecnicos" title="" class="gensmall">Problemas técnicos</a><strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">7 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">15 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>13/09/12, 01:00 am<br>
+                                    <strong><a href="/u27" class="gensmall"><span style="color:#888" class="color-groups"><strong>Fox Kuroishi</strong></span></a></strong>&nbsp;<a href="/t199-dominio-del-foro#1449" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Dominio del foro" title="Dominio del foro"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f80-afiliaciones" class="forumtitle">Afiliaciones</a></h3>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">9 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">12 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>06/10/12, 06:54 pm<br>
+                                    AF1.0 &nbsp;<a href="/t232-afiliaforos#1659" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="AfiliaForos" title="AfiliaForos"></a></span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <span class="corners-bottom"><span></span></span></div>
+                        </div>
+                        <div class="forabg">
+                          <div class="inner"><span class="corners-top"><span></span></span>
+                            <ul class="topiclist">
+                              <li class="header">
+                                <dl class="icon">
+                                  <dd class="dterm">
+                                    <div class="table-title">
+                                      <h2>Off rol</h2>
+                                    </div>
+                                  </dd>
+                                  <dd class="topics">Temas</dd>
+                                  <dd class="posts">Mensajes</dd>
+                                  <dd class="lastpost"><span>Últimos Mensajes</span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <ul class="topiclist forums">
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f3-presentaciones" class="forumtitle">Presentaciones</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/presen11.jpg" title="¡No seas tímido y date a conocer!"> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">24 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">187 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>Hoy a las 02:11 am<br>
+                                    <strong><a href="/u48" class="gensmall"><span style="color:#888" class="color-groups"><strong>Ariel Ariadna Angel</strong></span></a></strong>&nbsp;<a href="/t242-me-presento-ryu-tadashi#1718" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Me Presento!! - Ryu Tadashi" title="Me Presento!! - Ryu Tadashi"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f75-zona-de-entrenamiento" class="forumtitle">Zona de entrenamiento</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/zona_d10.jpg" title="¿No te has acostumbrado al sistema de batalla del foro? ¡Practica aquí!"> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">11 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">153 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>Ayer a las 01:24 am<br>
+                                    <strong><a href="/u48" class="gensmall"><span style="color:#888" class="color-groups"><strong>Ariel Ariadna Angel</strong></span></a></strong>&nbsp;<a href="/t239-entrenando-con-mi-familiar#1703" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Entrenando con mi familiar" title="Entrenando con mi familiar"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f82-noticias" class="forumtitle">Noticias</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/notici10.jpg" title="Información complementaria del foro"> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">2 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">6 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>20/08/12, 02:26 am<br>
+                                    <strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t143-nuevo-seijyuji-gakuen#1370" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Nuevo Seijyuji Gakuen" title="Nuevo Seijyuji Gakuen"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f23-relaciones" class="forumtitle">Relaciones</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/relaci10.jpg" title="Di la relación que tengas con el resto de personajes del foro"></div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">1 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">1 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>Ayer a las 01:43 pm<br>
+                                    <strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t240-relaciones-entre-personajes#1708" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Relaciones entre personajes" title="Relaciones entre personajes"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_11.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f28-busco-rol" class="forumtitle">Busco rol</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/busco_10.jpg" title="Si quieres rolear y no sabes con quién, este es tu lugar"></div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">2 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">4 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>Hoy a las 10:43 pm<br>
+                                    <strong><a href="/u5" class="gensmall"><span style="color:#888" class="color-groups"><strong>Shima Renzou</strong></span></a></strong>&nbsp;<a href="/t243-buscamos-rol?view=newest"><img src="http://illiweb.com/fa/m/icon_newest_reply1.gif" alt="Ver el mensaje lo más reciente" title="Ver el mensaje lo más reciente"></a> </span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <span class="corners-bottom"><span></span></span></div>
+                        </div>
+                        <div class="forabg">
+                          <div class="inner"><span class="corners-top"><span></span></span>
+                            <ul class="topiclist">
+                              <li class="header">
+                                <dl class="icon">
+                                  <dd class="dterm">
+                                    <div class="table-title">
+                                      <h2>Ciudad de Seijyuji</h2>
+                                    </div>
+                                  </dd>
+                                  <dd class="topics">Temas</dd>
+                                  <dd class="posts">Mensajes</dd>
+                                  <dd class="lastpost"><span>Últimos Mensajes</span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <ul class="topiclist forums">
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f1-monasterio" class="forumtitle">Monasterio</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/monast10.jpg" title="Este es el pequeño monasterio masculino que lleva el padre Fujimoto, el cual se encuentra al sur, en el pueblo de Seijyuji Gakuen"> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">1 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">5 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>14/04/12, 11:21 pm<br>
+                                    <strong><a href="/u2" class="gensmall"><span style="color:#999" class="color-groups"><strong>Okumura Yukio</strong></span></a></strong>&nbsp;<a href="/t20-precuela-mismo-dia#125" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="(Precuela) Mismo dia..." title="(Precuela) Mismo dia..."></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f2-parque-del-sur" class="forumtitle">Parque del Sur</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/parque10.jpg" title="Un pequeño parque que se encuentra cerca del monasterio. Además de un bonito jardín tiene diversos columpios para niños"> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">1 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">5 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>28/08/12, 06:01 pm<br>
+                                    <strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t192-caza-de-demonios#1408" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Caza de demonios" title="Caza de demonios"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f4-calle-de-la-cruz-sur" class="forumtitle">Calle de la Cruz Sur</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/callec10.jpg" title="La calle principal del pueblo, donde pasea mucha gente, comprando o hablando. Está llena de tiendas de todo tipo."> </div>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f25-supermercado-nico-nico">Supermercado Nico Nico</a></li>
+                                          <li><a href="/f26-pabellon-cruz-del-sur">Pabellón Cruz del Sur</a></li>
+                                          <li><a href="/f27-callejones">Callejones</a></li>
+                                        </ul>
+                                      </div>
+                                      <br>
+                                      <a href="/f25-supermercado-nico-nico" title="  " class="gensmall">Supermercado Nico Nico</a>, <a href="/f26-pabellon-cruz-del-sur" title="  " class="gensmall">Pabellón Cruz del Sur</a>, <a href="/f27-callejones" title="  " class="gensmall">Callejones</a><strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">5 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">18 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>13/08/12, 09:06 pm<br>
+                                    <strong><a href="/u26" class="gensmall"><span style="color:#888" class="color-groups"><strong>kida kuran</strong></span></a></strong>&nbsp;<a href="/t177-robando-en-el-supermercado#1320" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Robando en el supermercado" title="Robando en el supermercado"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f60-area-residencial" class="forumtitle">Área residencial</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/areare10.jpg" title="Una de las zonas más pobladas de la ciudad, donde se encuentran gran cantidad de edificios poblados de ciudadanos."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">0 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">0 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span></span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <span class="corners-bottom"><span></span></span></div>
+                        </div>
+                        <div class="forabg">
+                          <div class="inner"><span class="corners-top"><span></span></span>
+                            <ul class="topiclist">
+                              <li class="header">
+                                <dl class="icon">
+                                  <dd class="dterm">
+                                    <div class="table-title">
+                                      <h2>Seijyuji Gakuen</h2>
+                                    </div>
+                                  </dd>
+                                  <dd class="topics">Temas</dd>
+                                  <dd class="posts">Mensajes</dd>
+                                  <dd class="lastpost"><span>Últimos Mensajes</span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <ul class="topiclist forums">
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f17-entrada-principal" class="forumtitle">Entrada principal</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/vestib10.jpg" title="Flanqueada por amplios jardines con arboles altos. La puerta principal tiene tres escalinatas, una al frente y dos en los laterales."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">5 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">28 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>08/10/12, 08:19 am<br>
+                                    <strong><a href="/u45" class="gensmall"><span style="color:#888" class="color-groups"><strong>Ikeda Koyuki</strong></span></a></strong>&nbsp;<a href="/t235-primeros-pasos#1675" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Primeros Pasos." title="Primeros Pasos."></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f16-salon-de-actos" class="forumtitle">Salón de Actos</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/salon_10.jpg" title="Aquí es donde se celebra la ceremonia de bienvenida de los nuevos estudiantes, así como las conferencias o actos importantes."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">1 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">26 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>20/06/12, 01:35 pm<br>
+                                    <strong><a href="/u19" class="gensmall"><span style="color:#888" class="color-groups"><strong>Kumiko Yagami</strong></span></a></strong>&nbsp;<a href="/t75p15-presentacion-del-curso-2011-2012#650" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Presentación del curso 2011-2012" title="Presentación del curso 2011-2012"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f77-gran-parque-seijyuji-gakuen" class="forumtitle">Gran parque Seijyuji Gakuen</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/granpa10.jpg" title="Un lugar común para toda la Seijyuji Gakuen, sean exorcistas o no. Aquí los alumnos aprovechan para relajarse, comer, etc."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">10 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">102 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>Ayer a las 01:57 pm<br>
+                                    <strong><a href="/u45" class="gensmall"><span style="color:#888" class="color-groups"><strong>Ikeda Koyuki</strong></span></a></strong>&nbsp;<a href="/t228-tomando-aire-fresco#1709" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Tomando aire fresco" title="Tomando aire fresco"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f15-cafeteria-y-comedor" class="forumtitle">Cafetería y comedor</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/cafete11.jpg" title="Aquí los mejores chef preparan la comida de los estudiantes. Los precios son muy elevados y solo unos pocos pueden permitirse algo."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">4 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">15 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>11/10/12, 10:13 pm<br>
+                                    <strong><a href="/u39" class="gensmall"><span style="color:#888" class="color-groups"><strong>BellBirthday</strong></span></a></strong>&nbsp;<a href="/t234-aliviando-el-hambre-de-bell#1698" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Aliviando el hambre de Bell" title="Aliviando el hambre de Bell"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f14-hospital" class="forumtitle">Hospital</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/hospit10.jpg" title="El hospital de la Seijyuji Gakuen, donde va todo aquel que esté herido o necesite atención medica."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">4 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">28 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>01/08/12, 11:15 pm<br>
+                                    <strong><a href="/u27" class="gensmall"><span style="color:#888" class="color-groups"><strong>Fox Kuroishi</strong></span></a></strong>&nbsp;<a href="/t169-curando-la-mano#1228" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Curando la mano" title="Curando la mano"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f11-escuela-de-exorcistas" class="forumtitle">Escuela de Exorcistas</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/escuel10.jpg" title="Oculta para la gran parte de los alumnos, salvo aquellos que tienen la llave para acceder a ella. Es un largo pasillo lleno de aulas."> </div>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f20-aula-1106" title="  " class="gensmall">Aula 1106</a></li>
+                                          <li><a href="/f33-pasillo" title="Un largo pasillo lleno de puertas que dan a diversas aulas de la escuela de exorcistas.  " class="gensmall">Pasillo</a></li>
+                                          <li><a href="/f19-gimnasio" title="  " class="gensmall">Gimnasio</a></li>
+                                          <li><a href="/f18-campo-de-practicas" title="Una aula que consta con una instalación de entrenamiento para exorcistas.   " class="gensmall">Campo de prácticas</a></li>
+                                          <li><a href="/f34-jardin" title="Un pequeño jardín en forma redondeada en cuyo centro se encuentra una fuente donde los exorcistas suelen tomarse un descanso y pasar el rato libre.  " class="gensmall">Jardín</a></li>
+                                          <li><a href="/f35-laboratorio" title="El laboratorio es una zona a la que solo pueden entrar los exorcistas de alto nivel, en el hay materiales altamente peligrosos, así como diversas sustancias de investigación y herramientas para llevar a cabo análisis y experimentos.   " class="gensmall">Laboratorio</a></li>
+                                        </ul>
+                                      </div>
+                                      <br>
+                                      <a href="/f20-aula-1106" title="  " class="gensmall">Aula 1106</a>, <a href="/f33-pasillo" title="  " class="gensmall">Pasillo</a>, <a href="/f19-gimnasio" title="  " class="gensmall">Gimnasio</a>, <a href="/f18-campo-de-practicas" title="  " class="gensmall">Campo de prácticas</a>, <a href="/f34-jardin" title="  " class="gensmall">Jardín</a>, <a href="/f35-laboratorio" title="  " class="gensmall">Laboratorio</a><strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">10 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">198 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>27/09/12, 03:58 pm<br>
+                                    <strong><a href="/u5" class="gensmall"><span style="color:#888" class="color-groups"><strong>Shima Renzou</strong></span></a></strong>&nbsp;<a href="/t215-dando-un-pequeno-paseo-antes-de-ir-a-clase#1509" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Dando un pequeño paseo antes de ir a clase" title="Dando un pequeño paseo antes de ir a clase"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f12-biblioteca" class="forumtitle">Biblioteca</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/biblio10.jpg" title="La biblioteca es un sitio de estudio, así que recordar guardar silencio."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">2 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">23 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>04/10/12, 09:25 pm<br>
+                                    <strong><a href="/u5" class="gensmall"><span style="color:#888" class="color-groups"><strong>Shima Renzou</strong></span></a></strong>&nbsp;<a href="/t214-a-estudiar-se-ha-dicho#1648" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="A estudiar se ha dicho" title="A estudiar se ha dicho"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f10-residencia-de-estudiantes-y-profesores" class="forumtitle">Residencia de estudiantes y profesores</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/resi_010.jpg" title="Las habitaciones de estudiantes son dobles y las de profesores son más majestuosas e individuales"> </div>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f36-habitaciones" title="Las habitaciones de los diversos estudiantes de la Seijyuji Gakuen. Las habitaciones son compartidas entre dos personas." class="gensmall">Habitaciones</a></li>
+                                          <li><a href="/f76-habitaciones-de-profesores" title="" class="gensmall">Habitaciones de profesores</a></li>
+                                          <li><a href="/f37-comedor" title="El comer sirve tanto el desayuno como la comida y la cena a los estudiantes que se encuentran hospedados en la residencia." class="gensmall">Comedor</a></li>
+                                          <li><a href="/f38-banos" title="Los baños y lavabos de la residencia, separados por sexos." class="gensmall">Baños</a></li>
+                                          <li><a href="/f39-terraza" title="La terraza de la residencia se encuentra abierta para cualquiera que quiera ir, además es donde se tiende la ropa." class="gensmall">Terraza</a></li>
+                                        </ul>
+                                      </div>
+                                      <br>
+                                      <a href="/f36-habitaciones" title="  " class="gensmall">Habitaciones</a>, <a href="/f76-habitaciones-de-profesores" title="" class="gensmall">Habitaciones de profesores</a>, <a href="/f37-comedor" title="  " class="gensmall">Comedor</a>, <a href="/f38-banos" title="  " class="gensmall">Baños</a>, <a href="/f39-terraza" title="  " class="gensmall">Terraza</a><strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">36 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">194 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>07/10/12, 10:09 pm<br>
+                                    <strong><a href="/u39" class="gensmall"><span style="color:#888" class="color-groups"><strong>BellBirthday</strong></span></a></strong>&nbsp;<a href="/t207-habitacion-bell-birthday-llegada-al-cuarto#1665" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="[Habitación Bell Birthday.] Llegada al cuarto." title="[Habitación Bell Birthday.] Llegada al cuarto."></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f9-antigua-residencia" class="forumtitle">Antigua residencia</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/resi_a12.jpg" title="La antigua residencia de la Seijyuji Gakuen es un viejo edificio el cual se encuentra aparentemente desocupado."> </div>
+                                      <div class="newStyleSubforums">
+                                        <ul>
+                                          <li><a href="/f40-habitacion-602" title="La habitación de Yukio y Rin Okumura" class="gensmall">Habitación 602</a></li>
+                                          <li><a href="/f41-comedor-y-cocina" title="El comedor de la antigua residencia, la cocina se encuentra en desuso, aparentemente." class="gensmall">Comedor y Cocina</a></li>
+                                          <li><a href="/f42-banos" title="Los baños y los lavabos de la antigua residencia masculina." class="gensmall">Baños</a></li>
+                                          <li><a href="/f43-terraza" title="La terraza de la residencia se encuentra abierta para cualquiera que quiera ir, además es donde se tiende la ropa." class="gensmall">Terraza</a></li>
+                                        </ul>
+                                      </div>
+                                      <br>
+                                      <a href="/f40-habitacion-602" title="  " class="gensmall">Habitación 602</a>, <a href="/f41-comedor-y-cocina" title="  " class="gensmall">Comedor y Cocina</a>, <a href="/f42-banos" title="  " class="gensmall">Baños</a>, <a href="/f43-terraza" title="  " class="gensmall">Terraza</a><strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">10 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">139 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>Hoy a las 09:45 pm<br>
+                                    <strong><a href="/u3" class="gensmall"><span style="color:#999" class="color-groups"><strong>Okumura Rin</strong></span></a></strong>&nbsp;<a href="/t225p15-comida-para-tres-invitando-a-ariadna#1720" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="¡Comida para tres! Invitando a Ariadna" title="¡Comida para tres! Invitando a Ariadna"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f8-tienda-de-suministros-futsumaya" class="forumtitle">Tienda de suministros Futsumaya</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/tienda11.jpg" title="La tienda solo para exorcistas de la cual está a cargo la señora Moriyama."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">5 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">5 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>28/09/12, 09:01 pm<br>
+                                    <strong><a href="/u10" class="gensmall"><span style="color:#888" class="color-groups"><strong>Shiemi Moriyama</strong></span></a></strong>&nbsp;<a href="/t221-el-despues-del-bosque#1527" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="El después del bosque" title="El después del bosque"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f13-kiosko" class="forumtitle">Kiosko</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/kiosko10.jpg" title="Pequeño puesto donde venden bocatas para los alumnos de la academia a un precio mucho más económico que la cafetería."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">1 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">17 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>21/06/12, 12:16 am<br>
+                                    <strong><a href="/u15" class="gensmall"><span style="color:#888" class="color-groups"><strong>Kira Okami</strong></span></a></strong>&nbsp;<a href="/t74p15-intentando-robar-algo-para-comer#674" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Intentando robar algo para comer..." title="Intentando robar algo para comer..."></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f49-puesto-de-monja-yaki" class="forumtitle">Puesto de Monja-yaki</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/monjay10.jpg" title="El puesto de delicioso Monja-yaki de la Seijyuji Gakuen. Se rumorea que es una de las comidas preferidas del director."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">2 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">13 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>18/08/12, 03:03 am<br>
+                                    <strong><a href="/u26" class="gensmall"><span style="color:#888" class="color-groups"><strong>kida kuran</strong></span></a></strong>&nbsp;<a href="/t178-que-rico#1365" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="¡Que rico!" title="¡Que rico!"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f7-mansion-de-johann-fausto-v" class="forumtitle">Mansión de Johann Fausto V</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/mansio10.jpg" title="La mansión y despacho del director de la academia, Johann Fausto V, también conocido por otros pocos como Mephisto Pheles"> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">0 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">0 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f81-sala-de-profesores" class="forumtitle">Sala de Profesores</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/sala_d10.jpg" title="La sala de reunión de los profesores de la Seijyuji Gakuen."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">2 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">14 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>08/07/12, 08:29 pm<br>
+                                    <strong><a href="/u6" class="gensmall"><span style="color:#999" class="color-groups"><strong>Night Knightley</strong></span></a></strong>&nbsp;<a href="/t117-despues-de-clase#949" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Después de clase " title="Después de clase "></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f48-mephyland" class="forumtitle">Mephyland</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/mephyl10.jpg" title="¡El parque de atracciones de la Seijyuji! El nombre viene a honor de su director, y tiene las atracciones más divertidas e incluso terroríficas de toda la zona."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">1 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">5 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>18/07/12, 10:48 am<br>
+                                    <strong><a href="/u15" class="gensmall"><span style="color:#888" class="color-groups"><strong>Kira Okami</strong></span></a></strong>&nbsp;<a href="/t127-mephiland#1007" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Mephi...land?" title="Mephi...land?"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f6-bosque" class="forumtitle">Bosque</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/bosque10.jpg" title="El bosque de la academia, donde se llevan a cabo examenes y entrenamientos. De noche es un nido de demonios de nivel bajo."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">12 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">257 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>11/10/12, 10:01 pm<br>
+                                    <strong><a href="/u6" class="gensmall"><span style="color:#999" class="color-groups"><strong>Night Knightley</strong></span></a></strong>&nbsp;<a href="/t222p30-dando-un-paseo-por-el-bosque#1697" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Dando un paseo por el bosque" title="Dando un paseo por el bosque"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f5-estacion-de-tren" class="forumtitle">Estación de tren</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/estaci10.jpg" title="Para ir lejos de la Seijyuji Gakuen la mayoria de personas utiliza el tren, en especial los exorcistas cuando deben salir a misiones lejanas"> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">1 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">1 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>24/05/12, 04:48 am<br>
+                                    <strong><a href="/u11" class="gensmall"><span style="color:#888" class="color-groups"><strong>Shima Kinzou</strong></span></a></strong>&nbsp;<a href="/t47-un-viajecito-que-merece-la-pena#260" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Un viajecito que merece la pena~~" title="Un viajecito que merece la pena~~"></a></span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <span class="corners-bottom"><span></span></span></div>
+                        </div>
+                        <div class="forabg">
+                          <div class="inner"><span class="corners-top"><span></span></span>
+                            <ul class="topiclist">
+                              <li class="header">
+                                <dl class="icon">
+                                  <dd class="dterm">
+                                    <div class="table-title">
+                                      <h2>La Orden</h2>
+                                    </div>
+                                  </dd>
+                                  <dd class="topics">Temas</dd>
+                                  <dd class="posts">Mensajes</dd>
+                                  <dd class="lastpost"><span>Últimos Mensajes</span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <ul class="topiclist forums">
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f50-rama-japonesa-de-la-seijyuji" class="forumtitle">Rama Japonesa de la Seijyuji</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/japan10.jpg" title="Se encuentra en un subterráneo bajo la Seijyuji Gakuen, Tokyo. Se encuentra bajo el liderazgo de Mephisto Pheles."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">1 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">1 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>03/08/12, 03:08 pm<br>
+                                    <strong><a href="/u27" class="gensmall"><span style="color:#888" class="color-groups"><strong>Fox Kuroishi</strong></span></a></strong>&nbsp;<a href="/t173-haciendome-profesor#1264" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Haciéndome profesor. " title="Haciéndome profesor. "></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f53-rama-inglesa-de-la-seijyuji" class="forumtitle">Rama Inglesa de la Seijyuji</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/englan10.jpg" title="La rama inglesa de la orden se encuentra oculta en algún lugar de Londres, Inglaterra."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">1 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">3 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>16/04/12, 03:34 pm<br>
+                                    <strong><a href="/u6" class="gensmall"><span style="color:#999" class="color-groups"><strong>Night Knightley</strong></span></a></strong>&nbsp;<a href="/t17-precuela-en-la-rama-inglesa-night#149" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Precuela en la rama inglesa (Night)" title="Precuela en la rama inglesa (Night)"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f61-rama-de-kyoto-de-la-seijyuji" class="forumtitle">Rama de Kyoto de la Seijyuji</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/kyoto10.jpg" title="La rama de Kyoto de la orden se encuentra en la misma capital. Su líderazgo es compartido entre Yaozo Shima y Uwabami Hojo"> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">0 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">0 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f54-el-vaticano-sede-principal-de-la-orden" class="forumtitle">El Vaticano: Sede principal de la orden</a></h3>
+                                      <br>
+                                      <div class="newStyleDesc"> <img src="http://i38.servimg.com/u/f38/17/38/25/48/vatica11.jpg" title="En Roma, concretamente en el Vaticano, se encuentra la sede principal de la Seijyuji. Se encuentra dirigida por el actual Paladín, así como por el consejo de los Gregori. Ellos son quienes dictan lo que se ha de hacer y son la autoridad máxima en la orden."> </div>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">3 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">3 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>05/07/12, 01:49 am<br>
+                                    <strong><a href="/u16" class="gensmall"><span style="color:#888" class="color-groups"><strong>Shura Kirigakure</strong></span></a></strong>&nbsp;<a href="/t113-a-punto-de-emprender-el-viaje-hacia-la-seijyuji#864" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="A punto de emprender el viaje hacia la Seijyuji" title="A punto de emprender el viaje hacia la Seijyuji"></a></span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <span class="corners-bottom"><span></span></span></div>
+                        </div>
+                        <div class="forabg">
+                          <div class="inner"><span class="corners-top"><span></span></span>
+                            <ul class="topiclist">
+                              <li class="header">
+                                <dl class="icon">
+                                  <dd class="dterm">
+                                    <div class="table-title">
+                                      <h2>Kyoto</h2>
+                                    </div>
+                                  </dd>
+                                  <dd class="topics">Temas</dd>
+                                  <dd class="posts">Mensajes</dd>
+                                  <dd class="lastpost"><span>Últimos Mensajes</span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <ul class="topiclist forums">
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f62-posada" class="forumtitle">Posada</a></h3>
+                                      <br>
+                                      Una humilde posada de Kyoto destinada a hospedar a gente. Tiene un estilo típico de las casas japonesas y los templos. <!--La dueña es la madre de Suguro Ryuuji, por lo que a su vez está es la casa de toda la familia Suguro. También vive aquí el Monje Tatsuma Suguro, cabecilla de la secta budista Myoda. Corren rumores de que se trata de un sacerdote corrupto.--><br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">0 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">0 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f73-calles" class="forumtitle">Calles</a></h3>
+                                      <br>
+                                      Las calles de Kyoto, tanto las de la ciudad más moderna de altos edificios como las más antiguas, rodeadas de un paisaje más tradicional.<br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">3 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">27 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>21/08/12, 09:57 pm<br>
+                                    <strong><a href="/u5" class="gensmall"><span style="color:#888" class="color-groups"><strong>Shima Renzou</strong></span></a></strong>&nbsp;<a href="/t191-un-dia-corriente-de-shima-y-bon#1384" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Un día corriente de Shima y Bon" title="Un día corriente de Shima y Bon"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f64-la-torre-de-kyoto" class="forumtitle">La torre de Kyoto</a></h3>
+                                      <br>
+                                      La torre de Kyoto es una torre de observación de 131 metros de altura que se encuentra en el barrio de Shimogyō-ku.<br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">1 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">9 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>07/04/12, 05:53 pm<br>
+                                    <strong><a href="/u4" class="gensmall"><span style="color:#999" class="color-groups"><strong>Ryûji Suguro</strong></span></a></strong>&nbsp;<a href="/t16-precuela-frio-anochecer#44" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="(Precuela) Frío anochecer" title="(Precuela) Frío anochecer"></a></span></dd>
+                                </dl>
+                              </li>
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h3 class="hierarchy"><a href="/f70-montanas-kongo" class="forumtitle">Montañas Kongo</a></h3>
+                                      <br>
+                                      Las montañas más lejanas, rodeadas por un espeso bosque<br>
+                                      <a href="/f72-bosque" title="Un profundo bosque en el cual es bastante fácil perderse si no se conoce el camino a seguir." class="gensmall">Bosque</a>, <a href="/f71-gomado" title="El gomado es la antigua base central de la secta Budista Myoda. A parte del monje principal, es un sitio en el cual técnicamente no podía entrar nadie más. En su interior hay una pequeña plataforma con fuego aun encendido. Bajo una trampilla, y tras pasar un a puerta, se encuentra un gran secreto sellado...El rey impuro." class="gensmall">Gomado</a><strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">0 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">0 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span></span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <span class="corners-bottom"><span></span></span></div>
+                        </div>
+                        <div class="forabg">
+                          <div class="inner"><span class="corners-top"><span></span></span>
+                            <ul class="topiclist">
+                              <li class="header">
+                                <dl class="icon">
+                                  <dd class="dterm">
+                                    <div class="table-title">
+                                      <h2>Tablón de Anuncios</h2>
+                                    </div>
+                                  </dd>
+                                  <dd class="topics">Temas</dd>
+                                  <dd class="posts">Mensajes</dd>
+                                  <dd class="lastpost"><span>Últimos Mensajes</span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <ul class="topiclist forums">
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h2 class="hierarchy"><a href="/f32-tablon-de-anuncios" class="forumtitle">Tablón de Anuncios</a></h2>
+                                      <br>
+                                      Las noticias más relevantes del foro, aquí<br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">4 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">4 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>18/08/12, 04:28 pm<br>
+                                    <strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t189-orden-vaticana-2012-002-mision-de-proteccion-de-la-seijyuji-gakuen#1367" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Orden Vaticana 2012/002 . Misión de protección de la Seijyuji Gakuen" title="Orden Vaticana 2012/002 . Misión de protección de la Seijyuji Gakuen"></a></span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <span class="corners-bottom"><span></span></span></div>
+                        </div>
+                        <div class="forabg">
+                          <div class="inner"><span class="corners-top"><span></span></span>
+                            <ul class="topiclist">
+                              <li class="header">
+                                <dl class="icon">
+                                  <dd class="dterm">
+                                    <div class="table-title">
+                                      <h2>Beta</h2>
+                                    </div>
+                                  </dd>
+                                  <dd class="topics">Temas</dd>
+                                  <dd class="posts">Mensajes</dd>
+                                  <dd class="lastpost"><span>Últimos Mensajes</span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <ul class="topiclist forums">
+                              <li class="row">
+                                <dl class="icon" style="background:url(http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png) no-repeat scroll 10px 50%;">
+                                  <dd class="dterm">
+                                    <div style="display: block; margin : 0 0px 0 42px;">
+                                      <h2 class="hierarchy"><a href="/f74-beta" class="forumtitle">Beta</a></h2>
+                                      <br>
+                                      <strong></strong> </div>
+                                  </dd>
+                                  <dd class="topics">9 <dfn>Temas</dfn></dd>
+                                  <dd class="posts">40 <dfn>Mensajes</dfn></dd>
+                                  <dd class="lastpost"><span>27/08/12, 10:03 pm<br>
+                                    <strong><a href="/u1" class="gensmall"><span style="color:#999" class="color-groups"><strong>Admin</strong></span></a></strong>&nbsp;<a href="/t195-dinero-y-sueldo-referencia-basica#1406" class="last-post-icon"><img class="sprite-icon_reply" src="http://illiweb.com/fa/empty.gif" alt="Dinero y sueldo - Referencia básica" title="Dinero y sueldo - Referencia básica"></a></span></dd>
+                                </dl>
+                              </li>
+                            </ul>
+                            <span class="corners-bottom"><span></span></span></div>
+                        </div>
+                        <ul class="linklist">
+                          <li><a href="/search?search_id=activetopics">Temas activos del día</a>&nbsp;•&nbsp;</li>
+                          <li><a href="/memberlist?mode=today_posters">Top 20 posteadores hoy</a>&nbsp;•&nbsp;</li>
+                          <li class="last"><a href="/memberlist?mode=overall_posters">Top 20 posteadores del foro</a></li>
+                          <li class="rightside"><a href="/?mode=delete_cookies">Suprimir las cookies del foro</a></li>
+                        </ul>
+                        <div class="h3"><a href="/viewonline" rel="nofollow">¿Quién está en línea?</a></div>
+                        <img src="http://i48.servimg.com/u/f48/17/38/25/48/whoiso10.jpg" id="i_whosonline" alt="¿Quién está en línea?" class="img-whois">
+                        <p>En total hay <strong>5</strong> usuarios en línea: 2 Registrados, 1 Ocultos y 2 Invitados  :: 1 Motor de búsqueda<br>
+                          La mayor cantidad de usuarios en línea fue <strong>15</strong> el 10/06/12, 12:45 am.<br>
+                          <br>
+                          Usuarios registrados: <a href="/u45"><span style="color:#888"><strong>Ikeda Koyuki</strong></span></a>, <a href="/u4"><span style="color:#999"><strong>Ryûji Suguro</strong></span></a><br>
+                          Motores de búsqueda : <span style="font-family:tahoma,sans-serif;font-style:italic;">bing</span><br>
+                          <br>
+                          <br style="line-height:5px;">
+                          Ningún miembro celebra su cumpleaños hoy<br>
+                          Ningún miembro celebra su cumpleaños en los 7 próximos días<br>
+                          <br>
+                          <em>Leyenda&nbsp;:&nbsp; [ <b><a style="color: #999" class="gensmall" href="/g2-moderadores">Moderadores</a></b> ] [ <b><a style="color: #888" class="gensmall" href="/g4-estudiante">Estudiante</a></b> ] [ <b><a style="color: #888" class="gensmall" href="/g5-profesor">Profesor</a></b> ] [ <b><a style="color: #8A0000" class="gensmall" href="/g8-gente-avisada">Gente avisada</a></b> ] [ <b><a style="color: #888" class="gensmall" href="/g6-otros-ni-estudiante-ni-profesor">Otros (ni estudiante ni profesor)</a></b> ] [ <b><a style="color: #FF0000" class="gensmall" href="/g3-visitante">Visitante</a></b> ]</em></p>
+                        <div class="clear"></div>
+                        <div class="h3"><a href="/statistics" rel="nofollow">Estadísticas</a></div>
+                        <p class="page-bottom">Nuestros miembros han publicado un total de <strong>1671</strong> mensajes</p>
+                        <p class="page-bottom">Tenemos <strong>45</strong> miembros registrados.</p>
+                        <p class="page-bottom">El último usuario registrado es <strong><a href="/u49"><span style="color:#888"><strong>Ryu Tadashi</strong></span></a></strong>.</p>
+                        <br style="clear:both">
+                        <ul id="picture_legend">
+                          <li><img src="http://i48.servimg.com/u/f48/17/38/25/48/icons_11.png" alt="Nuevos mensajes">Nuevos mensajes</li>
+                          <li><img src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes">No hay nuevos mensajes</li>
+                          <li><img src="http://i48.servimg.com/u/f48/17/38/25/48/icons_14.png" alt="Foro cerrado">Foro cerrado</li>
+                        </ul>
+                      </div>
+                      <div id="afilitybar">
+                        <h3>Afiliados de élite / <a href="/h8-">Más afiliados</a></h3>
+                        <ul id="afilitylist">
+                          <li><a href="http://centrolewis-cal.foroactivo.com/"><img src="http://i1091.photobucket.com/albums/i384/natzumi1/Story/Clafl4.png" alt="centro lewis"></a></li>
+                          <li><a href="http://dragonball-world.foroactivo.mx/"><img src="http://i1188.photobucket.com/albums/z408/Reborn_24/Goku40x40.png" alt="Foro Dragon Ball"></a></li>
+                          <li><a href="http://hitman-world.activoforo.com/"><img src="http://i856.photobucket.com/albums/ab126/dino_cava/Hitoman/Banner/hw407.png" alt="Foro rol Hitman"></a></li>
+                          <li><a href="http://kyubi.foros.ws/index.php/"><img src="http://i50.tinypic.com/aaizpw.png" alt="Foro Naruto"></a></li>
+                          <li><a href="http://dgm-fallenangels.foroactivo.mx/"><img src="http://i1029.photobucket.com/albums/y354/SuomiNillson5/4040.gif" alt="Foro Fallen Angels"></a></li>
+                          <li><a href="http://no-heaven.foroac.com/"><img src="http://img546.imageshack.us/img546/3733/marcabanner.png" alt="Foro Mafias"></a></li>
+                          <li><a href="http://sweet-amoris.foroactivo.com/"><img src="http://i94.photobucket.com/albums/l98/camusa_verseau/sweetamoris/40-1.png" alt="Foro sweet"></a></li>
+                          <li><a href="http://cardcaptorsakurarol.foroactivo.com//"><img src="http://img43.imageshack.us/img43/4213/40x40a.png" alt="Foro rol Sakura"></a></li>
+                          <li><a href="http://world-fans-vocaloid.webmaster-foro.com/"><img src="http://i1134.photobucket.com/albums/m612/RainbowColorFull/Sweetboton.png" alt="Foro Rol Vocaloid"></a></li>
+                          <li><a href="http://sweet-sounds.foroactivo.com/"><img src="http://img580.imageshack.us/img580/8742/40x40.png" alt="Foro Vocaloid"></a></li>
+                          <li><a href="http://petsacademy.foroactivo.com/"><img src="http://i.imgur.com/ncVqj.gif?1" alt="Foro Rol Nekos"></a></li>
+                          <li><a href="http://dark-souls.foros-activos.com/"><img src="http://i1068.photobucket.com/albums/u460/DarkShadows99/Banners/40-1.png" alt="Foro Dark Souls"></a></li>
+                          <li><a href="http://ecuacion-humana.foro.bz"><img src="http://i701.photobucket.com/albums/ww12/alastorsparda/40x404.gif" alt="La educacion Humana"></a></li>
+                          <li><a href="http://demonsblood.foroactivo.com"><img src="http://i1267.photobucket.com/albums/jj557/julyloid/xx-40x40.png" alt="Demos souls"></a></li>
+                          <li><a href="http://www.zeldarol.com"><img src="http://i51.tinypic.com/muh9oh.png" alt=" Foro de rol Zelda"></a></li>
+                          <li><a href=""><img src="" alt=""></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                          <li><a href="/"><img src="http://i48.servimg.com/u/f48/17/38/25/48/afilia10.jpg" alt="Afiliados"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="emptyidright"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="page-footer">
+          <div class="navbar">
+            <div class="inner"><span class="corners-top"><span></span></span>
+              <ul class="linklist clearfix">
+                <li class="footer-home"><a class="icon-home" href="/" accesskey="h">Índice</a></li>
+                <li class="rightside"><strong><a href="http://www.foroactivo.com/" target="_blank">Crear foro</a></strong>&nbsp;|&nbsp;<span class="gensmall">©</span> <a href="http://www.foroactivo.com/es/phpbb/" target="_blank">phpBB</a>&nbsp;|&nbsp;<a name="bottom" href="http://asistencia.foroactivo.com/" target="_blank">Foro gratis de asistencia</a>&nbsp;|&nbsp;<a name="bottom" href="/contact" rel="nofollow">Contactar</a>&nbsp;|&nbsp;<a href="/abuse?page=%2F&amp;report=1" rel="nofollow">Denunciar un abuso</a></li>
+              </ul>
+              <span class="corners-bottom"><span></span></span></div>
+          </div>
+          <p class="copyright"><strong></strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">//<![CDATA[
+fa_endpage();//]]></script>
+<div id="flamegif"></div>
+<div id="flameBG1" style="opacity: -39.550480962005864; ">-</div>
+<div style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); text-align: center; background-position: initial initial; background-repeat: initial initial; ">Alojados en<br>
+  <a href="http://www.foroactivo.com"><img src="http://www.illiweb.com/fa/banner/es/banner5.png" alt="Crear foro" title="foroactivo.com"></a></div>
+</body>
 </html>
