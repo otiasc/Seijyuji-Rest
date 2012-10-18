@@ -229,7 +229,7 @@ select:focus {
 }
 /* BODY - SPECIFIC - NO-INDEX */
 body.notIndexPage {
-  background: #000 url('http://i38.servimg.com/u/f38/17/38/25/48/back10.jpg') no-repeat center -90px;
+  background: #000 url('http://i38.servimg.com/u/f38/17/38/25/48/back211.jpg') no-repeat center 0;
 }
 /* LOGO - GENERAL */
 #logo-desc>p {
@@ -524,7 +524,7 @@ body.notIndexPage {
         	    dd.posts
                 	dfn					"Mensajes"
             	dd.lastpost
-                	"Jue 2 Ago 2012 - 11:02" <br>
+                	"Jue 2 Ago 2012 - 11:02" 
                     strong				Usuario
                     a.last-post-icon	link al último post
 */
@@ -1308,6 +1308,14 @@ fieldset.quickmod {
   padding:0;
   -webkit-transform-origin:top left;
   -webkit-transform:rotate(-90deg);
+  -o-transform-origin:top left;
+  -o-transform:rotate(-90deg);
+  -moz-transform-origin:top left;
+  -moz-transform:rotate(-90deg);
+  -ms-transform-origin:top left;
+  -ms-transform:rotate(-90deg);
+  transform-origin:top left;
+  transform:rotate(-90deg);
 }
 #memberlist tbody td.avatar-mini span,
 #memberlist tbody td.avatar-mini strong,
